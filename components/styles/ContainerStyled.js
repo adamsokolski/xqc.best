@@ -5,8 +5,6 @@ export const ContainerStyled = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-
-  @media (max-width: 1200px) {
-    flex-direction: column;
-  }
+  flex-wrap: wrap;
+  transition: all 0.3s;
 `;
