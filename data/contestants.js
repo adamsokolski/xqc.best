@@ -1,4 +1,4 @@
-export const season3 = [
+export const contestants = [
   { id: 1, name: "Anna", img: "/images/contestants/s3/Anna-Rossi.jpg" },
   { id: 2, name: "Becky", img: "/images/contestants/s3/Becky-Reams.jpg" },
   { id: 3, name: "Christine", img: "/images/contestants/s3/Christine-Hà.jpg" },

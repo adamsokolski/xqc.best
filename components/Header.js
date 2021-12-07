@@ -36,7 +36,7 @@ export default function Header() {
         if (index >= xqcEmotes.length) {
           index = 0;
         }
-      }, 3000);
+      }, 5000);
     }, 2000);
   }, []);
   return (

@@ -4,7 +4,6 @@ export const ImageContainer = styled.div`
   position: relative;
   height: 111px;
   width: 111px;
-  margin-bottom: 10px;
   overflow: hidden;
   transition: all 0.3s;
 
