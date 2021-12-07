@@ -20,4 +20,8 @@ export const HeaderStyled = styled.header`
     align-items: center;
     line-height: normal;
   }
+
+  img {
+    transition: 0.3s ease-in-out;
+  }
 `;
