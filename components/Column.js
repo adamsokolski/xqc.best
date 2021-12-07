@@ -8,8 +8,14 @@ const Title = styled.h3`
   text-align: center;
   color: #fff;
   font-size: 2em;
+  font-family: "Montserrat";
+  font-weight: 700;
+  padding: 10px 0;
+  margin: 0;
 `;
 const ContestantsList = styled.div`
+  overflow: auto;
+  overflow-y: hidden;
   display: flex;
   flex-direction: row;
   align-items: center;
