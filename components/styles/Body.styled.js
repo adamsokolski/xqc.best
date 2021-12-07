@@ -3,6 +3,8 @@ import styled from "styled-components";
 export const Body = styled.div`
   margin: 0;
   min-height: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
 

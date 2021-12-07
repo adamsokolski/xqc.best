@@ -14,7 +14,7 @@ const ContestantsList = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 `;
 
 export default class Column extends Component {
@@ -22,7 +22,7 @@ export default class Column extends Component {
     return (
       <Container>
         <Title>{this.props.column.title}</Title>
-        <Droppable droppableId={this.props.column.id}>
+        <Droppable droppableId={this.props.column.id} direction="horizontal">
           {(provided) => (
             <ContestantsList
               ref={provided.innerRef}

@@ -37,7 +37,7 @@ export default function Header() {
           index = 0;
         }
       }, 5000);
-    }, 2000);
+    }, 5000);
   }, []);
   return (
     <HeaderStyled>

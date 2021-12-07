@@ -5,8 +5,8 @@ import { Draggable } from "react-beautiful-dnd";
 
 const ImageContainer = styled.div`
   position: relative;
-  height: 111px;
-  width: 111px;
+  height: 100px;
+  width: 100px;
   overflow: hidden;
   transition: all 0.3s;
 
@@ -26,7 +26,7 @@ const ContestantContainer = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 10px;
+  margin: 2px;
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 50% 50% 4px 4px;
   transition: 0.3s ease-in-out;
