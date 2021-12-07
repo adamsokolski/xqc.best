@@ -23,17 +23,14 @@ export default function Header() {
     for (let i = 0; i < xqcEmotes.length; i++) {
       numArr[i] = i;
     }
-    console.log(numArr);
 
     const randomArr = shuffle(numArr);
-    console.log(randomArr);
     let index = 0;
     setTimeout(() => {
       setHeaderImg("/images/PepeLaugh.png");
 
       setInterval(() => {
         setHeaderImg(xqcEmotes[randomArr[index]].img);
-        console.log(randomArr[index], xqcEmotes[randomArr[index]].img, index);
         index++;
         if (index >= xqcEmotes.length) {
           index = 0;
