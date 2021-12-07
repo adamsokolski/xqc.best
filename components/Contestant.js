@@ -56,7 +56,11 @@ export default class Contestant extends Component {
             ref={provided.innerRef}
           >
             <ImageContainer>
-              <Image src={this.props.contestant.img} layout="fill" />
+              <Image
+                src={this.props.contestant.img}
+                layout="fill"
+                alt={`${this.props.contestant.name} from MasterChef`}
+              />
             </ImageContainer>
             <p>{this.props.contestant.name}</p>
           </ContestantContainer>

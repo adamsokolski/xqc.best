@@ -19,6 +19,7 @@ export default function Footer() {
           width="15px"
           height="15px"
           className="footer-image"
+          alt="pixel heart"
         />{" "}
       </ImageWrapper>
       by NiceDevTools <span className="footer-small">in chat</span>

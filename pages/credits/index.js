@@ -15,6 +15,7 @@ export default function credits() {
               src="/images/HACKERMANS_Greekgodx.gif"
               width="50"
               height="50"
+              alt="emote of streamer GreekGodx typing"
             />{" "}
           </li>
         </ul>
