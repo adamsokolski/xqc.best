@@ -10,13 +10,17 @@ export default function credits() {
         <h2>xqc.best</h2>
         <ul>
           <li>
-            NiceDevTools -{" "}
+            NiceDevTools -{"  "}
             <Image
               src="/images/HACKERMANS_Greekgodx.gif"
               width="50"
               height="50"
             />{" "}
           </li>
+        </ul>
+        <h2>logo emotes - 7tv.app</h2>
+        <ul>
+          <li>Soon...</li>
         </ul>
       </div>
     </CreditListStyled>

@@ -4,10 +4,15 @@ export const HeaderStyled = styled.header`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding: 20px 40px;
 
   border-bottom: 1px solid #eaeaea;
+  div a {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
 
   span {
     margin: 0 20px;

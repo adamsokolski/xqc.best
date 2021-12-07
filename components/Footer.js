@@ -1,6 +1,7 @@
 import { FooterStyled } from "./styles/FooterStyled";
 import Image from "next/image";
 import styled from "styled-components";
+import Link from "next/link";
 
 const ImageWrapper = styled.div`
   margin: 0 5px;

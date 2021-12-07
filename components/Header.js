@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import { HeaderStyled } from "./styles/HeaderStyled";
 import { xqcEmotes } from "../data/logoEmotesXqc";
@@ -40,9 +41,24 @@ export default function Header() {
   }, []);
   return (
     <HeaderStyled>
-      <Image src={headerImg} width="64px" height="64px" />
-      <span>x</span>
-      <Image src="/images/masterchef-logo.svg" width="64px" height="64px" />
+      <div>
+        <Link href="/">
+          <a>
+            <Image src={headerImg} width="128px" height="128px" />
+            <span>x</span>
+            <Image
+              src="/images/masterchef-logo.svg"
+              width="128px"
+              height="128px"
+            />
+          </a>
+        </Link>
+      </div>
+      <nav>
+        <Link href="/credits">
+          <a>credits</a>
+        </Link>
+      </nav>
     </HeaderStyled>
   );
 }
