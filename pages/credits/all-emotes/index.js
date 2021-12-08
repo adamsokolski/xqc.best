@@ -12,7 +12,13 @@ const Container = styled.div`
 
 export default function AllEmotes() {
   const images = xqcEmotes.map((emote) => (
-    <Image src={emote.img} width="128" height="128" key="emote.id" />
+    <Image
+      src={emote.img}
+      width="128"
+      height="128"
+      key="emote.id"
+      alt="emote of streamer xQcOW"
+    />
   ));
 
   return <Container>{images}</Container>;
