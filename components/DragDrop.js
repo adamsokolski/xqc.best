@@ -1,11 +1,9 @@
-import { season3 } from "../../data/season3";
-import Column from "../../components/Column";
+import Column from "./Column";
 import { DragDropContext } from "react-beautiful-dnd";
-
 import React, { Component } from "react";
 
 export default class DragDrop extends Component {
-  state = season3;
+  state = this.props.season;
   onDragEnd = (result) => {
     const { destination, source, draggableId } = result;
     if (!destination) {

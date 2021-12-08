@@ -25,7 +25,7 @@ export default function Home() {
       </Head>
       <HomeHeader />
       <ContainerStyled>
-        {/* <LinkTitle>
+        <LinkTitle>
           <Link href="/season1">
             <a>Season 1</a>
           </Link>
@@ -34,7 +34,7 @@ export default function Home() {
           <Link href="/season2">
             <a>Season 2</a>
           </Link>
-        </LinkTitle> */}
+        </LinkTitle>
         <LinkTitle>
           <Link href="/season3">
             <a>Season 3</a>

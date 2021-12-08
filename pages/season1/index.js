@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { season3 } from "../../data/season3";
+import { season1 } from "../../data/season1";
 
 const DragDrop = dynamic(import("../../components/DragDrop"));
 const Container = styled.div`
@@ -20,7 +20,7 @@ export default function Index() {
   return winReady ? (
     <Container>
       {" "}
-      <DragDrop season={season3} />
+      <DragDrop season={season1} />
     </Container>
   ) : null;
 }
