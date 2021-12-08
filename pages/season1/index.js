@@ -5,6 +5,7 @@ import { season1 } from "../../data/season1";
 
 const DragDrop = dynamic(import("../../components/DragDrop"));
 const Container = styled.div`
+  user-select: none;
   width: 100%;
   display: flex;
   justify-content: flex-start;

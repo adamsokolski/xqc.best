@@ -7,19 +7,23 @@ export default function DragDrop({ season }) {
   const [state, setState] = useState(season);
   const [cookies, setCookie] = useCookies([season.seasonName]);
   useEffect(() => {
-    if (!cookies[season.seasonName]) {
+    if (cookies[season.seasonName] === undefined) {
       setCookie(season.seasonName, season.columns, {
-        path: `/${season.seasonName}`,
         maxAge: 157784630,
+        secure: true,
+        sameSite: "none",
       });
       setState(season);
+      console.log("no cookie");
     } else {
-      const newState = {
+      /*     const newState = {
         ...season,
         columns: cookies[season.seasonName],
-      };
-
+      }; */
+      const newState = { ...season };
+      newState.columns = cookies[season.seasonName];
       setState(newState);
+      console.log("cookie");
     }
   }, []);
 
@@ -57,10 +61,6 @@ export default function DragDrop({ season }) {
           [newColumn.id]: newColumn,
         },
       };
-
-      setState(newState);
-
-      // cookies
       const newColumns = {
         columns: {
           ...state.columns,
@@ -68,10 +68,15 @@ export default function DragDrop({ season }) {
         },
       };
 
+      setState(newState);
+
+      // cookies
       setCookie(season.seasonName, newColumns.columns, {
-        path: `/${season.seasonName}`,
         maxAge: 157784630,
+        secure: true,
+        sameSite: "none",
       });
+      console.log("cookie update - same column");
       return;
     }
 
@@ -97,8 +102,6 @@ export default function DragDrop({ season }) {
         [newFinish.id]: newFinish,
       },
     };
-    setState(newState);
-    // cookies
     const newColumns = {
       columns: {
         ...state.columns,
@@ -107,10 +110,15 @@ export default function DragDrop({ season }) {
       },
     };
 
+    setState(newState);
+
+    // cookies
     setCookie(season.seasonName, newColumns.columns, {
-      path: `/${season.seasonName}`,
       maxAge: 157784630,
+      secure: true,
+      sameSite: "none",
     });
+    console.log("cookie update - diffrent column");
   };
 
   return (

@@ -59,7 +59,6 @@ const ContestantContainer = styled.div`
 
 export default class Contestant extends Component {
   render() {
-    console.log(this.props.droppableId);
     return (
       <Draggable
         draggableId={this.props.contestant.id}
