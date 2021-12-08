@@ -5,7 +5,7 @@ export const season2 = {
          "contestant-2": { id:"contestant-2", name: "Alejandra", img: "/images/contestants/s2/Alejandra-Schrader.jpg" },
          "contestant-3": { id:"contestant-3", name: "Alvin", img: "/images/contestants/s2/Alvin-Schultz.jpg" },
          "contestant-4": { id:"contestant-4", name: "Angel", img: "/images/contestants/s2/Angel-Moore-Soukkay.jpg" },
-         "contestant-5": { id:"contestant-5", name: "Ben",img: "/images/contestants/s2/Ben-Starr.jpg",},
+         "contestant-5": { id:"contestant-5", name: "Ben", img: "/images/contestants/s2/Ben-Starr.jpg",},
          "contestant-6": { id:"contestant-6", name: "Christian", img: "/images/contestants/s2/Christian-Collins.PNG" },
          "contestant-7": { id:"contestant-7", name: "Christine", img: "/images/contestants/s2/Christine-Corley.jpg" },
          "contestant-8": { id:"contestant-8", name: "Derrick", img: "/images/contestants/s2/Derrick-Prince.jpg" },

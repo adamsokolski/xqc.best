@@ -38,7 +38,6 @@ const ContestantContainer = styled.div`
       : "50% 50% 4px 4px;"};
   box-shadow: ${(props) =>
     props.isDragging ? "0 3px 10px rgb(0 0 0 / 0.2)" : "0"};
-  transition: 0.3s ease-in-out;
 
   p {
     vertical-align: middle;
