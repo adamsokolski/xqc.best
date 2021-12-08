@@ -11,6 +11,7 @@ const Container = styled.div`
   width: 20%;
 `;
 const Title = styled.h3`
+  height: 75px;
   text-align: center;
   color: #fff;
   font-size: 2em;
@@ -28,14 +29,14 @@ const ContestantsList = styled.div`
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
-  min-height: 150px;
+  min-height: 200px;
 `;
 
 const backgrounds = {
   "column-good": "rgba(105, 255, 112, 0.5)",
-  "column-good-content": "#333",
+  "column-good-content": "rgba(175, 255, 109, 0.5)",
   "column-content": "rgba(245, 255, 105, 0.5)",
-  "column-content-bad": "#333",
+  "column-content-bad": "rgb(250, 180, 105, 0.5)",
   "column-bad": "rgba(255, 105, 105, 0.5)",
 };
 

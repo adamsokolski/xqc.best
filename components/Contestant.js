@@ -32,7 +32,8 @@ const ContestantContainer = styled.div`
   transition: 0.3s ease-in-out;
 
   p {
-    margin: 5px;
+    margin: 0;
+    margin-bottom: 2px;
     padding: 0;
   }
   &:hover {
