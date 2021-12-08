@@ -54,6 +54,14 @@ export const season3 = {
     "column-good-content": {
       id: "column-good-content",
       title: "",
+      imgArr: [
+        {
+          img: "/images/emotes/OkayChamp.png",
+        },
+        {
+          img: "/images/emotes/SillyChamp.png",
+        },
+      ],
       contestantsIds: [],
     },
     "column-content": {
@@ -65,6 +73,14 @@ export const season3 = {
     "column-content-bad": {
       id: "column-content-bad",
       title: "",
+      imgArr: [
+        {
+          img: "/images/emotes/SillyChamp.png",
+        },
+        {
+          img: "/images/emotes/WeirdChamp.png",
+        },
+      ],
       contestantsIds: [],
     },
     "column-bad": {

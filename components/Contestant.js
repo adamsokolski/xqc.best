@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { Draggable } from "react-beautiful-dnd";
 
 const ImageContainer = styled.div`
+  z-index: 11;
   position: relative;
   height: 140px;
   width: 140px;
@@ -17,41 +18,61 @@ const ImageContainer = styled.div`
 `;
 
 const ContestantContainer = styled.div`
+  position: relative;
   height: fit-content;
   width: fit-content;
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: ${(props) =>
+    props.droppableId !== "column-start" ? "flex-start" : "center"};
   justify-content: center;
-  flex-direction: column;
+  flex-direction: ${(props) =>
+    props.droppableId !== "column-start" ? "row" : "column"};
   margin: 2px;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 50% 50% 4px 4px;
+  background-color: ${(props) =>
+    props.droppableId !== "column-start" ? "" : "rgba(41, 41, 41, 0.7)"};
+
+  border-radius: ${(props) =>
+    props.droppableId !== "column-start"
+      ? "50% 4px 50% 50%"
+      : "50% 50% 4px 4px;"};
+  box-shadow: ${(props) =>
+    props.isDragging ? "0 3px 10px rgb(0 0 0 / 0.2)" : "0"};
+  transition: 0.3s ease-in-out;
 
   p {
+    vertical-align: middle;
+    right: -60px;
+    z-index: 10;
     margin: 0;
-    margin-bottom: 2px;
-    padding: 0;
-  }
-  &:hover {
-    img {
-      opacity: 0.8;
-    }
+    position: ${(props) =>
+      props.droppableId !== "column-start" ? "absolute" : "static"};
+    background-color: ${(props) =>
+      props.droppableId !== "column-start" ? "rgba(41, 41, 41, 0.7)" : ""};
+    border-radius: 4px;
+    padding: ${(props) =>
+      props.droppableId !== "column-start" ? "5px 5px 5px 5px" : ""};
+    width: 100%;
+    text-align: ${(props) =>
+      props.droppableId !== "column-start" ? "right" : "center"};
   }
 `;
 
 export default class Contestant extends Component {
   render() {
+    console.log(this.props.droppableId);
     return (
       <Draggable
         draggableId={this.props.contestant.id}
         index={this.props.index}
       >
-        {(provided) => (
+        {(provided, snapshot) => (
           <ContestantContainer
             {...provided.draggableProps}
             {...provided.dragHandleProps}
             ref={provided.innerRef}
+            isDragging={snapshot.isDragging}
+            droppableId={this.props.droppableId}
           >
             <ImageContainer>
               <Image

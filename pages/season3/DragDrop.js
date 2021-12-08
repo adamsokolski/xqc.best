@@ -19,24 +19,54 @@ export default class DragDrop extends Component {
       return;
     }
 
-    const column = this.state.columns[source.droppableId];
-    const newCotestantIds = Array.from(column.contestantsIds);
-    newCotestantIds.splice(source.index, 1);
-    newCotestantIds.splice(destination.index, 0, draggableId);
+    const start = this.state.columns[source.droppableId];
+    const finish = this.state.columns[destination.droppableId];
 
-    const newColumn = {
-      ...column,
-      contestantsIds: newCotestantIds,
+    if (start === finish) {
+      const newCotestantIds = Array.from(start.contestantsIds);
+
+      newCotestantIds.splice(source.index, 1);
+      newCotestantIds.splice(destination.index, 0, draggableId);
+
+      const newColumn = {
+        ...start,
+        contestantsIds: newCotestantIds,
+      };
+
+      const newState = {
+        ...this.state,
+        columns: {
+          ...this.state.columns,
+          [newColumn.id]: newColumn,
+        },
+      };
+
+      this.setState(newState);
+      return;
+    }
+
+    // Moving from one list to another
+    const startContestantsIds = Array.from(start.contestantsIds);
+    startContestantsIds.splice(source.index, 1);
+    const newStart = {
+      ...start,
+      contestantsIds: startContestantsIds,
     };
 
+    const finishContestantsIds = Array.from(finish.contestantsIds);
+    finishContestantsIds.splice(destination.index, 0, draggableId);
+    const newFinish = {
+      ...finish,
+      contestantsIds: finishContestantsIds,
+    };
     const newState = {
       ...this.state,
       columns: {
         ...this.state.columns,
-        [newColumn.id]: newColumn,
+        [newStart.id]: newStart,
+        [newFinish.id]: newFinish,
       },
     };
-
     this.setState(newState);
   };
 
@@ -49,7 +79,14 @@ export default class DragDrop extends Component {
             (id) => this.state.contestants[id]
           );
           return (
-            <Column key={column.id} column={column} contestants={contestants} />
+            <Column
+              key={column.id}
+              column={column}
+              contestants={contestants}
+              direction={columnId != "column-start" ? "vertical" : "horizontal"}
+              flexDirection={columnId != "column-start" ? "column" : "row"}
+              minHeight={columnId != "column-start" ? "200px" : "0"}
+            />
           );
         })}
       </DragDropContext>

@@ -25,11 +25,16 @@ const ContestantsList = styled.div`
   overflow: auto;
   overflow-y: hidden;
   display: flex;
-  flex-direction: row;
+  flex-direction: ${(props) => props.flexDirection};
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
-  min-height: 200px;
+  min-height: ${(props) => props.minHeight};
+  padding: 5px;
+`;
+const ImageContainer = styled.div`
+  margin: 0 5px;
+  display: inline-block;
 `;
 
 const backgrounds = {
@@ -47,21 +52,36 @@ export default class Column extends Component {
         <Title>
           {this.props.column.title}
           {this.props.column.img && (
-            <Image src={this.props.column.img} height="30" width="30" />
+            <ImageContainer>
+              <Image src={this.props.column.img} height="30" width="30" />
+            </ImageContainer>
           )}
+          {this.props.column.imgArr &&
+            this.props.column.imgArr.map((i, index) => (
+              <ImageContainer key={index}>
+                <Image src={i.img} height="30" width="30" />
+              </ImageContainer>
+            ))}
         </Title>
-        <Droppable droppableId={this.props.column.id} direction="horizontal">
+        <Droppable
+          droppableId={this.props.column.id}
+          direction={this.props.direction}
+        >
           {(provided) => (
             <ContestantsList
+              minHeight={this.props.minHeight}
+              flexDirection={this.props.flexDirection}
               bgc={backgrounds[this.props.column.id]}
               ref={provided.innerRef}
               {...provided.droppableProps}
             >
               {this.props.contestants.map((contestant, index) => (
                 <Contestant
+                  flexDirection={this.props.flexDirection}
                   key={contestant.id}
                   contestant={contestant}
                   index={index}
+                  droppableId={this.props.column.id}
                 />
               ))}
               {provided.placeholder}
