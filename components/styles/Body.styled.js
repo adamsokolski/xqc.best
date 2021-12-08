@@ -11,11 +11,6 @@ export const Body = styled.div`
   background-color: #333;
   color: #fff;
 
-  h2 {
-    font-family: "Montserrat";
-    font-weight: 700;
-    font-size: 2em;
-  }
   h1,
   h2,
   h3,

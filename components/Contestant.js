@@ -5,8 +5,8 @@ import { Draggable } from "react-beautiful-dnd";
 
 const ImageContainer = styled.div`
   position: relative;
-  height: 100px;
-  width: 100px;
+  height: 140px;
+  width: 140px;
   overflow: hidden;
   transition: all 0.3s;
 

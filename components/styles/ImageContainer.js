@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ImageContainer = styled.div`
   position: relative;
   height: 111px;
-  width: 111px;
+  width: 240px;
   overflow: hidden;
   transition: all 0.3s;
 

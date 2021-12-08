@@ -23,7 +23,7 @@ export const season3 = {
   columns: {
     "column-start": {
       id: "column-start",
-      title: "Season 3",
+      title: "Season 3 - Top 18",
       contestantsIds: [
         "contestant-1",
         "contestant-2",
@@ -45,6 +45,41 @@ export const season3 = {
         "contestant-18",
       ],
     },
+    "column-good": {
+      id: "column-good",
+      title: "Like",
+      img: "/images/emotes/OkayChamp.png",
+      contestantsIds: [],
+    },
+    "column-good-content": {
+      id: "column-good-content",
+      title: "",
+      contestantsIds: [],
+    },
+    "column-content": {
+      id: "column-content",
+      title: "Content",
+      img: "/images/emotes/SillyChamp.png",
+      contestantsIds: [],
+    },
+    "column-content-bad": {
+      id: "column-content-bad",
+      title: "",
+      contestantsIds: [],
+    },
+    "column-bad": {
+      id: "column-bad",
+      title: "Don't like",
+      img: "/images/emotes/WeirdChamp.png",
+      contestantsIds: [],
+    },
   },
-  columnOrder: ["column-start"],
+  columnOrder: [
+    "column-start",
+    "column-good",
+    "column-good-content",
+    "column-content",
+    "column-content-bad",
+    "column-bad",
+  ],
 };
