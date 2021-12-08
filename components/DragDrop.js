@@ -1,10 +1,11 @@
 import Column from "./Column";
 import { DragDropContext } from "react-beautiful-dnd";
-import React, { Component } from "react";
+import { useEffect, useState } from "react";
 
-export default class DragDrop extends Component {
-  state = this.props.season;
-  onDragEnd = (result) => {
+export default function DragDrop({ season }) {
+  const [state, setState] = useState(season);
+
+  const onDragEnd = (result) => {
     const { destination, source, draggableId } = result;
     if (!destination) {
       return;
@@ -17,8 +18,8 @@ export default class DragDrop extends Component {
       return;
     }
 
-    const start = this.state.columns[source.droppableId];
-    const finish = this.state.columns[destination.droppableId];
+    const start = state.columns[source.droppableId];
+    const finish = state.columns[destination.droppableId];
 
     if (start === finish) {
       const newCotestantIds = Array.from(start.contestantsIds);
@@ -32,14 +33,14 @@ export default class DragDrop extends Component {
       };
 
       const newState = {
-        ...this.state,
+        ...state,
         columns: {
-          ...this.state.columns,
+          ...state.columns,
           [newColumn.id]: newColumn,
         },
       };
 
-      this.setState(newState);
+      setState(newState);
       return;
     }
 
@@ -58,36 +59,34 @@ export default class DragDrop extends Component {
       contestantsIds: finishContestantsIds,
     };
     const newState = {
-      ...this.state,
+      ...state,
       columns: {
-        ...this.state.columns,
+        ...state.columns,
         [newStart.id]: newStart,
         [newFinish.id]: newFinish,
       },
     };
-    this.setState(newState);
+    setState(newState);
   };
 
-  render() {
-    return (
-      <DragDropContext onDragEnd={this.onDragEnd}>
-        {this.state.columnOrder.map((columnId) => {
-          const column = this.state.columns[columnId];
-          const contestants = column.contestantsIds.map(
-            (id) => this.state.contestants[id]
-          );
-          return (
-            <Column
-              key={column.id}
-              column={column}
-              contestants={contestants}
-              direction={columnId != "column-start" ? "vertical" : "horizontal"}
-              flexDirection={columnId != "column-start" ? "column" : "row"}
-              minHeight={columnId != "column-start" ? "200px" : "0"}
-            />
-          );
-        })}
-      </DragDropContext>
-    );
-  }
+  return (
+    <DragDropContext onDragEnd={(r) => onDragEnd(r)}>
+      {state.columnOrder.map((columnId) => {
+        const column = state.columns[columnId];
+        const contestants = column.contestantsIds.map(
+          (id) => state.contestants[id]
+        );
+        return (
+          <Column
+            key={column.id}
+            column={column}
+            contestants={contestants}
+            direction={columnId != "column-start" ? "vertical" : "horizontal"}
+            flexDirection={columnId != "column-start" ? "column" : "row"}
+            minHeight={columnId != "column-start" ? "200px" : "0"}
+          />
+        );
+      })}
+    </DragDropContext>
+  );
 }
