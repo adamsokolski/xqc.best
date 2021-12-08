@@ -8,7 +8,6 @@ export const ContestantContainer = styled.div`
   margin: 10px;
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 50% 50% 4px 4px;
-  transition: 0.3s ease-in-out;
 
   p {
     margin: 5px;

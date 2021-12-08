@@ -27,7 +27,6 @@ export default function Layout({ children }) {
       setIsHome(true);
     }
   }, [router.pathname]);
-  console.log(router.pathname);
   return (
     <>
       <Body>
