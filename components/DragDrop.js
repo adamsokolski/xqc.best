@@ -1,9 +1,27 @@
 import Column from "./Column";
 import { DragDropContext } from "react-beautiful-dnd";
 import { useEffect, useState } from "react";
+import { useCookies } from "react-cookie";
 
 export default function DragDrop({ season }) {
   const [state, setState] = useState(season);
+  const [cookies, setCookie] = useCookies([season.seasonName]);
+  useEffect(() => {
+    if (!cookies[season.seasonName]) {
+      setCookie(season.seasonName, season.columns, {
+        path: `/${season.seasonName}`,
+        maxAge: 157784630,
+      });
+      setState(season);
+    } else {
+      const newState = {
+        ...season,
+        columns: cookies[season.seasonName],
+      };
+
+      setState(newState);
+    }
+  }, []);
 
   const onDragEnd = (result) => {
     const { destination, source, draggableId } = result;
@@ -41,6 +59,19 @@ export default function DragDrop({ season }) {
       };
 
       setState(newState);
+
+      // cookies
+      const newColumns = {
+        columns: {
+          ...state.columns,
+          [newColumn.id]: newColumn,
+        },
+      };
+
+      setCookie(season.seasonName, newColumns.columns, {
+        path: `/${season.seasonName}`,
+        maxAge: 157784630,
+      });
       return;
     }
 
@@ -67,6 +98,19 @@ export default function DragDrop({ season }) {
       },
     };
     setState(newState);
+    // cookies
+    const newColumns = {
+      columns: {
+        ...state.columns,
+        [newStart.id]: newStart,
+        [newFinish.id]: newFinish,
+      },
+    };
+
+    setCookie(season.seasonName, newColumns.columns, {
+      path: `/${season.seasonName}`,
+      maxAge: 157784630,
+    });
   };
 
   return (

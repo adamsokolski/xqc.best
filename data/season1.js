@@ -1,4 +1,5 @@
 export const season1 = {
+  seasonName: "season1",
   // prettier-ignore
   contestants: {
          "contestant-1": { id:"contestant-1", name: "Avis", img: "/images/contestants/s1/Avis-White.jpg" },
