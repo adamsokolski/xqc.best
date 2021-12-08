@@ -8,13 +8,11 @@ const ImageContainer = styled.div`
   height: 140px;
   width: 140px;
   overflow: hidden;
-  transition: all 0.3s;
 
   img {
     border-radius: 50%;
     object-fit: cover;
     object-position: 0 0;
-    transition: all 0.3s;
   }
 `;
 
@@ -29,7 +27,6 @@ const ContestantContainer = styled.div`
   margin: 2px;
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 50% 50% 4px 4px;
-  transition: 0.3s ease-in-out;
 
   p {
     margin: 0;

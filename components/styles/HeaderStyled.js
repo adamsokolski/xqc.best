@@ -27,6 +27,5 @@ export const HeaderStyled = styled.header`
   }
 
   img {
-    transition: 0.3s ease-in-out;
   }
 `;

@@ -10,7 +10,6 @@ import styled from "styled-components";
 
 const LinkTitle = styled.h3`
   font-size: 30px;
-  transition: 0.3ms ease-in-out;
   &:hover {
     color: ${(props) => props.theme.main1};
   }
@@ -26,15 +25,7 @@ export default function Home() {
       </Head>
       <HomeHeader />
       <ContainerStyled>
-        {/* {season3.map((c) => (
-          <ContestantContainer key={c.id}>
-            <ImageContainer>
-              <Image src={c.img} layout="fill" />
-            </ImageContainer>
-            <p>{c.name}</p>
-          </ContestantContainer>
-        ))} */}
-        <LinkTitle>
+        {/* <LinkTitle>
           <Link href="/season1">
             <a>Season 1</a>
           </Link>
@@ -43,7 +34,7 @@ export default function Home() {
           <Link href="/season2">
             <a>Season 2</a>
           </Link>
-        </LinkTitle>
+        </LinkTitle> */}
         <LinkTitle>
           <Link href="/season3">
             <a>Season 3</a>
