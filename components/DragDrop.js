@@ -14,7 +14,6 @@ export default function DragDrop({ season }) {
         sameSite: "none",
       });
       setState(season);
-      console.log("no cookie");
     } else {
       /*     const newState = {
         ...season,
@@ -23,7 +22,6 @@ export default function DragDrop({ season }) {
       const newState = { ...season };
       newState.columns = cookies[season.seasonName];
       setState(newState);
-      console.log("cookie");
     }
   }, []);
 
@@ -76,7 +74,6 @@ export default function DragDrop({ season }) {
         secure: true,
         sameSite: "none",
       });
-      console.log("cookie update - same column");
       return;
     }
 
@@ -118,7 +115,6 @@ export default function DragDrop({ season }) {
       secure: true,
       sameSite: "none",
     });
-    console.log("cookie update - diffrent column");
   };
 
   return (
