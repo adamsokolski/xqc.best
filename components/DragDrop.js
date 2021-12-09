@@ -24,11 +24,46 @@ export default function DragDrop({ season }) {
       newState.columns = cookies[season.seasonName];
       setState(newState);
     }
+
+    if (cookies["confetti"] === undefined) {
+      let confettiObj = {
+        season1: false,
+        season2: false,
+        season3: false,
+        season4: false,
+        season5: false,
+        season6: false,
+        season7: false,
+        season8: false,
+        season9: false,
+        season10: false,
+        season11: false,
+      };
+      setCookie("confetti", confettiObj, {
+        maxAge: 604800,
+        secure: true,
+        sameSite: "none",
+      });
+    }
   }, []);
+
+  // confetti
   useEffect(() => {
-    confetti.reset();
-    if (state.columns["column-start"].contestantsIds.length === 0) {
-      var duration = 3 * 1000;
+    if (
+      state.columns["column-start"].contestantsIds.length === 0 &&
+      cookies["confetti"][season.seasonName] === false
+    ) {
+      let newConfetti = {
+        ...cookies["confetti"],
+        [season.seasonName]: true,
+      };
+      setCookie("confetti", newConfetti, {
+        maxAge: 604800,
+        secure: true,
+        sameSite: "none",
+      });
+
+      var duration = 7 * 1000;
       var animationEnd = Date.now() + duration;
       var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
 
