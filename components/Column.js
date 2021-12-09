@@ -11,6 +11,9 @@ const Container = styled.div`
   width: 20%;
 `;
 const Title = styled.h3`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 75px;
   text-align: center;
   color: #fff;
@@ -19,6 +22,12 @@ const Title = styled.h3`
   font-weight: 700;
   padding: 10px 0;
   margin: 0;
+
+  @media (max-width: 900px) {
+    height: 30px;
+    font-size: 1.5em;
+    padding: 0;
+  }
 `;
 const ContestantsList = styled.div`
   background-color: ${(props) => props.bgc || "transparent"};
@@ -31,6 +40,9 @@ const ContestantsList = styled.div`
   flex-wrap: nowrap;
   min-height: ${(props) => props.minHeight};
   padding: 5px;
+  @media (max-width: 900px) {
+    padding: 5px;
+  }
 `;
 const ImageContainer = styled.div`
   margin: 0 5px;

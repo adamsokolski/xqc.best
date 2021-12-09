@@ -15,6 +15,11 @@ const ImageContainer = styled.div`
     object-fit: cover;
     object-position: 0 0;
   }
+
+  @media (max-width: 900px) {
+    height: 65px;
+    width: 65px;
+  }
 `;
 
 const ContestantContainer = styled.div`
@@ -37,6 +42,13 @@ const ContestantContainer = styled.div`
       ? "50% 4px 50% 50%"
       : "50% 50% 4px 4px;"};
 
+  @media (max-width: 900px) {
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(41, 41, 41, 0.7);
+    border-radius: 50% 50% 4px 4px;
+  }
+
   p {
     vertical-align: middle;
     right: -60px;
@@ -52,6 +64,14 @@ const ContestantContainer = styled.div`
     width: 100%;
     text-align: ${(props) =>
       props.droppableId !== "column-start" ? "right" : "center"};
+
+    @media (max-width: 900px) {
+      font-size: 0.9em;
+      position: static;
+      background-color: transparent;
+      text-align: center;
+      padding: 0;
+    }
   }
 `;
 

@@ -11,14 +11,18 @@ const NavContainer = styled.nav`
   align-items: center;
   justify-content: center;
   flex-direction: row;
+
+  @media (max-width: 900px) {
+    margin: 10px 0;
+    right: 0;
+    position: relative;
+    width: 100%;
+    padding: 2px;
+    flex-direction: row;
+  }
   a {
     font-size: 1.1em;
     margin: 0 10px;
-  }
-
-  @media (max-width: 1100px) {
-    padding: 2px;
-    flex-direction: column;
   }
 `;
 

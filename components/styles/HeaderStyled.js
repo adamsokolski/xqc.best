@@ -10,6 +10,7 @@ export const HeaderStyled = styled.header`
 
   @media (max-width: 900px) {
     padding: 2px;
+    flex-direction: column;
   }
 
   div a {
