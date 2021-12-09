@@ -14,10 +14,10 @@ const LinkTitle = styled.h3`
   }
 `;
 
-export default function Home() {
+export default function Home({ headerImg }) {
   return (
     <div>
-      <HomeHeader />
+      <HomeHeader headerImg={headerImg} />
       <ContainerStyled>
         <LinkTitle>
           <Link href="/season1">

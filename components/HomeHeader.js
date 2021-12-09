@@ -28,10 +28,10 @@ const UnderTitle = styled.h2`
   text-align: center;
 `;
 
-export default function HomeHeader() {
+export default function HomeHeader({ headerImg }) {
   return (
     <Container>
-      <Logo />
+      <Logo headerImg={headerImg} />
       <Title>xqc.best</Title>
       <UnderTitle>MasterChef tier list for our reactor</UnderTitle>
     </Container>
