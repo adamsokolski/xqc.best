@@ -4,6 +4,8 @@ import { HeaderStyled } from "./styles/HeaderStyled";
 import styled from "styled-components";
 
 const NavContainer = styled.nav`
+  right: 40px;
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,7 +18,7 @@ const NavContainer = styled.nav`
     border-bottom: 1px solid;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 1100px) {
     padding: 2px;
     flex-direction: column;
   }
