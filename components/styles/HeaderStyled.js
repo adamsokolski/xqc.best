@@ -7,6 +7,10 @@ export const HeaderStyled = styled.header`
   justify-content: space-between;
   padding: 20px 40px;
 
+  @media (max-width: 900px) {
+    padding: 2px;
+  }
+
   border-bottom: 1px solid #eaeaea;
   div a {
     display: flex;

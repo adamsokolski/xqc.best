@@ -16,7 +16,7 @@ export default function AllEmotes() {
       src={emote.img}
       width="128"
       height="128"
-      key="emote.id"
+      key={emote.id}
       alt="emote of streamer xQcOW"
     />
   ));

@@ -35,6 +35,9 @@ const ContestantsList = styled.div`
 const ImageContainer = styled.div`
   margin: 0 5px;
   display: inline-block;
+  @media (max-width: 900px) {
+    display: none;
+  }
 `;
 
 const backgrounds = {
