@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Logo from "./Logo";
 
 const Container = styled.header`
-  background-color: #f06836;
+  background-color: #282828;
   width: 100%;
   display: flex;
   align-items: center;

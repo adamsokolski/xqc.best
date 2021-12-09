@@ -4,10 +4,11 @@ export const FooterStyled = styled.footer`
   width: 100%;
   display: flex;
   padding: 0.5rem 0;
-  border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
   margin-top: auto;
+  background-color: #282828;
+
   a {
     display: flex;
     justify-content: center;

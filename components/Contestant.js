@@ -36,8 +36,6 @@ const ContestantContainer = styled.div`
     props.droppableId !== "column-start"
       ? "50% 4px 50% 50%"
       : "50% 50% 4px 4px;"};
-  box-shadow: ${(props) =>
-    props.isDragging ? "0 3px 10px rgb(0 0 0 / 0.2)" : "0"};
 
   p {
     vertical-align: middle;

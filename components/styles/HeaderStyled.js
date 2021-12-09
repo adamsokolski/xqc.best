@@ -6,12 +6,12 @@ export const HeaderStyled = styled.header`
   align-items: center;
   justify-content: space-between;
   padding: 20px 40px;
+  background-color: #282828;
 
   @media (max-width: 900px) {
     padding: 2px;
   }
 
-  border-bottom: 1px solid #eaeaea;
   div a {
     display: flex;
     align-items: center;
