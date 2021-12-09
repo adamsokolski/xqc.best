@@ -126,6 +126,7 @@ export const emotesAuthors = {
     { id: 467, name: "xqcZZZ by kobwmoose" },
     { id: 468, name: "xqcZoom by CharlieJesper" },
     { id: 469, name: "SillyChamp by siiva8805" },
+    { id: 470, name: "WAYTOODANK by pajlada" },
   ],
   ffz: [
     { id: 600, name: "WeirdChamp by sundizzle" },

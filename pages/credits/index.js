@@ -56,7 +56,7 @@ export default function credits() {
           <li>
             NiceDevTools - Front End Developer{"  "}
             <Image
-              src="/images/HACKERMANS_Greekgodx.gif"
+              src="/images/emotes/HACKERMANS_Greekgodx.gif"
               width="50"
               height="50"
               alt="emote of streamer GreekGodx typing"
@@ -66,7 +66,15 @@ export default function credits() {
         <h2>Emotes</h2>
 
         <Link href="/credits/all-emotes">
-          <a>All emotes</a>
+          <a>
+            All emotes{" "}
+            <Image
+              src="/images/emotes/WAYTOODANK.gif"
+              width="50"
+              height="50"
+              alt="emote of pepe the frog with huge head"
+            />
+          </a>
         </Link>
 
         <h3>7tv.app</h3>

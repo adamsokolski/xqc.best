@@ -26,7 +26,7 @@ export default function DragDrop({ season }) {
     }
   }, []);
   useEffect(() => {
-    console.log(state.columns["column-start"].contestantsIds.length);
+    confetti.reset();
     if (state.columns["column-start"].contestantsIds.length === 0) {
       var duration = 5 * 1000;
       var animationEnd = Date.now() + duration;

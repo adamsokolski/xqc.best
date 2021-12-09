@@ -42,7 +42,7 @@ export const season1 = {
     },
     "column-good": {
       id: "column-good",
-      title: "Like",
+      title: "Good",
       img: "/images/emotes/OkayChamp.png",
       contestantsIds: [],
     },
@@ -80,7 +80,7 @@ export const season1 = {
     },
     "column-bad": {
       id: "column-bad",
-      title: "Don't like",
+      title: "Weird",
       img: "/images/emotes/WeirdChamp.png",
       contestantsIds: [],
     },
