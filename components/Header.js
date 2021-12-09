@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { HeaderStyled } from "./styles/HeaderStyled";
 import styled from "styled-components";
+import { FancyLinkStyled } from "./styles/FancyLinkStyled";
 
 const NavContainer = styled.nav`
   right: 40px;
@@ -13,9 +14,6 @@ const NavContainer = styled.nav`
   a {
     font-size: 1.1em;
     margin: 0 10px;
-  }
-  a:hover {
-    border-bottom: 1px solid;
   }
 
   @media (max-width: 1100px) {
@@ -48,27 +46,27 @@ export default function Header({ headerImg }) {
       </div>
       <NavContainer>
         <Link href="/season1">
-          <a>s1</a>
+          <FancyLinkStyled>s1</FancyLinkStyled>
         </Link>
         <Link href="/season2">
-          <a>s2</a>
+          <FancyLinkStyled>s2</FancyLinkStyled>
         </Link>
         <Link href="/season3">
-          <a>s3</a>
+          <FancyLinkStyled>s3</FancyLinkStyled>
         </Link>
         <Link href="/season4">
-          <a>s4</a>
+          <FancyLinkStyled>s4</FancyLinkStyled>
         </Link>
         <Link href="/credits">
-          <a>credits</a>
+          <FancyLinkStyled>credits</FancyLinkStyled>
         </Link>
-        <a
+        <FancyLinkStyled
           href="https://github.com/adamsokolski/xqc-mastercher-tierlist"
           target="_blank"
           rel="noopener noreferrer"
         >
           GitHub
-        </a>
+        </FancyLinkStyled>
       </NavContainer>
     </HeaderStyled>
   );

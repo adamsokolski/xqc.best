@@ -2,8 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
 import { emotesAuthors } from "../../data/emotesAuthors";
-
-// Todo: Credit list - 7tv emotes
+import { FancyLinkStyled } from "../../components/styles/FancyLinkStyled";
 
 const CreditListStyled = styled.div`
   max-width: 100%;
@@ -12,11 +11,14 @@ const CreditListStyled = styled.div`
   justify-content: center;
   text-align: center;
 
-  a {
-    border-bottom: 2px solid ${(props) => props.theme.main1};
-  }
   li {
     list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  strong {
+    margin-right: 5px;
   }
 `;
 
@@ -48,7 +50,7 @@ export default function credits() {
         <h2>xqc.best</h2>
         <ul>
           <li>
-            xQcOW - Concept Creator{"  "}
+            <strong>xQcOW</strong>- Concept Creator{"  "}
             <Image
               src="/images/emotes/pepe5Head.webp"
               width="50"
@@ -57,7 +59,7 @@ export default function credits() {
             />{" "}
           </li>
           <li>
-            NiceDevTools - Front End Developer{"  "}
+            <strong>NiceDevTools</strong> - Front End Developer{"  "}
             <Image
               src="/images/emotes/HACKERMANS_Greekgodx.gif"
               width="50"
@@ -69,7 +71,7 @@ export default function credits() {
         <h2>Emotes</h2>
 
         <Link href="/credits/all-emotes">
-          <a>
+          <FancyLinkStyled>
             All emotes{" "}
             <Image
               src="/images/emotes/WAYTOODANK.gif"
@@ -77,7 +79,7 @@ export default function credits() {
               height="50"
               alt="emote of pepe the frog with huge head"
             />
-          </a>
+          </FancyLinkStyled>
         </Link>
 
         <h3>7tv.app</h3>

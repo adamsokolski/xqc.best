@@ -12,8 +12,7 @@ const Container = styled.header`
   color: white;
   span {
     vertical-align: middle;
-    font-size: 100px;
-    font-weight: 100;
+    font-weight: 200;
     margin: 10px;
   }
 `;

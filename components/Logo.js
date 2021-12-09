@@ -6,14 +6,16 @@ const LogoContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 100px;
-  font-weight: 100;
+
   a {
     display: flex;
     align-items: center;
     justify-content: center;
   }
   span {
+    font-weight: 100;
+    font-size: 60px;
+    font-family: "Montserrat", sans-serif;
     margin: 20px;
   }
 `;

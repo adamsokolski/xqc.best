@@ -6,12 +6,10 @@ import { ContestantContainer } from "../components/styles/ContestantContainer";
 import Link from "next/link";
 import HomeHeader from "../components/HomeHeader";
 import styled from "styled-components";
+import { FancyLinkStyled } from "../components/styles/FancyLinkStyled";
 
 const LinkTitle = styled.h3`
   font-size: 30px;
-  &:hover {
-    color: ${(props) => props.theme.main1};
-  }
 `;
 
 export default function Home({ headerImg }) {
@@ -21,22 +19,22 @@ export default function Home({ headerImg }) {
       <ContainerStyled>
         <LinkTitle>
           <Link href="/season1">
-            <a>Season 1</a>
+            <FancyLinkStyled>Season 1</FancyLinkStyled>
           </Link>
         </LinkTitle>
         <LinkTitle>
           <Link href="/season2">
-            <a>Season 2</a>
+            <FancyLinkStyled>Season 2</FancyLinkStyled>
           </Link>
         </LinkTitle>
         <LinkTitle>
           <Link href="/season3">
-            <a>Season 3</a>
+            <FancyLinkStyled>Season 3</FancyLinkStyled>
           </Link>
         </LinkTitle>
         <LinkTitle>
           <Link href="/season4">
-            <a>Season 4</a>
+            <FancyLinkStyled>Season 4</FancyLinkStyled>
           </Link>
         </LinkTitle>
       </ContainerStyled>
