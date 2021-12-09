@@ -47,6 +47,7 @@ function MyApp({ Component, pageProps }) {
     <Layout headerImg={headerImg}>
       <Head>
         <title>XQC MASTERCHEF TIERLIST</title>
+        <meta name="description" content="SEASON 4 ADDED NOW" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <CookiesProvider>
