@@ -34,6 +34,11 @@ export default function Home({ headerImg }) {
             <a>Season 3</a>
           </Link>
         </LinkTitle>
+        <LinkTitle>
+          <Link href="/season4">
+            <a>Season 4</a>
+          </Link>
+        </LinkTitle>
       </ContainerStyled>
     </div>
   );

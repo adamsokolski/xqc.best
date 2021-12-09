@@ -15,6 +15,9 @@ const CreditListStyled = styled.div`
   a {
     border-bottom: 2px solid ${(props) => props.theme.main1};
   }
+  li {
+    list-style-type: none;
+  }
 `;
 
 const AuthorsList = styled.ul`

@@ -48,16 +48,19 @@ export default function Header({ headerImg }) {
       </div>
       <NavContainer>
         <Link href="/season1">
-          <a>Season 1</a>
+          <a>s1</a>
         </Link>
         <Link href="/season2">
-          <a>Season 2</a>
+          <a>s2</a>
         </Link>
         <Link href="/season3">
-          <a>Season 3</a>
+          <a>s3</a>
+        </Link>
+        <Link href="/season4">
+          <a>s4</a>
         </Link>
         <Link href="/credits">
-          <a>Credits</a>
+          <a>credits</a>
         </Link>
         <a
           href="https://github.com/adamsokolski/xqc-mastercher-tierlist"

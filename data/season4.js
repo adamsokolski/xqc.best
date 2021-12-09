@@ -1,0 +1,105 @@
+export const season4 = {
+  seasonName: "season4",
+  // prettier-ignore
+  contestants: {
+         "contestant-1": { id:"contestant-1", name: "Adriana", img: "/images/contestants/s4/Adriana-Guillen.jpg" },
+         "contestant-2": { id:"contestant-2", name: "Beth", img: "/images/contestants/s4/Beth-Kirby.jpg" },
+         "contestant-3": { id:"contestant-3", name: "Bethy", img: "/images/contestants/s4/Bethy-Rossos.jpg" },
+         "contestant-4": { id:"contestant-4", name: "Bime", img: "/images/contestants/s4/Bime-Cruz.jpg" },
+         "contestant-5": { id:"contestant-5", name: "Bri",img: "/images/contestants/s4/Bri-Kozior.JPG",},
+         "contestant-6": { id:"contestant-6", name: "Eddie", img: "/images/contestants/s4/Eddie-Jackson.jpg" },
+         "contestant-7": { id:"contestant-7", name: "Howard", img: "/images/contestants/s4/Howard-simpson.jpg" },
+         "contestant-8": { id:"contestant-8", name: "James", img: "/images/contestants/s4/James-Nelson.jpg" },
+         "contestant-9": { id:"contestant-9", name: "Jessie", img: "/images/contestants/s4/Jessie-Lysiak.jpg" },
+         "contestant-10": { id:"contestant-10", name: "Jonny",img: "/images/contestants/s4/Jonny-Blanchard.jpg",},
+         "contestant-11": { id:"contestant-11", name: "Jordan", img: "/images/contestants/s4/Jordan-Roots.jpg" },
+         "contestant-12": { id:"contestant-12", name: "Kathy", img: "/images/contestants/s4/Kathy-Prieto.jpg" },
+         "contestant-13": { id:"contestant-13", name: "Krissi", img: "/images/contestants/s4/Krissi-Biasiello.jpg" },
+         "contestant-14": { id:"contestant-14", name: "Luca",img: "/images/contestants/s4/Luca-Manfè.jpg"},
+         "contestant-15": { id:"contestant-15", name: "Lynn", img: "/images/contestants/s4/Lynn-Chyi.jpg" },
+         "contestant-16": { id:"contestant-16", name: "Malcolm",img: "/images/contestants/s4/Malcolm-Green.jpg" },
+         "contestant-17": { id:"contestant-17", name: "Natasha", img: "/images/contestants/s4/Natasha-Crnjac.jpg" },
+         "contestant-18": { id:"contestant-18", name: "Sasha", img: "/images/contestants/s4/Sasha-Foxx.jpg" },
+         "contestant-19": { id:"contestant-19", name: "Savannah", img: "/images/contestants/s4/Savannah-Sturges.jpg" },
+      },
+
+  columns: {
+    "column-start": {
+      id: "column-start",
+      title: "Season 4 - Top 19",
+      contestantsIds: [
+        "contestant-1",
+        "contestant-2",
+        "contestant-3",
+        "contestant-4",
+        "contestant-5",
+        "contestant-6",
+        "contestant-7",
+        "contestant-8",
+        "contestant-9",
+        "contestant-10",
+        "contestant-11",
+        "contestant-12",
+        "contestant-13",
+        "contestant-14",
+        "contestant-15",
+        "contestant-16",
+        "contestant-17",
+        "contestant-18",
+        "contestant-19",
+      ],
+    },
+    "column-good": {
+      id: "column-good",
+      title: "Good",
+      img: "/images/emotes/OkayChamp.png",
+      contestantsIds: [],
+    },
+    "column-good-content": {
+      id: "column-good-content",
+      title: "",
+      imgArr: [
+        {
+          img: "/images/emotes/OkayChamp.png",
+        },
+        {
+          img: "/images/emotes/SillyChamp.png",
+        },
+      ],
+      contestantsIds: [],
+    },
+    "column-content": {
+      id: "column-content",
+      title: "Content",
+      img: "/images/emotes/SillyChamp.png",
+      contestantsIds: [],
+    },
+    "column-content-bad": {
+      id: "column-content-bad",
+      title: "",
+      imgArr: [
+        {
+          img: "/images/emotes/SillyChamp.png",
+        },
+        {
+          img: "/images/emotes/WeirdChamp.png",
+        },
+      ],
+      contestantsIds: [],
+    },
+    "column-bad": {
+      id: "column-bad",
+      title: "Weird",
+      img: "/images/emotes/WeirdChamp.png",
+      contestantsIds: [],
+    },
+  },
+  columnOrder: [
+    "column-start",
+    "column-good",
+    "column-good-content",
+    "column-content",
+    "column-content-bad",
+    "column-bad",
+  ],
+};
