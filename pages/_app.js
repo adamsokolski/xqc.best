@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }) {
           index = 0;
         }
       }, 5000);
-    }, 5000);
+    }, 2000);
   }, []);
   pageProps = { headerImg, ...pageProps };
   return (
