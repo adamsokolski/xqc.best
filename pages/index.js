@@ -37,6 +37,11 @@ export default function Home({ headerImg }) {
             <FancyLinkStyled>Season 4</FancyLinkStyled>
           </Link>
         </LinkTitle>
+        <LinkTitle>
+          <Link href="/challenges">
+            <FancyLinkStyled>Challenges</FancyLinkStyled>
+          </Link>
+        </LinkTitle>
       </ContainerStyled>
     </div>
   );

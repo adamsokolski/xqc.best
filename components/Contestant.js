@@ -13,7 +13,7 @@ const ImageContainer = styled.div`
   img {
     border-radius: 50%;
     object-fit: cover;
-    object-position: 0 0;
+    object-position: 50% 0;
   }
 
   @media (max-width: 900px) {
@@ -52,6 +52,7 @@ const ContestantContainer = styled.div`
   p {
     vertical-align: middle;
     right: -60px;
+
     z-index: 10;
     margin: 0;
     position: ${(props) =>
@@ -94,7 +95,7 @@ export default class Contestant extends Component {
               <Image
                 src={this.props.contestant.img}
                 layout="fill"
-                alt={`${this.props.contestant.name} from MasterChef`}
+                alt={`${this.props.contestant.name}`}
               />
             </ImageContainer>
             <p>{this.props.contestant.name}</p>

@@ -35,7 +35,8 @@ const ContestantsList = styled.div`
   overflow-y: hidden;
   display: flex;
   flex-direction: ${(props) => props.flexDirection};
-  align-items: center;
+  align-items: ${(props) =>
+    props.droppableId === "column-start" ? "flex-start" : "center"};
   justify-content: center;
   flex-wrap: nowrap;
   min-height: ${(props) => props.minHeight};
@@ -84,10 +85,12 @@ export default class Column extends Component {
         >
           {(provided) => (
             <ContestantsList
+              name={this.props.name}
               minHeight={this.props.minHeight}
               flexDirection={this.props.flexDirection}
               bgc={backgrounds[this.props.column.id]}
               ref={provided.innerRef}
+              droppableId={this.props.column.id}
               {...provided.droppableProps}
             >
               {this.props.contestants.map((contestant, index) => (

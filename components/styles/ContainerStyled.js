@@ -6,5 +6,4 @@ export const ContainerStyled = styled.div`
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  height: 400px;
 `;

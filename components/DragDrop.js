@@ -202,6 +202,7 @@ export default function DragDrop({ season }) {
             key={column.id}
             column={column}
             contestants={contestants}
+            name={season.seasonName}
             direction={columnId != "column-start" ? "vertical" : "horizontal"}
             flexDirection={columnId != "column-start" ? "column" : "row"}
             minHeight={columnId != "column-start" ? "200px" : "0"}
