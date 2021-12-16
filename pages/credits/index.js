@@ -34,6 +34,11 @@ const AuthorsList = styled.ul`
   }
 `;
 
+const CreditLink = styled.span`
+  color: ${(props) => props.theme.main1};
+  font-weight: 700;
+`;
+
 export default function credits() {
   const sevenTv = emotesAuthors["7tv"].map((emote) => (
     <li key={emote.id}>{emote.name}</li>
@@ -48,6 +53,13 @@ export default function credits() {
     <CreditListStyled>
       <div>
         <h2>xqc.best</h2>
+        <FancyLinkStyled
+          href="https://github.com/adamsokolski/xqc-mastercher-tierlist"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <CreditLink>GitHub</CreditLink>
+        </FancyLinkStyled>
         <ul>
           <li>
             <strong>xQcOW</strong>- Concept Creator{"  "}
@@ -72,7 +84,7 @@ export default function credits() {
 
         <Link href="/credits/all-emotes">
           <FancyLinkStyled>
-            All emotes{" "}
+            <CreditLink>All emotes </CreditLink>
             <Image
               src="/images/emotes/WAYTOODANK.gif"
               width="50"

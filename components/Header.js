@@ -64,13 +64,6 @@ export default function Header({ headerImg }) {
         <Link href="/credits">
           <FancyLinkStyled>credits</FancyLinkStyled>
         </Link>
-        <FancyLinkStyled
-          href="https://github.com/adamsokolski/xqc-mastercher-tierlist"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub
-        </FancyLinkStyled>
       </NavContainer>
     </HeaderStyled>
   );

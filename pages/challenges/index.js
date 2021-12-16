@@ -52,7 +52,7 @@ export default function Index() {
   return winReady ? (
     <>
       <Info>
-        If you know challenge, that is missing send it to:{" "}
+        If you know challenge, that is missing send it to{" "}
         <strong
           onClick={() => {
             navigator.clipboard.writeText(discordName);
@@ -64,7 +64,7 @@ export default function Index() {
         >
           NiceDevTools#0211
         </strong>
-        {copied ? <Copied>Copied!</Copied> : ""}
+        , thanks. {copied ? <Copied>Copied!</Copied> : ""}
       </Info>
       <Container>
         <DragDrop season={challenges} />

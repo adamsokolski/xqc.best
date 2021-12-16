@@ -18,6 +18,11 @@ export default function Home({ headerImg }) {
       <HomeHeader headerImg={headerImg} />
       <ContainerStyled>
         <LinkTitle>
+          <Link href="/challenges">
+            <FancyLinkStyled>Challenges</FancyLinkStyled>
+          </Link>
+        </LinkTitle>
+        <LinkTitle>
           <Link href="/season1">
             <FancyLinkStyled>Season 1</FancyLinkStyled>
           </Link>
@@ -35,11 +40,6 @@ export default function Home({ headerImg }) {
         <LinkTitle>
           <Link href="/season4">
             <FancyLinkStyled>Season 4</FancyLinkStyled>
-          </Link>
-        </LinkTitle>
-        <LinkTitle>
-          <Link href="/challenges">
-            <FancyLinkStyled>Challenges</FancyLinkStyled>
           </Link>
         </LinkTitle>
       </ContainerStyled>

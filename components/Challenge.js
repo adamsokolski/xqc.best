@@ -48,7 +48,8 @@ const ContestantContainer = styled.div`
   p {
     width: ${(props) =>
       props.droppableId !== "column-start" ? "100px" : "140px"};
-    height: ${(props) => (props.droppableId !== "column-start" ? "140px" : "")};
+    height: ${(props) =>
+      props.droppableId !== "column-start" ? "140px" : "80px"};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,7 +65,7 @@ const ContestantContainer = styled.div`
     @media (max-width: 900px) {
       height: auto;
       width: ${(props) =>
-        props.droppableId !== "column-start" ? "100%" : "140px%"};
+        props.droppableId !== "column-start" ? "100%" : "65px"};
       font-size: 0.9em;
       position: static;
       background-color: transparent;
