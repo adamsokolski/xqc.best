@@ -38,7 +38,8 @@ const ContestantsList = styled.div`
   flex-direction: ${(props) => props.flexDirection};
   align-items: ${(props) =>
     props.droppableId === "column-start" ? "flex-start" : "center"};
-  justify-content: center;
+  justify-content: ${(props) =>
+    props.droppableId === "column-start" ? "" : "center"};
   flex-wrap: nowrap;
   min-height: ${(props) => props.minHeight};
   padding: 5px;
