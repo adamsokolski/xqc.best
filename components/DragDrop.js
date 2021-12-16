@@ -46,6 +46,45 @@ export default function DragDrop({ season }) {
         sameSite: "none",
       });
     }
+
+    if (cookies[season.seasonName] !== undefined) {
+      let contestantsNumberState = Object.keys(season.contestants).length;
+      let contestantsNumberCookies = 0;
+      let cookiesColumnObj = cookies[season.seasonName];
+      for (const key in cookiesColumnObj) {
+        if (Object.hasOwnProperty.call(cookiesColumnObj, key)) {
+          const element = cookiesColumnObj[key];
+          contestantsNumberCookies += Object.keys(
+            element.contestantsIds
+          ).length;
+        }
+      }
+      if (contestantsNumberState > contestantsNumberCookies) {
+        const diff = contestantsNumberState - contestantsNumberCookies;
+        const sliced = Object.fromEntries(
+          Object.entries(season.contestants).slice(-Math.abs(diff))
+        );
+        let tempCookie = cookies[season.seasonName];
+        for (const key in sliced) {
+          if (Object.hasOwnProperty.call(sliced, key)) {
+            const element = sliced[key];
+            tempCookie["column-start"].contestantsIds.push(element.id);
+          }
+        }
+        setCookie(season.seasonName, tempCookie, {
+          maxAge: 157784630,
+          secure: true,
+          sameSite: "none",
+        });
+      } else if (contestantsNumberState < contestantsNumberCookies) {
+        setCookie(season.seasonName, season.columns, {
+          maxAge: 157784630,
+          secure: true,
+          sameSite: "none",
+        });
+        setState(season);
+      }
+    }
   }, []);
 
   // confetti
