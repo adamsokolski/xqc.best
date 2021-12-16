@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { HeaderStyled } from "./styles/HeaderStyled";
 import styled from "styled-components";
-import { FancyLinkStyled } from "./styles/FancyLinkStyled";
+import Hamburger from "./Hamburger";
 
 const NavContainer = styled.nav`
   right: 40px;
@@ -14,15 +14,11 @@ const NavContainer = styled.nav`
 
   @media (max-width: 900px) {
     margin: 10px 0;
-    right: 0;
-    position: relative;
-    width: 100%;
+    justify-content: center;
+
+    position: absolute;
     padding: 2px;
     flex-direction: row;
-  }
-  a {
-    font-size: 1.1em;
-    margin: 0 10px;
   }
 `;
 
@@ -48,23 +44,8 @@ export default function Header({ headerImg }) {
           </a>
         </Link>
       </div>
-      <NavContainer>
-        <Link href="/season1">
-          <FancyLinkStyled>s1</FancyLinkStyled>
-        </Link>
-        <Link href="/season2">
-          <FancyLinkStyled>s2</FancyLinkStyled>
-        </Link>
-        <Link href="/season3">
-          <FancyLinkStyled>s3</FancyLinkStyled>
-        </Link>
-        <Link href="/season4">
-          <FancyLinkStyled>s4</FancyLinkStyled>
-        </Link>
-        <Link href="/credits">
-          <FancyLinkStyled>credits</FancyLinkStyled>
-        </Link>
-      </NavContainer>
+
+      <Hamburger />
     </HeaderStyled>
   );
 }

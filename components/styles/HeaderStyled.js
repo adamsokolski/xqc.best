@@ -6,11 +6,11 @@ export const HeaderStyled = styled.header`
   align-items: center;
   justify-content: center;
   padding: 20px 40px;
-  background-color: #282828;
+  background-color: ${(props) => props.theme.main4};
 
   @media (max-width: 900px) {
     padding: 2px;
-    flex-direction: column;
+    justify-content: flex-start;
   }
 
   div a {

@@ -52,7 +52,7 @@ export default function Index() {
   return winReady ? (
     <>
       <Info>
-        If you know challenge, that is missing send it to{" "}
+        If you know challenge, that is missing you can send it to{" "}
         <strong
           onClick={() => {
             navigator.clipboard.writeText(discordName);
