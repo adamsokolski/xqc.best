@@ -21,9 +21,14 @@ export const challenges = {
            "contestant-17": { id:"contestant-17", name: "Pick ingredient",img: "/images/challenges/17.png"},
            "contestant-18": { id:"contestant-18", name: "Swapping roles every 15 minutes",img: "/images/challenges/18.png"},
            "contestant-19": { id:"contestant-19", name: "Final three-course menu",img: "/images/challenges/19.png"},
-  
+           "contestant-20": { id:"contestant-20", name: "Cooking for office workers",img: "/images/challenges/20.png"},
+           "contestant-21": { id:"contestant-21", name: "Cooking for 101 bikers",img: "/images/challenges/21.png"},
+           "contestant-22": { id:"contestant-22", name: "Pick dish cooked by last year's winner",img: "/images/challenges/22.png"},
+           "contestant-23": { id:"contestant-23", name: "Make a cake with a minimum of 6 layers",img: "/images/challenges/23.png"},
+           "contestant-24": { id:"contestant-24", name: "Pick one for every contestant",img: "/images/challenges/24.png"},
+           "contestant-25": { id:"contestant-25", name: "Cater for a children's party",img: "/images/challenges/25.png"},
+           "contestant-26": { id:"contestant-26", name: "Fillet a whole salmon and cook it",img: "/images/challenges/26.png"}, 
         },
-
   columns: {
     "column-start": {
       id: "column-start",
@@ -48,6 +53,13 @@ export const challenges = {
         "contestant-17",
         "contestant-18",
         "contestant-19",
+        "contestant-20",
+        "contestant-21",
+        "contestant-22",
+        "contestant-23",
+        "contestant-24",
+        "contestant-25",
+        "contestant-26",
       ],
     },
     "column-good": {
