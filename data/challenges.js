@@ -27,7 +27,7 @@ export const challenges = {
   columns: {
     "column-start": {
       id: "column-start",
-      title: "Challenges 🚧",
+      title: "Challenges",
       contestantsIds: [
         "contestant-1",
         "contestant-2",

@@ -38,6 +38,7 @@ export default function DragDrop({ season }) {
         season9: false,
         season10: false,
         season11: false,
+        challenges: false,
       };
       setCookie("confetti", confettiObj, {
         maxAge: 604800,

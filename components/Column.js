@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import Contestant from "./Contestant";
+import Challenge from "./Challenge";
 import { Droppable } from "react-beautiful-dnd";
 import Image from "next/image";
 
@@ -93,15 +94,25 @@ export default class Column extends Component {
               droppableId={this.props.column.id}
               {...provided.droppableProps}
             >
-              {this.props.contestants.map((contestant, index) => (
-                <Contestant
-                  flexDirection={this.props.flexDirection}
-                  key={contestant.id}
-                  contestant={contestant}
-                  index={index}
-                  droppableId={this.props.column.id}
-                />
-              ))}
+              {this.props.contestants.map((contestant, index) =>
+                this.props.name !== "challenges" ? (
+                  <Contestant
+                    flexDirection={this.props.flexDirection}
+                    key={contestant.id}
+                    contestant={contestant}
+                    index={index}
+                    droppableId={this.props.column.id}
+                  />
+                ) : (
+                  <Challenge
+                    flexDirection={this.props.flexDirection}
+                    key={contestant.id}
+                    contestant={contestant}
+                    index={index}
+                    droppableId={this.props.column.id}
+                  />
+                )
+              )}
               {provided.placeholder}
             </ContestantsList>
           )}
