@@ -5,8 +5,16 @@ import Head from "next/head";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { xqcEmotes } from "../data/logoEmotesXqc";
+import { init } from "@socialgouv/matomo-next";
+
+const MATOMO_URL = process.env.NEXT_PUBLIC_MATOMO_URL;
+const MATOMO_SITE_ID = process.env.NEXT_PUBLIC_MATOMO_SITE_ID;
 
 function MyApp({ Component, pageProps }) {
+  useEffect(() => {
+    init({ url: MATOMO_URL, siteId: MATOMO_SITE_ID });
+  }, []);
+
   const [headerImg, setHeaderImg] = useState("/images/xqc-logo.webp");
 
   function shuffle(array) {
