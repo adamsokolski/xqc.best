@@ -28,6 +28,7 @@ export const challenges = {
            "contestant-24": { id:"contestant-24", name: "Pick one for every contestant",img: "/images/challenges/24.png"},
            "contestant-25": { id:"contestant-25", name: "Cater for a children's party",img: "/images/challenges/25.png"},
            "contestant-26": { id:"contestant-26", name: "Fillet a whole salmon and cook it",img: "/images/challenges/26.png"}, 
+           "contestant-27": { id:"contestant-27", name: "Taste test",img: "/images/challenges/27.png"}, 
         },
   columns: {
     "column-start": {
@@ -60,6 +61,7 @@ export const challenges = {
         "contestant-24",
         "contestant-25",
         "contestant-26",
+        "contestant-27",
       ],
     },
     "column-good": {
