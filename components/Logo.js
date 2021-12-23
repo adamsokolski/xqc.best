@@ -31,13 +31,6 @@ export default function Logo({ headerImg }) {
             height="128px"
             alt="logo with xqc"
           />
-          <span>x</span>
-          <Image
-            src="/images/masterchef-logo.svg"
-            width="128px"
-            height="128px"
-            alt="masterchef logo"
-          />
         </a>
       </Link>
     </LogoContainer>

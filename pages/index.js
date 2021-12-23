@@ -46,76 +46,19 @@ const NewTag = styled.span`
 `;
 
 export default function Home({ headerImg }) {
-  const router = useRouter();
-
-  const AllSeasonsClicked = () => {
-    Swal.fire({
-      title: `Potential spoilers`,
-      imageUrl: "/images/logo-emotes/xqcBased-AtypicalLUL.webp",
-      text: "This page will have spoilers of top 5 from 1-5 seasons. Do you want to continue?",
-      showDenyButton: true,
-      confirmButtonText: "Yes",
-      denyButtonText: `No`,
-      color: "white",
-      background: "#333",
-    }).then((result) => {
-      /* Read more about isConfirmed, isDenied below */
-      if (result.isConfirmed) {
-        router.push("/all-seasons");
-      }
-    });
-  };
   return (
     <div>
       <HomeHeader headerImg={headerImg} />
       <ContainerStyled>
-        <Link href="/challenges">
+        <Link href="/2021">
           <LinkTitle>
-            <FancyLinkStyled>Challenges</FancyLinkStyled>
+            <FancyLinkStyled>XQC 2021</FancyLinkStyled>
             <NewTag>New</NewTag>
           </LinkTitle>
         </Link>
-        <LinkTitle>
-          <Link href="/season1">
-            <FancyLinkStyled>Season 1</FancyLinkStyled>
-          </Link>
-        </LinkTitle>
-        <LinkTitle>
-          <Link href="/season2">
-            <FancyLinkStyled>Season 2</FancyLinkStyled>
-          </Link>
-        </LinkTitle>
-        <LinkTitle>
-          <Link href="/season3">
-            <FancyLinkStyled>Season 3</FancyLinkStyled>
-          </Link>
-        </LinkTitle>
-        <LinkTitle>
-          <Link href="/season4">
-            <FancyLinkStyled>Season 4</FancyLinkStyled>
-          </Link>
-        </LinkTitle>
-        <LinkTitle>
-          <Link href="/season5">
-            <FancyLinkStyled>Season 5</FancyLinkStyled>
-          </Link>
-        </LinkTitle>
-        <Link href="/season6">
+        <Link href="/masterchef">
           <LinkTitle>
-            <FancyLinkStyled>Season 6 </FancyLinkStyled>
-            <NewTag>New</NewTag>
-          </LinkTitle>
-        </Link>
-        <Link href="">
-          <LinkTitle>
-            <FancyLinkStyled
-              onClick={() => {
-                AllSeasonsClicked();
-              }}
-            >
-              Seasons 1-5 (Top 5)
-            </FancyLinkStyled>
-            <NewTag>New</NewTag>
+            <FancyLinkStyled>MasterChef tier list</FancyLinkStyled>
           </LinkTitle>
         </Link>
       </ContainerStyled>

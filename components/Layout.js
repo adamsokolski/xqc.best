@@ -36,7 +36,11 @@ export default function Layout({ children, headerImg }) {
   const router = useRouter();
   const [isHome, setIsHome] = useState(false);
   useEffect(() => {
-    if (router.pathname == "/") {
+    if (
+      router.pathname == "/" ||
+      router.pathname == "/masterchef" ||
+      router.pathname == "/2021"
+    ) {
       setIsHome(false);
     } else {
       setIsHome(true);

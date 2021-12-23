@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Logo from "./Logo";
+import Link from "next/link";
 
 const Container = styled.header`
   background-color: #282828;
@@ -8,7 +9,7 @@ const Container = styled.header`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 100px 0;
+  padding: 30px 0;
   color: white;
   span {
     vertical-align: middle;
@@ -24,15 +25,25 @@ const Title = styled.h1`
 `;
 
 const UnderTitle = styled.h2`
+  opacity: 0.9;
+  font-weight: 500;
   text-align: center;
 `;
 
-export default function HomeHeader({ headerImg }) {
+export default function HomeHeader({ headerImg, underTitle }) {
   return (
     <Container>
       <Logo headerImg={headerImg} />
-      <Title>xqc.best</Title>
-      <UnderTitle>MasterChef tier list for our reactor</UnderTitle>
+      <Link href="/">
+        <a>
+          <Title>xqc.best</Title>
+        </a>
+      </Link>
+      {underTitle ? (
+        <UnderTitle>MasterChef tier list for our reactor</UnderTitle>
+      ) : (
+        ""
+      )}
     </Container>
   );
 }
