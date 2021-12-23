@@ -131,4 +131,7 @@ export const xqcEmotes = [
   { id: 118, img: "/images/logo-emotes/xqcWave-MildSalt_.gif" },
   { id: 119, img: "/images/logo-emotes/xqcZZZ-kobwmoose.gif" },
   { id: 120, img: "/images/logo-emotes/xqcZoom-CharlieJesper.gif" },
+  { id: 121, img: "/images/logo-emotes/xqcDespairing-PARTALOSKI.gif" },
+  { id: 121, img: "/images/logo-emotes/VANISH-USPScreature.gif" },
+  { id: 121, img: "/images/logo-emotes/xqcBatChest-eskildbois.png" },
 ];

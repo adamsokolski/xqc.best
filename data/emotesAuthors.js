@@ -127,9 +127,14 @@ export const emotesAuthors = {
     { id: 468, name: "xqcZoom by CharlieJesper" },
     { id: 469, name: "SillyChamp by siiva8805" },
     { id: 470, name: "WAYTOODANK by pajlada" },
+    { id: 471, name: "xqcDespairing by PARTALOSKI" },
   ],
   ffz: [
     { id: 600, name: "WeirdChamp by sundizzle" },
     { id: 601, name: "OkayChamp by Dr_Scrubbington" },
+  ],
+  reddit: [
+    { id: 800, name: "VANISH by u/USPScreature" },
+    { id: 801, name: "xqcBatChest by u/eskildbois" },
   ],
 };

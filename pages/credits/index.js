@@ -49,6 +49,9 @@ export default function credits() {
   const frankerFacez = emotesAuthors["ffz"].map((emote) => (
     <li key={emote.id}>{emote.name}</li>
   ));
+  const reddit = emotesAuthors["reddit"].map((emote) => (
+    <li key={emote.id}>{emote.name}</li>
+  ));
   return (
     <CreditListStyled>
       <div>
@@ -100,6 +103,8 @@ export default function credits() {
         <AuthorsList>{betterTtv}</AuthorsList>
         <h3>frankerfacez.com</h3>
         <AuthorsList>{frankerFacez}</AuthorsList>
+        <h3>r/xQcOW</h3>
+        <AuthorsList>{reddit}</AuthorsList>
       </div>
     </CreditListStyled>
   );
