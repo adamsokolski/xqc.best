@@ -57,13 +57,14 @@ function MyApp({ Component, pageProps }) {
         <title>XQC MASTERCHEF TIERLIST</title>
         <meta
           name="description"
-          content="MasterChef tier list with contestants from seasons 1-6 and challenges."
+          content="MasterChef tier list with contestants from seasons 1-6 and challenges. Rate how much content they are. xqcL"
         />
-        <link rel="icon" href="/favicon.ico" />
         <meta
           property="og:image"
           content="/images/logo-emotes/xqcEat-headchogg.gif"
         />
+        <meta property="og:site_name" content="xqc.best" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <CookiesProvider>
         <Component {...pageProps} />
