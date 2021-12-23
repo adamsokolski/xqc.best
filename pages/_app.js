@@ -60,6 +60,10 @@ function MyApp({ Component, pageProps }) {
           content="MasterChef tier list with contestants from seasons 1-6 and challenges."
         />
         <link rel="icon" href="/favicon.ico" />
+        <meta
+          property="og:image"
+          content="/images/logo-emotes/xqcEat-headchogg.gif"
+        />
       </Head>
       <CookiesProvider>
         <Component {...pageProps} />
