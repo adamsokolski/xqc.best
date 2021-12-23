@@ -1,9 +1,7 @@
-import "../styles/globals.css";
 import Layout from "../components/Layout";
 import { CookiesProvider } from "react-cookie";
 import Head from "next/head";
 import { useState, useEffect } from "react";
-import { useRouter } from "next/router";
 import { xqcEmotes } from "../data/logoEmotesXqc";
 import { init } from "@socialgouv/matomo-next";
 
