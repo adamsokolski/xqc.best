@@ -52,7 +52,7 @@ export default function Home({ headerImg }) {
       <ContainerStyled>
         <Link href="/2021">
           <LinkTitle>
-            <FancyLinkStyled>XQC 2021</FancyLinkStyled>
+            <FancyLinkStyled>Best of XQC 2021</FancyLinkStyled>
             <NewTag>New</NewTag>
           </LinkTitle>
         </Link>
