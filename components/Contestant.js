@@ -51,7 +51,7 @@ const ContestantContainer = styled.div`
 
   p {
     vertical-align: middle;
-    right: -60px;
+    right: ${(props) => (props.name === "seasons" ? "-80px" : "-60px")};
 
     z-index: 10;
     margin: 0;
@@ -62,7 +62,7 @@ const ContestantContainer = styled.div`
     border-radius: 4px;
     padding: ${(props) =>
       props.droppableId !== "column-start" ? "5px 5px 5px 5px" : ""};
-    width: 100%;
+    width: ${(props) => (props.name === "seasons" ? "105%" : "100%")};
     text-align: ${(props) =>
       props.droppableId !== "column-start" ? "right" : "center"};
 
@@ -90,6 +90,7 @@ export default class Contestant extends Component {
             ref={provided.innerRef}
             isDragging={snapshot.isDragging}
             droppableId={this.props.droppableId}
+            name={this.props.name}
           >
             <ImageContainer>
               <Image

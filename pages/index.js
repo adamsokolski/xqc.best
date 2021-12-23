@@ -79,10 +79,15 @@ export default function Home({ headerImg }) {
             <FancyLinkStyled>Season 5</FancyLinkStyled>
           </Link>
         </LinkTitle>
-
         <Link href="/season6">
           <LinkTitle>
             <FancyLinkStyled>Season 6 </FancyLinkStyled>
+            <NewTag>New</NewTag>
+          </LinkTitle>
+        </Link>
+        <Link href="/all-seasons">
+          <LinkTitle>
+            <FancyLinkStyled>Seasons 1-5 (Top 5)</FancyLinkStyled>
             <NewTag>New</NewTag>
           </LinkTitle>
         </Link>

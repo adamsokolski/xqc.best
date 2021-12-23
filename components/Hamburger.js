@@ -106,6 +106,9 @@ export default function Hamburger() {
           <Link href="/season6">
             <FancyLinkStyled>Season 6</FancyLinkStyled>
           </Link>
+          <Link href="/all-seasons">
+            <FancyLinkStyled>Seasons 1-5 (Top 5)</FancyLinkStyled>
+          </Link>
           <Link href="/credits">
             <FancyLinkStyled>Credits</FancyLinkStyled>
           </Link>

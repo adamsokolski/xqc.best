@@ -103,6 +103,7 @@ export default class Column extends Component {
                     contestant={contestant}
                     index={index}
                     droppableId={this.props.column.id}
+                    name={this.props.name}
                   />
                 ) : (
                   <Challenge
