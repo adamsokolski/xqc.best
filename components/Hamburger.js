@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { Turn as Ham } from "hamburger-react";
 import { keyframes } from "styled-components";
+import Swal from "sweetalert2";
 
 const fadeIn = keyframes`
   0% {
@@ -66,6 +67,7 @@ const List = styled.div`
 export default function Hamburger() {
   const [isOpen, setIsOpen] = useState(false);
   const [outAnim, setOutAnim] = useState(false);
+
   const router = useRouter();
   useEffect(() => {
     setIsOpen(false);
@@ -79,6 +81,26 @@ export default function Hamburger() {
       setOutAnim(isOpen);
     }
   }, [isOpen]);
+
+  const AllSeasonsClicked = () => {
+    Swal.fire({
+      title: `Potential spoilers`,
+      imageUrl: "/images/logo-emotes/xqcBased-AtypicalLUL.webp",
+      text: "This page will have spoilers of top 5 from 1-5 seasons. Do you want to continue?",
+      showDenyButton: true,
+      confirmButtonText: "Yes",
+      denyButtonText: `No`,
+      color: "white",
+      background: "#333",
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        router.push("/all-seasons");
+      } else if (result.isDenied) {
+        router.push("/");
+      }
+    });
+  };
   return (
     <Container>
       <Ham toggled={isOpen} toggle={setIsOpen} />
@@ -106,8 +128,10 @@ export default function Hamburger() {
           <Link href="/season6">
             <FancyLinkStyled>Season 6</FancyLinkStyled>
           </Link>
-          <Link href="/all-seasons">
-            <FancyLinkStyled>Seasons 1-5 (Top 5)</FancyLinkStyled>
+          <Link href="">
+            <FancyLinkStyled onClick={() => AllSeasonsClicked()}>
+              Seasons 1-5 (Top 5)
+            </FancyLinkStyled>
           </Link>
           <Link href="/credits">
             <FancyLinkStyled>Credits</FancyLinkStyled>

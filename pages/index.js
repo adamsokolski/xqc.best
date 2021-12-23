@@ -4,6 +4,8 @@ import HomeHeader from "../components/HomeHeader";
 import styled from "styled-components";
 import { FancyLinkStyled } from "../components/styles/FancyLinkStyled";
 import { keyframes } from "styled-components";
+import { useRouter } from "next/router";
+import Swal from "sweetalert2";
 
 const gradientAnimation = keyframes`
  to {
@@ -44,6 +46,27 @@ const NewTag = styled.span`
 `;
 
 export default function Home({ headerImg }) {
+  const router = useRouter();
+
+  const AllSeasonsClicked = () => {
+    Swal.fire({
+      title: `Potential spoilers`,
+      imageUrl: "/images/logo-emotes/xqcBased-AtypicalLUL.webp",
+      text: "This page will have spoilers of top 5 from 1-5 seasons. Do you want to continue?",
+      showDenyButton: true,
+      confirmButtonText: "Yes",
+      denyButtonText: `No`,
+      color: "white",
+      background: "#333",
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        router.push("/all-seasons");
+      } else if (result.isDenied) {
+        router.push("/");
+      }
+    });
+  };
   return (
     <div>
       <HomeHeader headerImg={headerImg} />
@@ -85,9 +108,15 @@ export default function Home({ headerImg }) {
             <NewTag>New</NewTag>
           </LinkTitle>
         </Link>
-        <Link href="/all-seasons">
+        <Link href="">
           <LinkTitle>
-            <FancyLinkStyled>Seasons 1-5 (Top 5)</FancyLinkStyled>
+            <FancyLinkStyled
+              onClick={() => {
+                AllSeasonsClicked();
+              }}
+            >
+              Seasons 1-5 (Top 5)
+            </FancyLinkStyled>
             <NewTag>New</NewTag>
           </LinkTitle>
         </Link>
