@@ -93,7 +93,8 @@ export default class Challenge extends Component {
             <ImageContainer>
               <Image
                 src={this.props.contestant.img}
-                layout="fill"
+                height="140px"
+                width="140px"
                 alt={`${this.props.contestant.name}`}
               />
             </ImageContainer>
