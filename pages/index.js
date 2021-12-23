@@ -62,8 +62,6 @@ export default function Home({ headerImg }) {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
         router.push("/all-seasons");
-      } else if (result.isDenied) {
-        router.push("/");
       }
     });
   };
