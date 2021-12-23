@@ -113,7 +113,7 @@ const Strong = styled.strong`
   cursor: pointer;
 `;
 
-export default function index({ headerImg }) {
+export default function Index({ headerImg }) {
   const [discordName, setDiscordName] = useState("NiceDevTools#0211");
   const [copied, setCopied] = useState(false);
   return (
@@ -121,7 +121,7 @@ export default function index({ headerImg }) {
       <HomeHeader headerImg={headerImg} />
       <h2>Best of XQC 2021</h2>
       <UnderTitle>
-        <Important>Voting isn't open yet!</Important>
+        <Important>Voting isn&apos;t open yet!</Important>
         When all categories will be complete, link to form will be here.
       </UnderTitle>
       <UnderTitle>
