@@ -225,7 +225,12 @@ export const xqc2021 = {
           link: "https://streamable.com/7u9xdy",
           thumbnail: "/images/xqc2021/monkaw/2.png",
         },
-        { id: 3, name: "", link: "", thumbnail: "/images/xqc2021/monkaw/" },
+        {
+          id: 3,
+          name: "Lights",
+          link: "https://streamable.com/sk3r4s",
+          thumbnail: "/images/xqc2021/monkaw/3.png",
+        },
         { id: 4, name: "", link: "", thumbnail: "/images/xqc2021/monkaw/" },
         { id: 5, name: "", link: "", thumbnail: "/images/xqc2021/monkaw/" },
       ],
