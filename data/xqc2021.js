@@ -108,7 +108,7 @@ export const xqc2021 = {
           id: 1,
           name: "Sigma male Ending",
           link: "https://streamable.com/zw1k0e",
-          thumbnail: "/images/xqc2021/category3/1.jpg",
+          thumbnail: "/images/xqc2021/category3/1.png",
         },
         {
           id: 2,
