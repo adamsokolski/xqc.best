@@ -22,6 +22,7 @@ const Title = styled.h1`
   margin: 20px 0 0 0;
   padding: 0;
   text-align: center;
+  font-weight: 400;
 `;
 
 const UnderTitle = styled.h2`

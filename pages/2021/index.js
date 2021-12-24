@@ -4,6 +4,8 @@ import styled from "styled-components";
 import Image from "next/image";
 import { keyframes } from "styled-components";
 import { useState } from "react";
+import { FancyLinkStyled } from "../../components/styles/FancyLinkStyled";
+import { BiLinkExternal } from "react-icons/bi";
 
 const Container = styled.div`
   width: 100%;
@@ -12,6 +14,10 @@ const Container = styled.div`
   justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
+`;
+
+const Title = styled.h2`
+  font-size: 2em;
 `;
 
 const ImageContainer = styled.div`
@@ -33,7 +39,7 @@ const ImageContainer = styled.div`
 `;
 
 const Categories = styled.div`
-  max-width: 1000px;
+  max-width: 1400px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,9 +51,10 @@ const Category = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-bottom: 50px;
   @media (max-width: 900px) {
     flex-direction: column;
   }
@@ -59,7 +66,7 @@ const CategoryTitle = styled.h3`
   width: 100%;
 `;
 const Option = styled.div`
-  width: 45%;
+  width: 30%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -84,7 +91,7 @@ const UnderTitle = styled.p`
 
 const Important = styled.span`
   font-size: 1.4em;
-  font-weight: 700;
+  font-weight: 600;
   margin: 0 10px;
   padding: 10px;
   background-color: rgba(252, 50, 50, 0.5);
@@ -116,10 +123,11 @@ const Strong = styled.strong`
 export default function Index({ headerImg }) {
   const [discordName, setDiscordName] = useState("NiceDevTools#0211");
   const [copied, setCopied] = useState(false);
+
   return (
     <Container>
       <HomeHeader headerImg={headerImg} />
-      <h2>Best of XQC 2021</h2>
+      <Title>Best of XQC 2021</Title>
       <UnderTitle>
         <Important>Voting isn&apos;t open yet!</Important>
         When all categories will be complete, link to form will be here.
@@ -149,7 +157,7 @@ export default function Index({ headerImg }) {
                   {option.thumbnail ? (
                     <Image
                       src={option.thumbnail}
-                      height="200px"
+                      height="300px"
                       width="450px"
                       alt={option.name}
                     />
@@ -157,7 +165,21 @@ export default function Index({ headerImg }) {
                     ""
                   )}
                 </ImageContainer>
-                <OptionName>{option.name}</OptionName>
+                <OptionName>
+                  {option.link ? (
+                    <FancyLinkStyled
+                      href={option.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {option.name} <BiLinkExternal />
+                    </FancyLinkStyled>
+                  ) : (
+                    option.name
+                  )}
+
+                  {}
+                </OptionName>
               </Option>
             ))}
           </Category>

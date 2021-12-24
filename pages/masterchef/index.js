@@ -45,6 +45,15 @@ const NewTag = styled.span`
   padding: 2px 5px 5px 5px;
 `;
 
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 50px 0;
+`;
+
 export default function Masterchef({ headerImg }) {
   const router = useRouter();
 
@@ -68,7 +77,7 @@ export default function Masterchef({ headerImg }) {
   return (
     <div>
       <HomeHeader headerImg={headerImg} underTitle={true} />
-      <ContainerStyled>
+      <Container>
         <Link href="/challenges">
           <LinkTitle>
             <FancyLinkStyled>Challenges</FancyLinkStyled>
@@ -118,7 +127,7 @@ export default function Masterchef({ headerImg }) {
             <NewTag>New</NewTag>
           </LinkTitle>
         </Link>
-      </ContainerStyled>
+      </Container>
     </div>
   );
 }

@@ -43,11 +43,48 @@ export const xqc2021 = {
       name: "Best setup",
       img: "",
       options: [
-        { id: 1, name: "", link: "", thumbnail: "" },
-        { id: 2, name: "", link: "", thumbnail: "" },
-        { id: 3, name: "", link: "", thumbnail: "" },
-        { id: 4, name: "", link: "", thumbnail: "" },
-        { id: 5, name: "", link: "", thumbnail: "" },
+        {
+          id: 1,
+          name: "Setup 1",
+          link: "",
+          thumbnail: "/images/xqc2021/place1.png",
+        },
+        {
+          id: 2,
+          name: "Setup 2",
+          link: "",
+          thumbnail: "/images/xqc2021/place2.png",
+        },
+        {
+          id: 3,
+          name: "Setup 3",
+          link: "",
+          thumbnail: "/images/xqc2021/place3.png",
+        },
+        {
+          id: 4,
+          name: "Setup 4",
+          link: "",
+          thumbnail: "/images/xqc2021/place4.png",
+        },
+        {
+          id: 5,
+          name: "Setup 5",
+          link: "",
+          thumbnail: "/images/xqc2021/place5.png",
+        },
+        {
+          id: 6,
+          name: "Setup 6",
+          link: "",
+          thumbnail: "/images/xqc2021/place6.png",
+        },
+        {
+          id: 7,
+          name: "Setup 7",
+          link: "",
+          thumbnail: "/images/xqc2021/place7.png",
+        },
       ],
     },
     {
@@ -67,7 +104,12 @@ export const xqc2021 = {
       name: "Best Pepega moment",
       img: "",
       options: [
-        { id: 1, name: "", link: "", thumbnail: "" },
+        {
+          id: 1,
+          name: "Romeo and Julia",
+          link: "https://streamable.com/h3263g",
+          thumbnail: "/images/xqc2021/category4/1.jpg",
+        },
         { id: 2, name: "", link: "", thumbnail: "" },
         { id: 3, name: "", link: "", thumbnail: "" },
         { id: 4, name: "", link: "", thumbnail: "" },
