@@ -116,9 +116,24 @@ export const xqc2021 = {
           link: "https://streamable.com/yepyrv",
           thumbnail: "/images/xqc2021/category3/2.png",
         },
-        { id: 3, name: "", link: "", thumbnail: "/images/xqc2021/" },
-        { id: 4, name: "", link: "", thumbnail: "/images/xqc2021/" },
-        { id: 5, name: "", link: "", thumbnail: "/images/xqc2021/" },
+        {
+          id: 3,
+          name: "Sad sheeesh jebaited",
+          link: "https://streamable.com/ssdmzm",
+          thumbnail: "/images/xqc2021/category3/3.png",
+        },
+        {
+          id: 4,
+          name: "Sheeesh with Sammy",
+          link: "https://streamable.com/v8zqgt",
+          thumbnail: "/images/xqc2021/category3/4.png",
+        },
+        {
+          id: 5,
+          name: "",
+          link: "",
+          thumbnail: "/images/xqc2021/category3/5.png",
+        },
       ],
     },
     {
@@ -188,7 +203,7 @@ export const xqc2021 = {
       ],
     },
     {
-      id: "category-6",
+      id: "category-20",
       name: "Best monkaW moment",
       img: "",
       options: [
@@ -210,11 +225,38 @@ export const xqc2021 = {
       ],
     },
     {
+      id: "category-21",
+      name: "Best SOY moment",
+      img: "",
+      options: [
+        {
+          id: 1,
+          name: "Valorant PRO",
+          link: "https://streamable.com/ztzinl",
+          thumbnail: "/images/xqc2021/soy/1.png",
+        },
+        {
+          id: 2,
+          name: "Phasmophobia",
+          link: "https://streamable.com/7u9xdy",
+          thumbnail: "/images/xqc2021/soy/2.png",
+        },
+        { id: 3, name: "", link: "", thumbnail: "/images/xqc2021/soy/" },
+        { id: 4, name: "", link: "", thumbnail: "/images/xqc2021/soy/" },
+        { id: 5, name: "", link: "", thumbnail: "/images/xqc2021/soy/" },
+      ],
+    },
+    {
       id: "category-7",
       name: "Best rage",
       img: "",
       options: [
-        { id: 1, name: "", link: "", thumbnail: "/images/xqc2021/" },
+        {
+          id: 1,
+          name: "Controller",
+          link: "https://streamable.com/wbz3tl",
+          thumbnail: "/images/xqc2021/rage/1.png",
+        },
         { id: 2, name: "", link: "", thumbnail: "/images/xqc2021/" },
         { id: 3, name: "", link: "", thumbnail: "/images/xqc2021/" },
         { id: 4, name: "", link: "", thumbnail: "/images/xqc2021/" },
@@ -255,9 +297,14 @@ export const xqc2021 = {
           link: "https://streamable.com/g0qbfy",
           thumbnail: "/images/xqc2021/tts/2.png",
         },
-        { id: 3, name: "", link: "", thumbnail: "/images/xqc2021/" },
-        { id: 4, name: "", link: "", thumbnail: "/images/xqc2021/" },
-        { id: 5, name: "", link: "", thumbnail: "/images/xqc2021/" },
+        {
+          id: 3,
+          name: "Spongebob",
+          link: "https://streamable.com/zxabcy",
+          thumbnail: "/images/xqc2021/tts/3.png",
+        },
+        { id: 4, name: "", link: "", thumbnail: "/images/xqc2021/tts/4.png" },
+        { id: 5, name: "", link: "", thumbnail: "/images/xqc2021/tts/5.png" },
       ],
     },
     {
