@@ -4,8 +4,7 @@ import HomeHeader from "../components/HomeHeader";
 import styled from "styled-components";
 import { FancyLinkStyled } from "../components/styles/FancyLinkStyled";
 import { keyframes } from "styled-components";
-import { useRouter } from "next/router";
-import Swal from "sweetalert2";
+import Image from "next/image";
 
 const gradientAnimation = keyframes`
  to {
@@ -16,106 +15,62 @@ const gradientAnimation = keyframes`
 const LinkTitle = styled.h3`
   position: relative;
   font-size: 30px;
-  margin: 25px 0;
+  margin: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 `;
 
-const NewTag = styled.span`
-  right: -60px;
-  position: absolute;
-  font-size: 20px;
-  background: radial-gradient(
-    circle,
-    ${(props) => props.theme.main1} 0%,
-    rgba(255, 199, 95, 1) 100%
-  );
-  background-size: 200% auto;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
-  font-weight: 900;
-  font-style: italic;
+const ImageContainer = styled.div`
+  z-index: 11;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
 
-  animation: ${gradientAnimation} 4s cubic-bezier(0.68, -0.6, 0.32, 1.6)
-    infinite;
-  border-radius: 20px;
-  padding: 2px 5px 5px 5px;
+  img {
+    border-radius: 4px;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center center;
+    cursor: pointer;
+  }
 `;
 
 export default function Home({ headerImg }) {
-  const router = useRouter();
-
-  const AllSeasonsClicked = () => {
-    Swal.fire({
-      title: `Potential spoilers`,
-      imageUrl: "/images/logo-emotes/xqcBased-AtypicalLUL.webp",
-      text: "This page will have spoilers of top 5 from 1-5 seasons. Do you want to continue?",
-      showDenyButton: true,
-      confirmButtonText: "Yes",
-      denyButtonText: `No`,
-      color: "white",
-      background: "#333",
-    }).then((result) => {
-      /* Read more about isConfirmed, isDenied below */
-      if (result.isConfirmed) {
-        router.push("/all-seasons");
-      }
-    });
-  };
   return (
     <div>
       <HomeHeader headerImg={headerImg} />
       <ContainerStyled>
-        <Link href="/challenges">
+        <Link href="/2021">
           <LinkTitle>
-            <FancyLinkStyled>Challenges</FancyLinkStyled>
-            <NewTag>New</NewTag>
+            <ImageContainer>
+              <Image
+                src="/images/bestof2021xqc.png"
+                width="300px"
+                height="300px"
+                alt="Emotes of xqc with 2021 heading"
+              />
+            </ImageContainer>
+
+            <FancyLinkStyled>Best of XQC 2021</FancyLinkStyled>
           </LinkTitle>
         </Link>
-        <LinkTitle>
-          <Link href="/season1">
-            <FancyLinkStyled>Season 1</FancyLinkStyled>
-          </Link>
-        </LinkTitle>
-        <LinkTitle>
-          <Link href="/season2">
-            <FancyLinkStyled>Season 2</FancyLinkStyled>
-          </Link>
-        </LinkTitle>
-        <LinkTitle>
-          <Link href="/season3">
-            <FancyLinkStyled>Season 3</FancyLinkStyled>
-          </Link>
-        </LinkTitle>
-        <LinkTitle>
-          <Link href="/season4">
-            <FancyLinkStyled>Season 4</FancyLinkStyled>
-          </Link>
-        </LinkTitle>
-        <LinkTitle>
-          <Link href="/season5">
-            <FancyLinkStyled>Season 5</FancyLinkStyled>
-          </Link>
-        </LinkTitle>
-        <Link href="/season6">
+        <Link href="/masterchef">
           <LinkTitle>
-            <FancyLinkStyled>Season 6 </FancyLinkStyled>
-            <NewTag>New</NewTag>
-          </LinkTitle>
-        </Link>
-        <Link href="">
-          <LinkTitle>
-            <FancyLinkStyled
-              onClick={() => {
-                AllSeasonsClicked();
-              }}
-            >
-              Seasons 1-5 (Top 5)
-            </FancyLinkStyled>
-            <NewTag>New</NewTag>
+            <ImageContainer>
+              <Image
+                src="/images/masterchef.webp"
+                width="300px"
+                height="300px"
+                alt="Masterchef trophy"
+              />
+            </ImageContainer>
+            <FancyLinkStyled>MasterChef tier list</FancyLinkStyled>
           </LinkTitle>
         </Link>
       </ContainerStyled>
