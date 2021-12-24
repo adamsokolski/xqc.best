@@ -102,7 +102,7 @@ export const xqc2021 = {
           id: 2,
           name: "Rare Gachi Ending",
           link: "https://streamable.com/yepyrv",
-          thumbnail: "2.png",
+          thumbnail: "/images/xqc2021/category3/2.png",
         },
         { id: 3, name: "", link: "", thumbnail: "" },
         { id: 4, name: "", link: "", thumbnail: "" },
