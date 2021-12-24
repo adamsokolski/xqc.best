@@ -106,7 +106,7 @@ export const xqc2021 = {
       options: [
         {
           id: 1,
-          name: "Romeo and Julia",
+          name: "Romeo and Juliet",
           link: "https://streamable.com/h3263g",
           thumbnail: "/images/xqc2021/category4/1.jpg",
         },
