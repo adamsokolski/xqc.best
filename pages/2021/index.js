@@ -86,6 +86,9 @@ const OptionName = styled.p`
 `;
 
 const UnderTitle = styled.p`
+  text-align: center;
+  line-height: 35px;
+  margin: 0 20px;
   font-size: 1.2em;
 `;
 
@@ -93,7 +96,7 @@ const Important = styled.span`
   font-size: 1.4em;
   font-weight: 600;
   margin: 0 10px;
-  padding: 10px;
+  padding: 5px 10px;
   background-color: rgba(252, 50, 50, 0.5);
 `;
 
