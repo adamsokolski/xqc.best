@@ -282,7 +282,7 @@ export const xqc2021 = {
         {
           id: 1,
           name: "Beeanz",
-          link: "https://streamable.com/lw8mix",
+          link: "https://streamable.com/87xgov",
           thumbnail: "/images/xqc2021/category12/1.png",
         },
         {
@@ -293,7 +293,7 @@ export const xqc2021 = {
         },
         {
           id: 3,
-          name: "It arived",
+          name: "It arrived",
           link: "https://streamable.com/85kij1",
           thumbnail: "/images/xqc2021/category12/3.png",
         },
