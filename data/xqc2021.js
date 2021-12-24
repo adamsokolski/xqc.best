@@ -333,7 +333,12 @@ export const xqc2021 = {
       name: "Best fart",
       img: "",
       options: [
-        { id: 1, name: "", link: "", thumbnail: "/images/xqc2021/" },
+        {
+          id: 1,
+          name: "...in front of Sammy",
+          link: "https://streamable.com/9z5x7q",
+          thumbnail: "/images/xqc2021/fart/1.png",
+        },
         { id: 2, name: "", link: "", thumbnail: "/images/xqc2021/" },
         { id: 3, name: "", link: "", thumbnail: "/images/xqc2021/" },
         { id: 4, name: "", link: "", thumbnail: "/images/xqc2021/" },
