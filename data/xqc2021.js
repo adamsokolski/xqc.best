@@ -10,7 +10,7 @@ export const xqc2021 = {
           id: 1,
           name: "GTA RP",
           link: "",
-          thumbnail: "/images/xqc2021/gtarp.png",
+          thumbnail: "/images/xqc2021/gtarp2.jpg",
         },
         {
           id: 2,
@@ -35,6 +35,12 @@ export const xqc2021 = {
           name: "MasterChef",
           link: "",
           thumbnail: "/images/xqc2021/masterchef.jpg",
+        },
+        {
+          id: 6,
+          name: "Mario Kart gamba",
+          link: "",
+          thumbnail: "/images/xqc2021/mario.jpg",
         },
       ],
     },
@@ -125,7 +131,7 @@ export const xqc2021 = {
         {
           id: 4,
           name: "Sheeesh with Sammy",
-          link: "https://streamable.com/v8zqgt",
+          link: "https://streamable.com/6qcv8s",
           thumbnail: "/images/xqc2021/category3/4.png",
         },
         {
@@ -241,9 +247,24 @@ export const xqc2021 = {
           link: "https://streamable.com/wpbivx",
           thumbnail: "/images/xqc2021/soy/2.png",
         },
-        { id: 3, name: "", link: "", thumbnail: "/images/xqc2021/soy/" },
-        { id: 4, name: "", link: "", thumbnail: "/images/xqc2021/soy/" },
-        { id: 5, name: "", link: "", thumbnail: "/images/xqc2021/soy/" },
+        {
+          id: 3,
+          name: "I Can Clutch, Watch This...",
+          link: "https://streamable.com/ug9dbh",
+          thumbnail: "/images/xqc2021/soy/3.png",
+        },
+        {
+          id: 4,
+          name: "Ulted",
+          link: "https://streamable.com/cspt99",
+          thumbnail: "/images/xqc2021/soy/4.png",
+        },
+        {
+          id: 5,
+          name: "a",
+          link: "https://streamable.com/sfcmja",
+          thumbnail: "/images/xqc2021/soy/5.png",
+        },
       ],
     },
     {
