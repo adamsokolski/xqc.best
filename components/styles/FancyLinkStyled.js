@@ -14,6 +14,7 @@ export const FancyLinkStyled = styled.a`
   transition: background-size 300ms ease;
   cursor: pointer;
   text-decoration: none;
+  text-align: center;
 
   &:hover {
     background-size: 100% 2px;
