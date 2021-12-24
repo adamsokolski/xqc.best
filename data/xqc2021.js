@@ -238,7 +238,7 @@ export const xqc2021 = {
         {
           id: 2,
           name: "Phasmophobia",
-          link: "https://streamable.com/7u9xdy",
+          link: "https://streamable.com/wpbivx",
           thumbnail: "/images/xqc2021/soy/2.png",
         },
         { id: 3, name: "", link: "", thumbnail: "/images/xqc2021/soy/" },
