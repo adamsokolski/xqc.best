@@ -52,10 +52,10 @@ function MyApp({ Component, pageProps }) {
   return (
     <Layout headerImg={headerImg}>
       <Head>
-        <title>XQC MASTERCHEF TIERLIST</title>
+        <title>XQC.BEST</title>
         <meta
           name="description"
-          content="MasterChef tier list with contestants from seasons 1-6 and challenges. Rate how much content they are. xqcL"
+          content="Best of xQcOW 2021. MasterChef tier list with contestants from seasons 1-6 and challenges. Rate how much content they are xqcL"
         />
         <meta
           property="og:image"
