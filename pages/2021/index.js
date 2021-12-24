@@ -157,7 +157,7 @@ export default function Index({ headerImg }) {
             {category.options.map((option) => (
               <Option key={option.id}>
                 <ImageContainer>
-                  {option.thumbnail ? (
+                  {option.name ? (
                     <Image
                       src={option.thumbnail}
                       height="300px"
