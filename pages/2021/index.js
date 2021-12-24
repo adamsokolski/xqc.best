@@ -133,7 +133,7 @@ export default function Index({ headerImg }) {
       <Title>Best of XQC 2021</Title>
       <UnderTitle>
         <Important>Voting isn&apos;t open yet!</Important>
-        When all categories will be complete, link to form will be here.
+        When all categories will be completed, a link to the form will be here.
       </UnderTitle>
       <UnderTitle>
         If you want to contribute (categories, options, other...) dm{" "}
