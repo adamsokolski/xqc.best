@@ -136,8 +136,8 @@ export const xqc2021 = {
         },
         {
           id: 5,
-          name: "",
-          link: "",
+          name: "Xqc gets cancelled live",
+          link: "https://streamable.com/52rsoo",
           thumbnail: "/images/xqc2021/category3/5.png",
         },
       ],
@@ -350,11 +350,58 @@ export const xqc2021 = {
       name: "Best fanart",
       img: "",
       options: [
-        { id: 1, name: "", link: "", thumbnail: "/images/xqc2021/" },
-        { id: 2, name: "", link: "", thumbnail: "/images/xqc2021/" },
+        {
+          id: 1,
+          name: "Crust XQC by u/Mundo_69",
+          link: "",
+          thumbnail: "/images/xqc2021/fanart/1.jpg",
+        },
+        {
+          id: 2,
+          name: "",
+          link: "",
+          thumbnail: "/images/xqc2021/",
+        },
         { id: 3, name: "", link: "", thumbnail: "/images/xqc2021/" },
         { id: 4, name: "", link: "", thumbnail: "/images/xqc2021/" },
         { id: 5, name: "", link: "", thumbnail: "/images/xqc2021/" },
+      ],
+    },
+    {
+      id: "category-22",
+      name: "Best fan video",
+      img: "",
+      options: [
+        {
+          id: 1,
+          name: "LOCALS by u/F1BBA",
+          link: "https://streamable.com/zb3fgx",
+          thumbnail: "/images/xqc2021/fanvideo/1.png",
+        },
+        {
+          id: 2,
+          name: "Six Consoles by Greg Foster",
+          link: "https://streamable.com/pk6may",
+          thumbnail: "/images/xqc2021/fanvideo/2.png",
+        },
+        {
+          id: 3,
+          name: "Xqc drowning on juice by u/BesiegeChanne",
+          link: "https://streamable.com/s7uwbm",
+          thumbnail: "/images/xqc2021/fanvideo/3.png",
+        },
+        {
+          id: 4,
+          name: "When xQc leaves the room by u/Elo-Guvna",
+          link: "https://streamable.com/ccfutk",
+          thumbnail: "/images/xqc2021/fanvideo/4.png",
+        },
+        {
+          id: 5,
+          name: "",
+          link: "",
+          thumbnail: "/images/xqc2021/fanvideo/5.png",
+        },
       ],
     },
     {
