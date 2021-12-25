@@ -329,8 +329,24 @@ export const xqc2021 = {
           link: "https://streamable.com/zxabcy",
           thumbnail: "/images/xqc2021/tts/3.png",
         },
-        { id: 4, name: "", link: "", thumbnail: "/images/xqc2021/tts/4.png" },
-        { id: 5, name: "", link: "", thumbnail: "/images/xqc2021/tts/5.png" },
+        {
+          id: 4,
+          name: "Coping mechanism",
+          link: "https://streamable.com/4panu0",
+          thumbnail: "/images/xqc2021/tts/4.png",
+        },
+        {
+          id: 5,
+          name: "Hey felix!",
+          link: "https://streamable.com/xjkebe",
+          thumbnail: "/images/xqc2021/tts/5.png",
+        },
+        {
+          id: 6,
+          name: "Its really dank düd",
+          link: "https://streamable.com/dhe920",
+          thumbnail: "/images/xqc2021/tts/6.png",
+        },
       ],
     },
     {
