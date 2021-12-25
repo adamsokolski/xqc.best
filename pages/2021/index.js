@@ -6,6 +6,7 @@ import { keyframes } from "styled-components";
 import { useState } from "react";
 import { FancyLinkStyled } from "../../components/styles/FancyLinkStyled";
 import { BiLinkExternal } from "react-icons/bi";
+import { xqc2021contributors } from "../../data/xqc2021contributors";
 
 const Container = styled.div`
   width: 100%;
@@ -54,7 +55,7 @@ const Category = styled.div`
   justify-content: flex-start;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-bottom: 50px;
+  margin-top: 50px;
   @media (max-width: 900px) {
     flex-direction: column;
   }
@@ -88,7 +89,7 @@ const OptionName = styled.p`
 const UnderTitle = styled.p`
   text-align: center;
   line-height: 35px;
-  margin: 0 20px;
+  margin: 5px 20px;
   font-size: 1.2em;
 `;
 
@@ -123,6 +124,19 @@ const Strong = styled.strong`
   cursor: pointer;
 `;
 
+const Contributor = styled.span`
+  font-size: 0.8em;
+  display: inline-block;
+  margin: 0 5px;
+  background-color: #222;
+  border-radius: 4px;
+  padding: 0 5px;
+  transition: 300ms ease-in-out;
+  &:hover {
+    background-color: #111;
+  }
+`;
+
 export default function Index({ headerImg }) {
   const [discordName, setDiscordName] = useState("NiceDevTools#0211");
   const [copied, setCopied] = useState(false);
@@ -149,6 +163,13 @@ export default function Index({ headerImg }) {
           NiceDevTools#0211
         </Strong>
         {copied ? <Copied>Copied!</Copied> : ""}
+      </UnderTitle>
+
+      <UnderTitle>
+        Contributors:{" "}
+        {xqc2021contributors.map((user) => (
+          <Contributor key={user.name}>{user.name}</Contributor>
+        ))}
       </UnderTitle>
       <Categories>
         {xqc2021.categories.map((category) => (
