@@ -305,8 +305,8 @@ export const xqc2021 = {
       options: [
         {
           id: 1,
-          name: "",
-          link: "",
+          name: "Birthday video from Nick",
+          link: "https://streamable.com/4fcl46",
           thumbnail: "/images/xqc2021/wholesome/1.jpg",
         },
         {
