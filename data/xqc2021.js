@@ -183,6 +183,12 @@ export const xqc2021 = {
           link: "https://streamable.com/iyip4q",
           thumbnail: "/images/xqc2021/category4/5.png",
         },
+        {
+          id: 6,
+          name: "Who would buy this sh*t?",
+          link: "https://streamable.com/6q2r3s",
+          thumbnail: "/images/xqc2021/category4/6.png",
+        },
       ],
     },
     {
