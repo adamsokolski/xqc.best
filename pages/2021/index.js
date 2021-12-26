@@ -115,6 +115,7 @@ const Important = styled.span`
   margin: 0 10px;
   padding: 5px 10px;
   background-color: rgba(252, 50, 50, 0.5);
+  border-radius: 4px;
 `;
 
 const fadeInOut = keyframes`
@@ -148,6 +149,8 @@ const Contributor = styled.span`
   border-radius: 4px;
   padding: 0 5px;
   transition: 300ms ease-in-out;
+  color: ${(props) => (props.platform === "twitch" ? "#b073ff" : "#ff6e38")};
+  font-weight: 600;
   &:hover {
     background-color: #111;
   }
@@ -184,9 +187,11 @@ export default function Index({ headerImg }) {
       </UnderTitle>
 
       <UnderTitle>
-        Contributors:{" "}
+        <strong>Contributors</strong>:{" "}
         {xqc2021contributors.map((user) => (
-          <Contributor key={user.name}>{user.name}</Contributor>
+          <Contributor key={user.name} platform={user.platform}>
+            {user.name}
+          </Contributor>
         ))}
       </UnderTitle>
       <Categories>
