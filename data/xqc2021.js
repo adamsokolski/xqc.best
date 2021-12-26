@@ -497,8 +497,8 @@ export const xqc2021 = {
         },
         {
           id: 7,
-          name: "",
-          link: "",
+          name: "XQCOW by u/CaioViero",
+          link: "https://i.redd.it/da0bp0d4hrl61.png",
           thumbnail: "/images/xqc2021/fanart/7.png",
         },
       ],
