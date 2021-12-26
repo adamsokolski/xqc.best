@@ -47,7 +47,7 @@ const Container = styled.div`
   padding-right: 20px;
   justify-content: center;
   flex-direction: column;
-  z-index: 50;
+  z-index: 20;
   width: 100%;
   background-color: #282828;
 
@@ -56,6 +56,8 @@ const Container = styled.div`
   }
 `;
 const List = styled.div`
+  z-index: 60;
+  background-color: #282828;
   position: absolute;
   top: 50px;
   background-color: ${(props) => props.theme.main4};
