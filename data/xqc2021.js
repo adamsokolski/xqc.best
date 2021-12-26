@@ -412,7 +412,7 @@ export const xqc2021 = {
           id: 5,
           name: "If you're sniper...",
           link: "https://streamable.com/3ql5pe",
-          thumbnail: "/images/xqc2021/streamsnipe/5.png",
+          thumbnail: "/images/xqc2021/streamsnipe/5.jpg",
         },
       ],
     },

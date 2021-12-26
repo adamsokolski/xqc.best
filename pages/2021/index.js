@@ -9,20 +9,6 @@ import { BiLinkExternal } from "react-icons/bi";
 import { xqc2021contributors } from "../../data/xqc2021contributors";
 import HamburgerBest from "../../components/HamburgerBest";
 
-import * as Scroll from "react-scroll";
-import {
-  Link,
-  DirectLink,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from "react-scroll";
-
-let LinkScroll = Scroll.Link;
-let ElementScroll = Scroll.Element;
-
 const Container = styled.div`
   width: 100%;
   display: flex;
@@ -222,6 +208,8 @@ export default function Index({ headerImg }) {
                       height="300px"
                       width="450px"
                       alt={option.name}
+                      placeholder="blur"
+                      blurDataURL="/images/logo-emotes/xqcSCAREDOFGIRLS-fraserlol.webp"
                     />
                   ) : (
                     ""
