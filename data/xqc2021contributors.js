@@ -6,6 +6,7 @@ export const xqc2021contributors = [
   { name: "moldnugget", platform: "twitch" },
   { name: "H_ETHAN", platform: "twitch" },
   { name: "DeadEyeDave64", platform: "twitch" },
+  { name: "FreeformFob", platform: "twitch" },
   { name: "u/-aoxner", platform: "reddit" },
   { name: "u/arara55", platform: "reddit" },
   { name: "u/PM_ME_LATIAS_PICS", platform: "reddit" },

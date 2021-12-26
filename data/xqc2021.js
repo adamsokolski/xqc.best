@@ -533,7 +533,13 @@ export const xqc2021 = {
           link: "https://streamable.com/a8o6y7",
           thumbnail: "/images/xqc2021/category12/4.jpg",
         },
-        { id: 5, name: "", link: "", thumbnail: "/images/xqc2021/" },
+        {
+          id: 5,
+          name: " ",
+          nameImg: "/images/xqc2021/category12/55.png",
+          link: "",
+          thumbnail: "/images/xqc2021/category12/5.png",
+        },
       ],
     },
     {
@@ -561,6 +567,16 @@ export const xqc2021 = {
         },
         { id: 4, name: "", link: "", thumbnail: "/images/xqc2021/funny/4.png" },
         { id: 5, name: "", link: "", thumbnail: "/images/xqc2021/funny/5.png" },
+      ],
+    },
+    {
+      id: "category-30",
+      name: "Best fails",
+      img: "",
+      options: [
+        { id: 1, name: "", link: "", thumbnail: "/images/xqc2021/" },
+        { id: 2, name: "", link: "", thumbnail: "/images/xqc2021/" },
+        { id: 3, name: "", link: "", thumbnail: "/images/xqc2021/" },
       ],
     },
   ],

@@ -71,6 +71,7 @@ const Category = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 50px;
+  margin-bottom: 20px;
   @media (max-width: 900px) {
     flex-direction: column;
   }
@@ -227,6 +228,16 @@ export default function Index({ headerImg }) {
                   )}
                 </ImageContainer>
                 <OptionName>
+                  {option.nameImg ? (
+                    <Image
+                      src={option.nameImg}
+                      height="28"
+                      width="28"
+                      alt={option.name}
+                    />
+                  ) : (
+                    ""
+                  )}
                   {option.link ? (
                     <FancyLinkStyled
                       href={option.link}
