@@ -47,7 +47,7 @@ const Container = styled.div`
   padding-right: 20px;
   justify-content: center;
   flex-direction: column;
-  z-index: 20;
+  z-index: 50;
   width: 100%;
   background-color: #282828;
 
