@@ -2,6 +2,7 @@ export const xqc2021contributors = [
   { name: "LSoccer" },
   { name: "MDPog" },
   { name: "SebWayz" },
+  { name: "moldnugget" },
   { name: "u/-aoxner" },
   { name: "u/arara55" },
   { name: "u/PM_ME_LATIAS_PICS" },

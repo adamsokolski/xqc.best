@@ -106,6 +106,7 @@ const UnderTitle = styled.p`
   line-height: 35px;
   margin: 5px 20px;
   font-size: 1.2em;
+  max-width: 900px;
 `;
 
 const Important = styled.span`
@@ -142,7 +143,7 @@ const Strong = styled.strong`
 const Contributor = styled.span`
   font-size: 0.8em;
   display: inline-block;
-  margin: 0 5px;
+  margin: 3px 5px;
   background-color: #222;
   border-radius: 4px;
   padding: 0 5px;

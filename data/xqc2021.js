@@ -42,6 +42,12 @@ export const xqc2021 = {
           link: "",
           thumbnail: "/images/xqc2021/mario.jpg",
         },
+        {
+          id: 7,
+          name: "Crab Game",
+          link: "",
+          thumbnail: "/images/xqc2021/crab.jpg",
+        },
       ],
     },
     {
