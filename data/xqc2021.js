@@ -307,12 +307,12 @@ export const xqc2021 = {
           id: 1,
           name: "Birthday video from Nick",
           link: "https://streamable.com/4fcl46",
-          thumbnail: "/images/xqc2021/wholesome/1.jpg",
+          thumbnail: "/images/xqc2021/wholesome/1.png",
         },
         {
           id: 2,
-          name: "",
-          link: "",
+          name: "Viewer thanking xqc for buying her a wheelchair",
+          link: "https://streamable.com/hvzaqa",
           thumbnail: "/images/xqc2021/wholesome/2.png",
         },
         {
