@@ -7,6 +7,21 @@ import { useState } from "react";
 import { FancyLinkStyled } from "../../components/styles/FancyLinkStyled";
 import { BiLinkExternal } from "react-icons/bi";
 import { xqc2021contributors } from "../../data/xqc2021contributors";
+import HamburgerBest from "../../components/HamburgerBest";
+
+import * as Scroll from "react-scroll";
+import {
+  Link,
+  DirectLink,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from "react-scroll";
+
+let LinkScroll = Scroll.Link;
+let ElementScroll = Scroll.Element;
 
 const Container = styled.div`
   width: 100%;
@@ -144,6 +159,8 @@ export default function Index({ headerImg }) {
   return (
     <Container>
       <HomeHeader headerImg={headerImg} />
+      <HamburgerBest />
+
       <Title>Best of XQC 2021</Title>
       <UnderTitle>
         <Important>Voting isn&apos;t open yet!</Important>
@@ -173,7 +190,7 @@ export default function Index({ headerImg }) {
       </UnderTitle>
       <Categories>
         {xqc2021.categories.map((category) => (
-          <Category key={category.id}>
+          <Category key={category.id} className={category.id}>
             <CategoryTitle>{category.name}</CategoryTitle>
             {category.options.map((option) => (
               <Option key={option.id}>

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Logo from "./Logo";
 import Link from "next/link";
+import HamburgerBest from "./HamburgerBest";
 
 const Container = styled.header`
   background-color: #282828;
@@ -23,6 +24,7 @@ const Title = styled.h1`
   padding: 0;
   text-align: center;
   font-weight: 400;
+  z-index: 30;
 `;
 
 const UnderTitle = styled.h2`
@@ -31,7 +33,7 @@ const UnderTitle = styled.h2`
   text-align: center;
 `;
 
-export default function HomeHeader({ headerImg, underTitle }) {
+export default function HomeHeader({ headerImg, underTitle, navBar }) {
   return (
     <Container>
       <Logo headerImg={headerImg} />
@@ -45,6 +47,8 @@ export default function HomeHeader({ headerImg, underTitle }) {
       ) : (
         ""
       )}
+
+      {navBar ? <HamburgerBest /> : ""}
     </Container>
   );
 }
