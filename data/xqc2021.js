@@ -299,6 +299,43 @@ export const xqc2021 = {
       ],
     },
     {
+      id: "category-24",
+      name: "Best wholesome moment",
+      img: "",
+      options: [
+        {
+          id: 1,
+          name: "",
+          link: "",
+          thumbnail: "/images/xqc2021/wholesome/1.jpg",
+        },
+        {
+          id: 2,
+          name: "",
+          link: "",
+          thumbnail: "/images/xqc2021/wholesome/2.png",
+        },
+        {
+          id: 3,
+          name: "",
+          link: "",
+          thumbnail: "/images/xqc2021/wholesome/3.png",
+        },
+        {
+          id: 4,
+          name: "",
+          link: "",
+          thumbnail: "/images/xqc2021/wholesome/4.png",
+        },
+        {
+          id: 5,
+          name: "",
+          link: "",
+          thumbnail: "/images/xqc2021/wholesome/5.png",
+        },
+      ],
+    },
+    {
       id: "category-7",
       name: "Best rage",
       img: "",
@@ -417,12 +454,6 @@ export const xqc2021 = {
       img: "",
       options: [
         {
-          id: 1,
-          name: "Crust XQC by u/Mundo_69",
-          link: "",
-          thumbnail: "/images/xqc2021/fanart/1.jpg",
-        },
-        {
           id: 2,
           name: "Drawing by poopernoodle",
           link: "https://streamable.com/x8s6fo",
@@ -430,61 +461,37 @@ export const xqc2021 = {
         },
         {
           id: 3,
-          name: "",
-          link: "",
+          name: "LOCALS by u/F1BBA",
+          link: "https://streamable.com/zb3fgx",
           thumbnail: "/images/xqc2021/fanart/3.png",
         },
         {
           id: 4,
-          name: "",
-          link: "",
+          name: "Six Consoles by Greg Foster",
+          link: "https://streamable.com/pk6may",
           thumbnail: "/images/xqc2021/fanart/4.png",
         },
         {
           id: 5,
-          name: "",
-          link: "",
+          name: "BOOK BOOK BOOK by u/Matt_eM_art",
+          link: "https://i.redd.it/951skthcrmv61.jpg",
           thumbnail: "/images/xqc2021/fanart/5.png",
         },
-      ],
-    },
-    {
-      id: "category-22",
-      name: "Best fan video",
-      img: "",
-      options: [
         {
-          id: 1,
-          name: "LOCALS by u/F1BBA",
-          link: "https://streamable.com/zb3fgx",
-          thumbnail: "/images/xqc2021/fanvideo/1.png",
+          id: 6,
+          name: "The First Successful Bank Robbery by u/Single-Elevator-5627",
+          link: "https://preview.redd.it/65u6wis665p61.jpg?width=1240&format=pjpg&auto=webp&s=7fd34c66ae2199d10cce95646c099306662b8573",
+          thumbnail: "/images/xqc2021/fanart/6.png",
         },
         {
-          id: 2,
-          name: "Six Consoles by Greg Foster",
-          link: "https://streamable.com/pk6may",
-          thumbnail: "/images/xqc2021/fanvideo/2.png",
-        },
-        {
-          id: 3,
-          name: "Xqc drowning on juice by u/BesiegeChanne",
-          link: "https://streamable.com/s7uwbm",
-          thumbnail: "/images/xqc2021/fanvideo/3.png",
-        },
-        {
-          id: 4,
-          name: "When xQc leaves the room by u/Elo-Guvna",
-          link: "https://streamable.com/ccfutk",
-          thumbnail: "/images/xqc2021/fanvideo/4.png",
-        },
-        {
-          id: 5,
-          name: "Goblin Became the Biggest Streamer by Mr_Randomnese",
-          link: "https://www.youtube.com/watch?v=F9PA6zczsx8",
-          thumbnail: "/images/xqc2021/fanvideo/5.png",
+          id: 7,
+          name: "",
+          link: "",
+          thumbnail: "/images/xqc2021/fanart/7.png",
         },
       ],
     },
+
     {
       id: "category-12",
       name: "Most overused meme",

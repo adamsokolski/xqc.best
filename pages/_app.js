@@ -52,7 +52,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <Layout headerImg={headerImg}>
       <Head>
-        <title>XQC.BEST</title>
+        <title>xqc.best</title>
         <meta
           name="description"
           content="Best of xQcOW 2021. MasterChef tier list with contestants from seasons 1-6 and challenges. Rate how much content they are xqcL"
