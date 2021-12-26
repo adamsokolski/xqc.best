@@ -553,7 +553,12 @@ export const xqc2021 = {
           link: "https://streamable.com/53e80q",
           thumbnail: "/images/xqc2021/funny/2.png",
         },
-        { id: 3, name: "", link: "", thumbnail: "/images/xqc2021/funny/3.png" },
+        {
+          id: 3,
+          name: "xQc Trying To Do a Backflip",
+          link: "https://streamable.com/68slah",
+          thumbnail: "/images/xqc2021/funny/3.png",
+        },
         { id: 4, name: "", link: "", thumbnail: "/images/xqc2021/funny/4.png" },
         { id: 5, name: "", link: "", thumbnail: "/images/xqc2021/funny/5.png" },
       ],

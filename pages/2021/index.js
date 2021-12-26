@@ -47,10 +47,10 @@ const ImageContainer = styled.div`
 
   img {
     border-radius: 4px;
-
     overflow: hidden;
     object-fit: cover;
     object-position: center center;
+    transition: 300ms ease-in-out;
   }
 `;
 
@@ -91,6 +91,16 @@ const Option = styled.div`
   margin: 10px;
   padding: 5px;
   border-radius: 4px;
+
+  box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: 300ms ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0px 15px 0 rgba(0, 0, 0, 0.37);
+  }
+
   @media (max-width: 900px) {
     width: 95%;
   }
@@ -153,6 +163,10 @@ const Contributor = styled.span`
   font-weight: 600;
   &:hover {
     background-color: #111;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    transition: 300ms ease-in-out;
+    box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.37);
   }
 `;
 
