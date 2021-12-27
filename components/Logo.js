@@ -30,6 +30,8 @@ export default function Logo({ headerImg }) {
             width="128px"
             height="128px"
             alt="logo with xqc"
+            placeholder="blur"
+            blurDataURL="/images/logo-emotes/xqcSCAREDOFGIRLS-fraserlol.webp"
           />
         </a>
       </Link>

@@ -98,6 +98,8 @@ export default class Contestant extends Component {
                 height="140px"
                 width="140px"
                 alt={`${this.props.contestant.name}`}
+                placeholder="blur"
+                blurDataURL="/images/logo-emotes/xqcSCAREDOFGIRLS-fraserlol.webp"
               />
             </ImageContainer>
             <p>{this.props.contestant.name}</p>

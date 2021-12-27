@@ -232,6 +232,12 @@ export const xqc2021 = {
           link: "https://streamable.com/xd75cr",
           thumbnail: "/images/xqc2021/dansgame/5.png",
         },
+        {
+          id: 6,
+          name: "🖐",
+          link: "https://streamable.com/cx2btb",
+          thumbnail: "/images/xqc2021/dansgame/6.png",
+        },
       ],
     },
     {
@@ -257,8 +263,6 @@ export const xqc2021 = {
           link: "https://streamable.com/sk3r4s",
           thumbnail: "/images/xqc2021/monkaw/3.png",
         },
-        { id: 4, name: "", link: "", thumbnail: "/images/xqc2021/monkaw/" },
-        { id: 5, name: "", link: "", thumbnail: "/images/xqc2021/monkaw/" },
       ],
     },
     {
@@ -376,7 +380,6 @@ export const xqc2021 = {
           link: "https://streamable.com/sbt7r4",
           thumbnail: "/images/xqc2021/rage/4.png",
         },
-        { id: 5, name: "", link: "", thumbnail: "/images/xqc2021/rage/5.png" },
       ],
     },
     {
@@ -576,6 +579,55 @@ export const xqc2021 = {
           name: "Time to Throw PogChamp xQcL 2",
           link: "https://streamable.com/qrpnfk",
           thumbnail: "/images/xqc2021/funny/5.png",
+        },
+        {
+          id: 6,
+          name: "I'm so excited for this casino",
+          link: "https://streamable.com/6h3bjz",
+          thumbnail: "/images/xqc2021/funny/6.png",
+        },
+      ],
+    },
+    {
+      id: "category-31",
+      name: "Horny Harold",
+      img: "",
+      options: [
+        {
+          id: 1,
+          name: "DLC?",
+          link: "https://streamable.com/asvhzm",
+          thumbnail: "/images/xqc2021/harold/1.png",
+        },
+        {
+          id: 2,
+          name: "XQC on eating pu**y",
+          link: "https://streamable.com/3s5c6l",
+          thumbnail: "/images/xqc2021/harold/2.png",
+        },
+        {
+          id: 3,
+          name: "forsenCD",
+          link: "https://streamable.com/yx3d5d",
+          thumbnail: "/images/xqc2021/harold/3.png",
+        },
+        {
+          id: 4,
+          name: "BAZONGIE DONGIES JUICER MALONIES",
+          link: "https://streamable.com/esgw42",
+          thumbnail: "/images/xqc2021/harold/4.png",
+        },
+        {
+          id: 5,
+          name: "xqc needs to stand up",
+          link: "https://streamable.com/j9yazj",
+          thumbnail: "/images/xqc2021/harold/5.png",
+        },
+        {
+          id: 6,
+          name: "I wonder what xQc is staring at...",
+          link: "https://streamable.com/yprtbe",
+          thumbnail: "/images/xqc2021/harold/6.png",
         },
       ],
     },
