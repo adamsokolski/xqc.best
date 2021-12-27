@@ -263,6 +263,12 @@ export const xqc2021 = {
           link: "https://streamable.com/sk3r4s",
           thumbnail: "/images/xqc2021/monkaw/3.png",
         },
+        {
+          id: 4,
+          name: "177 BMP",
+          link: "https://streamable.com/oc5c0q",
+          thumbnail: "/images/xqc2021/monkaw/4.png",
+        },
       ],
     },
     {
@@ -571,7 +577,7 @@ export const xqc2021 = {
         {
           id: 4,
           name: "Fix your hairline",
-          link: "https://www.xqc.best/2021",
+          link: "https://streamable.com/dj5tp1",
           thumbnail: "/images/xqc2021/funny/4.png",
         },
         {
@@ -619,9 +625,9 @@ export const xqc2021 = {
         },
         {
           id: 5,
-          name: "xqc needs to stand up",
-          link: "https://streamable.com/j9yazj",
-          thumbnail: "/images/xqc2021/harold/5.png",
+          name: "xqc gets heated",
+          link: "https://streamable.com/vyb2ye",
+          thumbnail: "/images/xqc2021/harold/55.png",
         },
         {
           id: 6,
@@ -644,6 +650,41 @@ export const xqc2021 = {
         },
         { id: 2, name: "", link: "", thumbnail: "/images/xqc2021/fails/2.png" },
         { id: 3, name: "", link: "", thumbnail: "/images/xqc2021/fails/3.png" },
+      ],
+    },
+    {
+      id: "category-31",
+      name: "Best PogU moments",
+      img: "",
+      options: [
+        { id: 1, name: "", link: "", thumbnail: "/images/xqc2021/" },
+        { id: 2, name: "", link: "", thumbnail: "/images/xqc2021/" },
+        { id: 2, name: "", link: "", thumbnail: "/images/xqc2021/" },
+      ],
+    },
+    {
+      id: "category-32",
+      name: "Most cringe moments",
+      img: "",
+      options: [
+        {
+          id: 1,
+          name: "xQcLoL",
+          link: "https://streamable.com/qbu5tb",
+          thumbnail: "/images/xqc2021/cringe/1.png",
+        },
+        {
+          id: 2,
+          name: "",
+          link: "",
+          thumbnail: "/images/xqc2021/cringe/2.png",
+        },
+        {
+          id: 3,
+          name: "",
+          link: "",
+          thumbnail: "/images/xqc2021/cringe/3.png",
+        },
       ],
     },
   ],
