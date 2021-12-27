@@ -39,7 +39,8 @@ export default function Layout({ children, headerImg }) {
     if (
       router.pathname == "/" ||
       router.pathname == "/masterchef" ||
-      router.pathname == "/2021"
+      router.pathname == "/2021" ||
+      router.pathname == "/2022"
     ) {
       setIsHome(false);
     } else {

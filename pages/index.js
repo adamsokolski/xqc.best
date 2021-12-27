@@ -54,8 +54,6 @@ export default function Home({ headerImg }) {
                 width="300px"
                 height="300px"
                 alt="Emotes of xqc with 2021 heading"
-                placeholder="blur"
-                blurDataURL="/images/logo-emotes/xqcSCAREDOFGIRLS-fraserlol.webp"
               />
             </ImageContainer>
 
@@ -70,8 +68,6 @@ export default function Home({ headerImg }) {
                 width="300px"
                 height="300px"
                 alt="Masterchef trophy"
-                placeholder="blur"
-                blurDataURL="/images/logo-emotes/xqcSCAREDOFGIRLS-fraserlol.webp"
               />
             </ImageContainer>
             <FancyLinkStyled>MasterChef tier list</FancyLinkStyled>

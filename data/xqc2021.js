@@ -91,6 +91,7 @@ export const xqc2021 = {
           link: "",
           thumbnail: "/images/xqc2021/setup/place6.png",
         },
+
         {
           id: 7,
           name: "Setup 7",
