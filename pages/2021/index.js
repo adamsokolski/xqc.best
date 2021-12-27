@@ -168,7 +168,7 @@ export default function Index({ headerImg }) {
 
       <Title>Best of XQC 2021</Title>
       <UnderTitle>
-        <Important>Voting isn&apos;t open yet!</Important>
+        <Important>🚧 Voting isn&apos;t open yet!</Important>
         When all categories will be completed, a link to the form will be here.
       </UnderTitle>
       <UnderTitle>
@@ -197,7 +197,7 @@ export default function Index({ headerImg }) {
       </UnderTitle>
       <Categories>
         {xqc2021.categories.map((category) => (
-          <Category key={category.id} className={category.id}>
+          <Category key={category.name} className={category.id}>
             <CategoryTitle>{category.name}</CategoryTitle>
             {category.options.map((option) => (
               <Option key={option.id}>

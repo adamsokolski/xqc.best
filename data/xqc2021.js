@@ -328,7 +328,7 @@ export const xqc2021 = {
         {
           id: 2,
           name: "Viewer thanking xqc for buying her a wheelchair",
-          link: "https://streamable.com/hvzaqa",
+          link: "https://streamable.com/77we3x",
           thumbnail: "/images/xqc2021/wholesome/2.png",
         },
         {
@@ -354,6 +354,43 @@ export const xqc2021 = {
           name: "xQc and Adept",
           link: "https://streamable.com/g0zff6",
           thumbnail: "/images/xqc2021/wholesome/6.png",
+        },
+      ],
+    },
+    {
+      id: "category-34",
+      name: "Best PogU moment",
+      img: "",
+      options: [
+        {
+          id: 1,
+          name: "Legendary flight",
+          link: "https://streamable.com/g6yqv9",
+          thumbnail: "/images/xqc2021/pogu/1.png",
+        },
+        {
+          id: 2,
+          name: "xQc avoids a ban",
+          link: "https://streamable.com/j01eis",
+          thumbnail: "/images/xqc2021/pogu/2.png",
+        },
+        {
+          id: 3,
+          name: "I own the place!",
+          link: "https://streamable.com/gooxv9",
+          thumbnail: "/images/xqc2021/pogu/3.png",
+        },
+        {
+          id: 4,
+          name: "xQc betrays everyone",
+          link: "https://streamable.com/c638at",
+          thumbnail: "/images/xqc2021/pogu/4.png",
+        },
+        {
+          id: 5,
+          name: "RAWR",
+          link: "https://streamable.com/n8k7cr",
+          thumbnail: "/images/xqc2021/pogu/5.png",
         },
       ],
     },
@@ -391,6 +428,12 @@ export const xqc2021 = {
           name: "🔇",
           link: "https://streamable.com/ku3f26",
           thumbnail: "/images/xqc2021/rage/5.png",
+        },
+        {
+          id: 6,
+          name: "🔇 v2",
+          link: "https://streamable.com/x1r1la",
+          thumbnail: "/images/xqc2021/rage/6.png",
         },
       ],
     },
@@ -518,6 +561,74 @@ export const xqc2021 = {
         },
       ],
     },
+    {
+      id: "category-30",
+      name: "Best fail",
+      img: "",
+      options: [
+        {
+          id: 1,
+          name: "Team rocket loses everything",
+          link: "https://streamable.com/rxnbed",
+          thumbnail: "/images/xqc2021/fails/1.png",
+        },
+        {
+          id: 2,
+          name: "Xqc kills dafran then...",
+          link: "https://streamable.com/lz2ekt",
+          thumbnail: "/images/xqc2021/fails/2.png",
+        },
+        {
+          id: 3,
+          name: "Time to throw",
+          link: "https://streamable.com/y1owv5",
+          thumbnail: "/images/xqc2021/fails/3.png",
+        },
+      ],
+    },
+    {
+      id: "category-35",
+      name: "Best fart",
+      img: "",
+      options: [
+        {
+          id: 1,
+          name: "Longest fart yet",
+          link: "https://streamable.com/10i17k",
+          thumbnail: "/images/xqc2021/fart/1.png",
+        },
+        {
+          id: 2,
+          name: "Wet fart to Pokimane as a thanks for raid",
+          link: "https://streamable.com/ff1t5b",
+          thumbnail: "/images/xqc2021/fart/2.png",
+        },
+        {
+          id: 3,
+          name: "xQc farts and loses a viewer",
+          link: "https://streamable.com/65uaxc",
+          thumbnail: "/images/xqc2021/fart/3.png",
+        },
+        {
+          id: 4,
+          name: "Creamy fart",
+          link: "https://streamable.com/gtyoux",
+          thumbnail: "/images/xqc2021/fart/4.png",
+        },
+        {
+          id: 5,
+          name: "Listen to this",
+          link: "https://streamable.com/hqt0ql",
+          thumbnail: "/images/xqc2021/fart/5.png",
+        },
+        {
+          id: 6,
+          name: "Fart smelled so bad the dog had to leave",
+          link: "https://streamable.com/jy1vaq",
+          thumbnail: "/images/xqc2021/fart/6.png",
+        },
+      ],
+    },
 
     {
       id: "category-12",
@@ -554,6 +665,31 @@ export const xqc2021 = {
           nameImg: "/images/xqc2021/category12/55.png",
           link: "",
           thumbnail: "/images/xqc2021/category12/5.png",
+        },
+      ],
+    },
+    {
+      id: "category-33",
+      name: "Most cringe moment",
+      img: "",
+      options: [
+        {
+          id: 1,
+          name: "xQcLoL",
+          link: "https://streamable.com/qbu5tb",
+          thumbnail: "/images/xqc2021/cringe/1.png",
+        },
+        {
+          id: 2,
+          name: "xQcOW presentation",
+          link: "https://streamable.com/gpilff",
+          thumbnail: "/images/xqc2021/cringe/2.png",
+        },
+        {
+          id: 3,
+          name: "",
+          link: "",
+          thumbnail: "/images/xqc2021/cringe/3.png",
         },
       ],
     },
@@ -631,7 +767,7 @@ export const xqc2021 = {
         },
         {
           id: 5,
-          name: "xqc gets heated",
+          name: "xQc gets heated",
           link: "https://streamable.com/vyb2ye",
           thumbnail: "/images/xqc2021/harold/55.png",
         },
@@ -640,88 +776,6 @@ export const xqc2021 = {
           name: "I wonder what xQc is staring at...",
           link: "https://streamable.com/yprtbe",
           thumbnail: "/images/xqc2021/harold/6.png",
-        },
-      ],
-    },
-    {
-      id: "category-30",
-      name: "Best fails",
-      img: "",
-      options: [
-        {
-          id: 1,
-          name: "Team rocket loses everything",
-          link: "https://streamable.com/rxnbed",
-          thumbnail: "/images/xqc2021/fails/1.png",
-        },
-        {
-          id: 2,
-          name: "Xqc kills dafran then...",
-          link: "https://streamable.com/lz2ekt",
-          thumbnail: "/images/xqc2021/fails/2.png",
-        },
-        { id: 3, name: "", link: "", thumbnail: "/images/xqc2021/fails/3.png" },
-      ],
-    },
-    {
-      id: "category-31",
-      name: "Best PogU moment",
-      img: "",
-      options: [
-        {
-          id: 1,
-          name: "Legendary flight",
-          link: "https://streamable.com/g6yqv9",
-          thumbnail: "/images/xqc2021/pogu/1.png",
-        },
-        {
-          id: 2,
-          name: "xQc avoids a ban",
-          link: "https://streamable.com/j01eis",
-          thumbnail: "/images/xqc2021/pogu/2.png",
-        },
-        {
-          id: 3,
-          name: "I own the place!",
-          link: "https://streamable.com/gooxv9",
-          thumbnail: "/images/xqc2021/pogu/3.png",
-        },
-        {
-          id: 4,
-          name: "xQc betrays everyone",
-          link: "https://streamable.com/c638at",
-          thumbnail: "/images/xqc2021/pogu/4.png",
-        },
-        {
-          id: 5,
-          name: "RAWR",
-          link: "https://streamable.com/n8k7cr",
-          thumbnail: "/images/xqc2021/pogu/5.png",
-        },
-      ],
-    },
-    {
-      id: "category-32",
-      name: "Most cringe moment",
-      img: "",
-      options: [
-        {
-          id: 1,
-          name: "xQcLoL",
-          link: "https://streamable.com/qbu5tb",
-          thumbnail: "/images/xqc2021/cringe/1.png",
-        },
-        {
-          id: 2,
-          name: "xQcOW presentation",
-          link: "https://streamable.com/gpilff",
-          thumbnail: "/images/xqc2021/cringe/2.png",
-        },
-        {
-          id: 3,
-          name: "",
-          link: "",
-          thumbnail: "/images/xqc2021/cringe/3.png",
         },
       ],
     },
