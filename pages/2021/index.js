@@ -52,7 +52,7 @@ const Categories = styled.div`
 const Category = styled.div`
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: flex-start;
   flex-direction: row;
   flex-wrap: wrap;

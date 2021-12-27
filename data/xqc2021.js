@@ -386,6 +386,12 @@ export const xqc2021 = {
           link: "https://streamable.com/sbt7r4",
           thumbnail: "/images/xqc2021/rage/4.png",
         },
+        {
+          id: 5,
+          name: "🔇",
+          link: "https://streamable.com/ku3f26",
+          thumbnail: "/images/xqc2021/rage/5.png",
+        },
       ],
     },
     {
@@ -438,8 +444,8 @@ export const xqc2021 = {
         },
         {
           id: 2,
-          name: "yayayayayaay",
-          link: "https://streamable.com/g0qbfy",
+          name: "Ayaya curse",
+          link: "https://streamable.com/ido8gm",
           thumbnail: "/images/xqc2021/tts/2.png",
         },
         {
@@ -648,23 +654,55 @@ export const xqc2021 = {
           link: "https://streamable.com/rxnbed",
           thumbnail: "/images/xqc2021/fails/1.png",
         },
-        { id: 2, name: "", link: "", thumbnail: "/images/xqc2021/fails/2.png" },
+        {
+          id: 2,
+          name: "Xqc kills dafran then...",
+          link: "https://streamable.com/lz2ekt",
+          thumbnail: "/images/xqc2021/fails/2.png",
+        },
         { id: 3, name: "", link: "", thumbnail: "/images/xqc2021/fails/3.png" },
       ],
     },
     {
       id: "category-31",
-      name: "Best PogU moments",
+      name: "Best PogU moment",
       img: "",
       options: [
-        { id: 1, name: "", link: "", thumbnail: "/images/xqc2021/" },
-        { id: 2, name: "", link: "", thumbnail: "/images/xqc2021/" },
-        { id: 2, name: "", link: "", thumbnail: "/images/xqc2021/" },
+        {
+          id: 1,
+          name: "Legendary flight",
+          link: "https://streamable.com/g6yqv9",
+          thumbnail: "/images/xqc2021/pogu/1.png",
+        },
+        {
+          id: 2,
+          name: "xQc avoids a ban",
+          link: "https://streamable.com/j01eis",
+          thumbnail: "/images/xqc2021/pogu/2.png",
+        },
+        {
+          id: 3,
+          name: "I own the place!",
+          link: "https://streamable.com/gooxv9",
+          thumbnail: "/images/xqc2021/pogu/3.png",
+        },
+        {
+          id: 4,
+          name: "xQc betrays everyone",
+          link: "https://streamable.com/c638at",
+          thumbnail: "/images/xqc2021/pogu/4.png",
+        },
+        {
+          id: 5,
+          name: "RAWR",
+          link: "https://streamable.com/n8k7cr",
+          thumbnail: "/images/xqc2021/pogu/5.png",
+        },
       ],
     },
     {
       id: "category-32",
-      name: "Most cringe moments",
+      name: "Most cringe moment",
       img: "",
       options: [
         {
@@ -675,8 +713,8 @@ export const xqc2021 = {
         },
         {
           id: 2,
-          name: "",
-          link: "",
+          name: "xQcOW presentation",
+          link: "https://streamable.com/gpilff",
           thumbnail: "/images/xqc2021/cringe/2.png",
         },
         {
