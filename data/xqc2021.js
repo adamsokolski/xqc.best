@@ -217,7 +217,7 @@ export const xqc2021 = {
         },
         {
           id: 3,
-          name: "Gfuel",
+          name: "xqc finally cleans his desk",
           link: "https://streamable.com/254qxd",
           thumbnail: "/images/xqc2021/dansgame/3.png",
         },
@@ -585,6 +585,18 @@ export const xqc2021 = {
           link: "https://streamable.com/y1owv5",
           thumbnail: "/images/xqc2021/fails/3.png",
         },
+        {
+          id: 4,
+          name: "Rolled",
+          link: "https://streamable.com/7g2ciw",
+          thumbnail: "/images/xqc2021/fails/4.png",
+        },
+        {
+          id: 5,
+          name: "Watch this",
+          link: "https://streamable.com/cp0mvx",
+          thumbnail: "/images/xqc2021/fails/5.png",
+        },
       ],
     },
     {
@@ -713,8 +725,8 @@ export const xqc2021 = {
         },
         {
           id: 3,
-          name: "xQc Trying To Do a Backflip",
-          link: "https://streamable.com/68slah",
+          name: "IM IN NO MOOD FOR THIS",
+          link: "https://streamable.com/w80ruu",
           thumbnail: "/images/xqc2021/funny/3.png",
         },
         {
@@ -777,6 +789,37 @@ export const xqc2021 = {
           name: "I wonder what xQc is staring at...",
           link: "https://streamable.com/yprtbe",
           thumbnail: "/images/xqc2021/harold/6.png",
+        },
+      ],
+    },
+    {
+      id: "category-32",
+      name: "Best moment of the Year",
+      img: "",
+      options: [
+        {
+          id: 1,
+          name: "xQc 1.16 Personal Best 20:45!",
+          link: "https://streamable.com/daeez8",
+          thumbnail: "/images/xqc2021/best/1.jpg",
+        },
+        {
+          id: 2,
+          name: "xQc is the FIRST to Hack into the LOWER VAULT",
+          link: "https://streamable.com/a4s8m5",
+          thumbnail: "/images/xqc2021/best/2.png",
+        },
+        {
+          id: 3,
+          name: "xQcOW & adeptthebest",
+          link: "https://streamable.com/minwju",
+          thumbnail: "/images/xqc2021/best/3.png",
+        },
+        {
+          id: 4,
+          name: "Victory",
+          link: "https://streamable.com/rpg2yx",
+          thumbnail: "/images/xqc2021/best/4.png",
         },
       ],
     },
