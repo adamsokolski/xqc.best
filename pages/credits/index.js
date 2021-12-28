@@ -74,7 +74,7 @@ export default function credits() {
             />{" "}
           </li>
           <li>
-            <strong>NiceDevTools</strong> - Front End Developer{"  "}
+            <strong>NiceDevTools#0211</strong> - Front End Developer{"  "}
             <Image
               src="/images/emotes/HACKERMANS_Greekgodx.gif"
               width="50"

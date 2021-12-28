@@ -286,7 +286,7 @@ export const xqc2021 = {
         {
           id: 2,
           name: "Phasmophobia",
-          link: "https://streamable.com/wpbivx",
+          link: "https://streamable.com/21dbjv",
           thumbnail: "/images/xqc2021/soy/2.png",
         },
         {
@@ -323,7 +323,7 @@ export const xqc2021 = {
         {
           id: 1,
           name: "Birthday video from Nick",
-          link: "https://streamable.com/4fcl46",
+          link: "https://streamable.com/5pnacw",
           thumbnail: "/images/xqc2021/wholesome/1.png",
         },
         {
@@ -384,7 +384,7 @@ export const xqc2021 = {
         {
           id: 4,
           name: "xQc betrays everyone",
-          link: "https://streamable.com/c638at",
+          link: "https://streamable.com/5ltf2e",
           thumbnail: "/images/xqc2021/pogu/4.png",
         },
         {
@@ -403,13 +403,13 @@ export const xqc2021 = {
         {
           id: 1,
           name: "Controller",
-          link: "https://streamable.com/wbz3tl",
+          link: "https://streamable.com/rnjm63",
           thumbnail: "/images/xqc2021/rage/1.png",
         },
         {
           id: 2,
           name: "Mouse wire",
-          link: "https://streamable.com/eg15hn",
+          link: "https://streamable.com/68awiu",
           thumbnail: "/images/xqc2021/rage/2.png",
         },
         {
@@ -550,9 +550,9 @@ export const xqc2021 = {
         },
         {
           id: 6,
-          name: "The First Successful Bank Robbery by u/Single-Elevator-5627",
-          link: "https://preview.redd.it/65u6wis665p61.jpg?width=1240&format=pjpg&auto=webp&s=7fd34c66ae2199d10cce95646c099306662b8573",
-          thumbnail: "/images/xqc2021/fanart/6.png",
+          name: "by u/lxdoger",
+          link: "https://i.redd.it/bzzdiirz5fg71.jpg",
+          thumbnail: "/images/xqc2021/fanart/6.jpg",
         },
         {
           id: 7,

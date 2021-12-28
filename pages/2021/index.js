@@ -101,9 +101,82 @@ const OptionName = styled.p`
 const UnderTitle = styled.p`
   text-align: center;
   line-height: 35px;
-  margin: 5px 20px;
+  margin: 10px 20px;
   font-size: 1.2em;
   max-width: 900px;
+
+  .pushable {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+  }
+  .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+  }
+  .edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(
+      to left,
+      hsl(340deg 100% 16%) 0%,
+      hsl(340deg 100% 32%) 8%,
+      hsl(340deg 100% 32%) 92%,
+      hsl(340deg 100% 16%) 100%
+    );
+  }
+  .front {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    display: block;
+    position: relative;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    color: white;
+    background: hsl(345deg 100% 47%);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+  }
+  .pushable:hover {
+    filter: brightness(110%);
+  }
+  .pushable:hover .front {
+    transform: translateY(-6px);
+    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+  }
+  .pushable:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+  }
+  .pushable:hover .shadow {
+    transform: translateY(4px);
+    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+  }
+  .pushable:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+  }
+  .pushable:focus:not(:focus-visible) {
+    outline: none;
+  }
 `;
 
 const Important = styled.span`
@@ -157,6 +230,12 @@ const Contributor = styled.span`
   }
 `;
 
+const VoteButton = styled.button`
+  margin-bottom: 40px;
+`;
+
+const VoteLink = styled.a``;
+
 export default function Index({ headerImg }) {
   const [discordName, setDiscordName] = useState("NiceDevTools#0211");
   const [copied, setCopied] = useState(false);
@@ -168,23 +247,17 @@ export default function Index({ headerImg }) {
 
       <Title>Best of XQC 2021</Title>
       <UnderTitle>
-        <Important>🚧 Voting isn&apos;t open yet!</Important>
-        When all categories will be completed, a link to the form will be here.
-      </UnderTitle>
-      <UnderTitle>
-        If you want to contribute (categories, options, other...) dm{" "}
-        <Strong
-          onClick={() => {
-            navigator.clipboard.writeText(discordName);
-            setCopied(true);
-            setTimeout(() => {
-              setCopied(false);
-            }, 1000);
-          }}
+        <VoteLink
+          href="https://docs.google.com/forms/d/e/1FAIpQLSeUFx91_m517Lz-V-yo183K80Gv3fPjh_wBKyxKCpYmFuDH1Q/viewform?usp=sf_link"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          NiceDevTools#0211
-        </Strong>
-        {copied ? <Copied>Copied!</Copied> : ""}
+          <VoteButton className="pushable">
+            <span className="shadow"></span>
+            <span className="edge"></span>
+            <span className="front">VOTE HERE</span>
+          </VoteButton>
+        </VoteLink>
       </UnderTitle>
 
       <UnderTitle>

@@ -1,4 +1,5 @@
 export const xqc2021contributors = [
+  { name: "NiceDevTools", platform: "twitch" },
   { name: "chilliwow", platform: "twitch" },
   { name: "ContraVz", platform: "twitch" },
   { name: "LSoccer", platform: "twitch" },

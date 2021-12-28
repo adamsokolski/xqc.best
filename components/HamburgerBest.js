@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { FancyLinkStyled } from "./styles/FancyLinkStyled";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { Turn as Ham } from "hamburger-react";
@@ -17,6 +16,18 @@ import {
 } from "react-scroll";
 
 let LinkScroll = Scroll.Link;
+
+const LinkStyled = styled(LinkScroll)`
+  cursor: pointer;
+  width: 100%;
+  transition: 50ms ease-in-out;
+  padding: 3px 20px;
+  border-bottom: 1px rgba(255, 255, 255, 0.1) solid;
+
+  &:hover {
+    background-color: ${(props) => props.theme.main3};
+  }
+`;
 
 const fadeIn = keyframes`
   0% {
@@ -66,12 +77,13 @@ const List = styled.div`
   justify-content: center;
   flex-direction: column;
   border-radius: 4px;
-  padding: 2px;
   animation: ${fadeIn} 250ms ease;
-  a {
-    font-size: 1.05em;
-    margin: 5px 15px;
-  }
+  border: 1px ${(props) => props.theme.main3} solid;
+  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: 300ms ease-in-out;
+
   @media (max-width: 900px) {
     padding: 1px;
   }
@@ -101,7 +113,7 @@ export default function HamburgerBest() {
       {outAnim && (
         <List className={!isOpen ? "hidden" : ""}>
           {xqc2021.categories.map((category) => (
-            <LinkScroll
+            <LinkStyled
               key={category.id}
               to={category.id}
               spy={true}
@@ -110,8 +122,8 @@ export default function HamburgerBest() {
               duration={500}
               onClick={() => setIsOpen(false)}
             >
-              <FancyLinkStyled>{category.name}</FancyLinkStyled>
-            </LinkScroll>
+              {category.name}
+            </LinkStyled>
           ))}
         </List>
       )}
