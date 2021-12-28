@@ -698,12 +698,6 @@ export const xqc2021 = {
           link: "https://streamable.com/gpilff",
           thumbnail: "/images/xqc2021/cringe/2.png",
         },
-        {
-          id: 3,
-          name: "",
-          link: "",
-          thumbnail: "/images/xqc2021/cringe/3.png",
-        },
       ],
     },
     {
