@@ -3,7 +3,7 @@ import { xqc2021 } from "../data/xqc2021";
 export default function List() {
   return (
     <div>
-      <strong>you shouldn't be here 🙂</strong>
+      <strong>you shouldn&apos;t be here 🙂</strong>
       {xqc2021.categories.map((category) => (
         <div key={category.id}>
           <h2>{category.name}</h2>
