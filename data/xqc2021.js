@@ -556,8 +556,8 @@ export const xqc2021 = {
         },
         {
           id: 7,
-          name: "XQCOW by u/CaioViero",
-          link: "https://i.redd.it/da0bp0d4hrl61.png",
+          name: "The DonoWall - Episode 1 by Meloon",
+          link: "https://www.youtube.com/watch?v=A9klYhTPJvk",
           thumbnail: "/images/xqc2021/fanart/7.png",
         },
       ],
