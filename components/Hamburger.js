@@ -141,7 +141,7 @@ export default function Hamburger() {
           <Link href="/season7">
             <LinkStyled>Season 7</LinkStyled>
           </Link>
-          <Link href="/all-seasons">
+          <Link href="">
             <LinkStyled onClick={() => AllSeasonsClicked()}>
               Seasons 1-6 (Top 5)
             </LinkStyled>
