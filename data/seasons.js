@@ -27,12 +27,17 @@ export const seasons = {
            "contestant-23": { id:"contestant-23", name:"Leslie (s5)", img: "/images/contestants/s5/Leslie-Gilliams.jpg"},
            "contestant-24": { id:"contestant-24", name:"Cutter (s5)", img: "/images/contestants/s5/Cutter-Brewer.jpg"},
            "contestant-25": { id:"contestant-25", name:"Christian (s5)", img: "/images/contestants/s5/Christian-Green.jpg"},
+           "contestant-26": { id:"contestant-26", name:"Claudia (s6)", img: "/images/contestants/s6/Claudia-Sandoval.jpg"},
+           "contestant-27": { id:"contestant-27", name:"Derrick (s6)", img: "/images/contestants/s6/Derrick-Peltz.jpg"},
+           "contestant-28": { id:"contestant-28", name:"Stephen (s6)", img: "/images/contestants/s6/Stephen-Lee.jpg"},
+           "contestant-29": { id:"contestant-29", name:"Nick (s6)", img: "/images/contestants/s6/Nick-Nappi.png"},
+           "contestant-30": { id:"contestant-30", name:"Katrina (s6)", img: "/images/contestants/s6/Katrina-Kozar.png"},
             },
 
   columns: {
     "column-start": {
       id: "column-start",
-      title: "Seasons 1-5 (Top 5)",
+      title: "Seasons 1-6 (Top 5)",
       contestantsIds: [
         "contestant-1",
         "contestant-2",
@@ -59,6 +64,11 @@ export const seasons = {
         "contestant-23",
         "contestant-24",
         "contestant-25",
+        "contestant-26",
+        "contestant-27",
+        "contestant-28",
+        "contestant-29",
+        "contestant-30",
       ],
     },
     "column-good": {

@@ -99,9 +99,7 @@ export default function HamburgerBest() {
   }, [router.pathname]);
   useEffect(() => {
     if (!isOpen) {
-      setTimeout(() => {
-        setOutAnim(isOpen);
-      }, 250);
+      setOutAnim(isOpen);
     } else {
       setOutAnim(isOpen);
     }

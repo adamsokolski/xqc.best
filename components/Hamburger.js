@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import Link from "next/link";
-import { FancyLinkStyled } from "./styles/FancyLinkStyled";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { Turn as Ham } from "hamburger-react";
@@ -27,6 +26,18 @@ const fadeOut = keyframes`
  
 `;
 
+const LinkStyled = styled.a`
+  cursor: pointer;
+  width: 100%;
+  transition: 50ms ease-in-out;
+  padding: 3px 20px;
+  border-bottom: 1px rgba(255, 255, 255, 0.1) solid;
+
+  &:hover {
+    background-color: ${(props) => props.theme.main3};
+  }
+`;
+
 const Container = styled.div`
   position: absolute;
   right: 60px;
@@ -45,20 +56,23 @@ const Container = styled.div`
   }
 `;
 const List = styled.div`
+  z-index: 60;
+  background-color: #282828;
   position: absolute;
   top: 50px;
   background-color: ${(props) => props.theme.main4};
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-direction: column;
   border-radius: 4px;
-  padding: 10px;
   animation: ${fadeIn} 250ms ease;
-  a {
-    font-size: 1.1em;
-    margin: 5px 15px;
-  }
+  border: 1px ${(props) => props.theme.main3} solid;
+  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: 300ms ease-in-out;
+
   @media (max-width: 900px) {
     padding: 1px;
   }
@@ -74,9 +88,7 @@ export default function Hamburger() {
   }, [router.pathname]);
   useEffect(() => {
     if (!isOpen) {
-      setTimeout(() => {
-        setOutAnim(isOpen);
-      }, 250);
+      setOutAnim(isOpen);
     } else {
       setOutAnim(isOpen);
     }
@@ -86,7 +98,7 @@ export default function Hamburger() {
     Swal.fire({
       title: `Potential spoilers`,
       imageUrl: "/images/logo-emotes/xqcBased-AtypicalLUL.webp",
-      text: "This page will have spoilers of top 5 from 1-5 seasons. Do you want to continue?",
+      text: "This page will have spoilers of top 5 from 1-6 seasons. Do you want to continue?",
       showDenyButton: true,
       confirmButtonText: "Yes",
       denyButtonText: `No`,
@@ -106,33 +118,36 @@ export default function Hamburger() {
       {outAnim && (
         <List className={!isOpen ? "hidden" : ""}>
           <Link href="/challenges">
-            <FancyLinkStyled>Challenges</FancyLinkStyled>
+            <LinkStyled>Challenges</LinkStyled>
           </Link>
           <Link href="/season1">
-            <FancyLinkStyled>Season 1</FancyLinkStyled>
+            <LinkStyled>Season 1</LinkStyled>
           </Link>
           <Link href="/season2">
-            <FancyLinkStyled>Season 2</FancyLinkStyled>
+            <LinkStyled>Season 2</LinkStyled>
           </Link>
           <Link href="/season3">
-            <FancyLinkStyled>Season 3</FancyLinkStyled>
+            <LinkStyled>Season 3</LinkStyled>
           </Link>
           <Link href="/season4">
-            <FancyLinkStyled>Season 4</FancyLinkStyled>
+            <LinkStyled>Season 4</LinkStyled>
           </Link>
           <Link href="/season5">
-            <FancyLinkStyled>Season 5</FancyLinkStyled>
+            <LinkStyled>Season 5</LinkStyled>
           </Link>
           <Link href="/season6">
-            <FancyLinkStyled>Season 6</FancyLinkStyled>
+            <LinkStyled>Season 6</LinkStyled>
           </Link>
-          <Link href="">
-            <FancyLinkStyled onClick={() => AllSeasonsClicked()}>
-              Seasons 1-5 (Top 5)
-            </FancyLinkStyled>
+          <Link href="/season7">
+            <LinkStyled>Season 7</LinkStyled>
+          </Link>
+          <Link href="/all-seasons">
+            <LinkStyled onClick={() => AllSeasonsClicked()}>
+              Seasons 1-6 (Top 5)
+            </LinkStyled>
           </Link>
           <Link href="/credits">
-            <FancyLinkStyled>Credits</FancyLinkStyled>
+            <LinkStyled>Credits</LinkStyled>
           </Link>
         </List>
       )}

@@ -61,7 +61,7 @@ export default function Masterchef({ headerImg }) {
     Swal.fire({
       title: `Potential spoilers`,
       imageUrl: "/images/logo-emotes/xqcBased-AtypicalLUL.webp",
-      text: "This page will have spoilers of top 5 from 1-5 seasons. Do you want to continue?",
+      text: "This page will have spoilers of top 5 from 1-6 seasons. Do you want to continue?",
       showDenyButton: true,
       confirmButtonText: "Yes",
       denyButtonText: `No`,
@@ -81,7 +81,6 @@ export default function Masterchef({ headerImg }) {
         <Link href="/challenges">
           <LinkTitle>
             <FancyLinkStyled>Challenges</FancyLinkStyled>
-            <NewTag>New</NewTag>
           </LinkTitle>
         </Link>
         <LinkTitle>
@@ -112,6 +111,11 @@ export default function Masterchef({ headerImg }) {
         <Link href="/season6">
           <LinkTitle>
             <FancyLinkStyled>Season 6 </FancyLinkStyled>
+          </LinkTitle>
+        </Link>
+        <Link href="/season7">
+          <LinkTitle>
+            <FancyLinkStyled>Season 7 </FancyLinkStyled>
             <NewTag>New</NewTag>
           </LinkTitle>
         </Link>
@@ -122,9 +126,8 @@ export default function Masterchef({ headerImg }) {
                 AllSeasonsClicked();
               }}
             >
-              Seasons 1-5 (Top 5)
+              Seasons 1-6 (Top 5)
             </FancyLinkStyled>
-            <NewTag>New</NewTag>
           </LinkTitle>
         </Link>
       </Container>
