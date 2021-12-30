@@ -225,7 +225,7 @@ const Contributor = styled.span`
   border-radius: 4px;
   padding: 0 5px;
   transition: 300ms ease-in-out;
-  cursor: ${(props) => (props.cursor ? "pointer" : "")};
+  cursor: ${(props) => (props.cursor == "true" ? "pointer" : "")};
   color: ${(props) => {
     switch (props.platform) {
       case "twitch":
@@ -253,11 +253,20 @@ const Contributor = styled.span`
   }
 `;
 
-const VoteButton = styled.button`
-  margin-bottom: 40px;
-`;
+const VoteButton = styled.button``;
 
 const VoteLink = styled.a``;
+
+const UnderVoteButton = styled.span`
+  display: block;
+  font-size: 1em;
+  font-weight: 600;
+  margin: 10px;
+  margin-bottom: 20px;
+  padding: 5px 10px;
+  background-color: rgba(252, 50, 50, 0.2);
+  border-radius: 4px;
+`;
 
 export default function Index({ headerImg }) {
   const [discordName, setDiscordName] = useState("NiceDevTools#0211");
@@ -282,11 +291,20 @@ export default function Index({ headerImg }) {
             <span className="front">VOTE HERE</span>
           </VoteButton>
         </VoteLink>
+        <UnderVoteButton>
+          <Image
+            src="/images/emotes/DinkDonk.gif"
+            alt="emote of donk"
+            width="32"
+            height="32"
+          />
+          mr cow this will show your email!
+        </UnderVoteButton>
       </UnderTitle>
       <UnderTitle>
         <strong>Contributors</strong>:{" "}
         <Contributor
-          cursor={true}
+          cursor="true"
           onClick={() => setShowContributors(!showContributors)}
         >
           {showContributors ? (
