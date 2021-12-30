@@ -182,12 +182,13 @@ const UnderTitle = styled.p`
   }
 `;
 
-const Important = styled.span`
-  font-size: 1.4em;
+const Important = styled.p`
+  font-size: 1em;
   font-weight: 600;
-  margin: 0 10px;
-  padding: 5px 10px;
-  background-color: rgba(252, 50, 50, 0.5);
+  margin: 8px 10px;
+  margin-bottom: 40px;
+  padding: 2px 5px;
+  background-color: rgba(252, 50, 50, 0.3);
   border-radius: 4px;
 `;
 
@@ -253,8 +254,10 @@ const Contributor = styled.span`
   }
 `;
 
-const VoteButton = styled.button`
-  margin-bottom: 40px;
+const VoteButton = styled.button``;
+
+const UnderVote = styled.p`
+  margin: 0 0 30px 0;
 `;
 
 const VoteLink = styled.a``;
@@ -282,6 +285,15 @@ export default function Index({ headerImg }) {
             <span className="front">VOTE HERE</span>
           </VoteButton>
         </VoteLink>
+        <Important>
+          <Image
+            src="/images/emotes/DinkDonk.gif"
+            alt="emote of donk"
+            width="32"
+            height="32"
+          />
+          mr cow this will show your email!
+        </Important>
       </UnderTitle>
       <UnderTitle>
         <strong>Contributors</strong>:{" "}
