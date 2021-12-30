@@ -1,13 +1,16 @@
 import HomeHeader from "../../components/HomeHeader";
-import { xqc2021 } from "../../data/xqc2021";
 import styled from "styled-components";
 import Image from "next/image";
 import { keyframes } from "styled-components";
 import { useState } from "react";
 import { FancyLinkStyled } from "../../components/styles/FancyLinkStyled";
 import { BiLinkExternal } from "react-icons/bi";
-import { xqc2021contributors } from "../../data/xqc2021contributors";
+import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
 import HamburgerBest from "../../components/HamburgerBest";
+
+import { xqc2021 } from "../../data/xqc2021";
+import { xqc2021contributors } from "../../data/xqc2021contributors";
+import { xqc2021channels } from "../../data/xqc2021channels";
 
 const Container = styled.div`
   width: 100%;
@@ -213,14 +216,34 @@ const Strong = styled.strong`
 
 const Contributor = styled.span`
   font-size: 0.8em;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
   margin: 3px 5px;
   background-color: #222;
   border-radius: 4px;
   padding: 0 5px;
   transition: 300ms ease-in-out;
-  color: ${(props) => (props.platform === "twitch" ? "#b073ff" : "#ff6e38")};
+  cursor: ${(props) => (props.cursor ? "pointer" : "")};
+  color: ${(props) => {
+    switch (props.platform) {
+      case "twitch":
+        return "#b073ff";
+        break;
+      case "reddit":
+        return "#ff6e38";
+        break;
+      case "youtube":
+        return "#fc6565";
+        break;
+    }
+  }};
   font-weight: 600;
+  span {
+    margin-left: 5px;
+  }
+
   &:hover {
     background-color: #111;
     backdrop-filter: blur(4px);
@@ -239,12 +262,13 @@ const VoteLink = styled.a``;
 export default function Index({ headerImg }) {
   const [discordName, setDiscordName] = useState("NiceDevTools#0211");
   const [copied, setCopied] = useState(false);
+  const [showContributors, setShowContributors] = useState(false);
+  const [showChannels, setShowChannels] = useState(false);
 
   return (
     <Container>
       <HomeHeader headerImg={headerImg} />
       <HamburgerBest />
-
       <Title>Best of XQC 2021</Title>
       <UnderTitle>
         <VoteLink
@@ -259,14 +283,55 @@ export default function Index({ headerImg }) {
           </VoteButton>
         </VoteLink>
       </UnderTitle>
-
       <UnderTitle>
         <strong>Contributors</strong>:{" "}
-        {xqc2021contributors.map((user) => (
-          <Contributor key={user.name} platform={user.platform}>
-            {user.name}
-          </Contributor>
-        ))}
+        <Contributor
+          cursor={true}
+          onClick={() => setShowContributors(!showContributors)}
+        >
+          {showContributors ? (
+            <>
+              <BsEyeSlashFill /> <span>Hide</span>
+            </>
+          ) : (
+            <>
+              <BsEyeFill /> <span>Show</span>
+            </>
+          )}
+        </Contributor>
+        {showContributors &&
+          xqc2021contributors.map((user) => (
+            <Contributor key={user.name} platform={user.platform}>
+              {user.name}
+            </Contributor>
+          ))}
+        {}
+      </UnderTitle>
+
+      <UnderTitle>
+        <strong>Clips from</strong>:{" "}
+        <Contributor
+          cursor={true}
+          onClick={() => setShowChannels(!showChannels)}
+        >
+          {showChannels ? (
+            <>
+              <BsEyeSlashFill /> <span>Hide</span>
+            </>
+          ) : (
+            <>
+              <BsEyeFill /> <span>Show</span>
+            </>
+          )}
+        </Contributor>
+        {showChannels &&
+          xqc2021channels.map((channel) => (
+            <Contributor key={channel.name} platform={channel.platform}>
+              <a href={channel.link} target="_blank" rel="noopener noreferrer">
+                {channel.name}
+              </a>
+            </Contributor>
+          ))}
       </UnderTitle>
       <Categories>
         {xqc2021.categories.map((category) => (
