@@ -308,7 +308,7 @@ export async function getStaticProps() {
 
   await sheet.loadCells("A1:E10");
   const votes = sheet.getCell(1, 0).value;
-  const updateDate = sheet.getCell(1, 1).formattedValue;
+  const updateDate = new Date().toUTCString();
   return {
     props: { votes, updateDate }, // will be passed to the page component as props
   };
@@ -317,7 +317,6 @@ export async function getStaticProps() {
 export default function Index({ headerImg, votes, updateDate }) {
   const [showContributors, setShowContributors] = useState(false);
   const [showChannels, setShowChannels] = useState(false);
-  const updateDateUnix = new Date(updateDate).toUTCString();
   const now = new Date().toUTCString();
 
   // console.log(`Updated: ${updateDateUnix.toUTCString()}, now: ${now}`);
@@ -362,7 +361,7 @@ export default function Index({ headerImg, votes, updateDate }) {
         </VoteCounter>
         <UnderVoteCounter>
           Updated{" "}
-          {formatDistance(new Date(updateDateUnix), new Date(now), {
+          {formatDistance(new Date(updateDate), new Date(now), {
             addSuffix: true,
           })}
         </UnderVoteCounter>
