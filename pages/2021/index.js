@@ -320,7 +320,7 @@ export default function Index({ headerImg, votes, updateDate }) {
   const updateDateUnix = new Date(updateDate).toUTCString();
   const now = new Date().toUTCString();
 
-  console.log(now, updateDateUnix);
+  // console.log(`Updated: ${updateDateUnix.toUTCString()}, now: ${now}`);
 
   return (
     <Container>
@@ -360,7 +360,12 @@ export default function Index({ headerImg, votes, updateDate }) {
             />
           </strong>
         </VoteCounter>
-        <UnderVoteCounter>Updated ? ago</UnderVoteCounter>
+        <UnderVoteCounter>
+          Updated{" "}
+          {formatDistance(new Date(updateDateUnix), new Date(now), {
+            addSuffix: true,
+          })}
+        </UnderVoteCounter>
       </UnderTitle>
       <UnderTitle>
         <strong>Contributors</strong>:{" "}
