@@ -329,7 +329,7 @@ export default function Index({ headerImg }) {
       <UnderTitle>
         <strong>Clips from</strong>:{" "}
         <Contributor
-          cursor={true}
+          cursor="true"
           onClick={() => setShowChannels(!showChannels)}
         >
           {showChannels ? (
