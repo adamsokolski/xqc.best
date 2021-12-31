@@ -6,7 +6,10 @@ import { useState } from "react";
 import { FancyLinkStyled } from "../../components/styles/FancyLinkStyled";
 import { BiLinkExternal } from "react-icons/bi";
 import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
+import { MdOutlineHowToVote } from "react-icons/md";
 import HamburgerBest from "../../components/HamburgerBest";
+import { google } from "googleapis";
+import { formatDistanceToNow } from "date-fns";
 
 import { xqc2021 } from "../../data/xqc2021";
 import { xqc2021contributors } from "../../data/xqc2021contributors";
@@ -268,7 +271,56 @@ const UnderVoteButton = styled.span`
   border-radius: 4px;
 `;
 
-export default function Index({ headerImg }) {
+const VoteCounter = styled.span`
+  font-size: 1.2em;
+  font-weight: 400;
+  margin: 0 10px;
+  padding: 5px 10px;
+  background-color: rgba(124, 255, 54, 0.3);
+  border-radius: 4px;
+
+  strong {
+    font-size: 1.4em;
+    font-weight: 700;
+  }
+`;
+
+const UnderVoteCounter = styled.span`
+  opacity: 0.5;
+  font-size: 0.8em;
+  display: block;
+`;
+
+export async function getStaticProps({ query }) {
+  // Auth
+  const auth = await google.auth.getClient({
+    scopes: ["https://www.googleapis.com/auth/spreadsheets.readonly"],
+  });
+  const sheets = google.sheets({ version: "v4", auth });
+
+  // Query
+
+  const range = `Sheet2!A2:B2`;
+
+  const response = await sheets.spreadsheets.values.get({
+    spreadsheetId: process.env.SHEET_ID,
+    range,
+  });
+
+  // Result
+
+  const [sum, date] = response.data.values[0];
+  console.log(response.data.values);
+
+  return {
+    props: {
+      sum,
+      date,
+    },
+  };
+}
+
+export default function Index({ headerImg, sum, date }) {
   const [discordName, setDiscordName] = useState("NiceDevTools#0211");
   const [copied, setCopied] = useState(false);
   const [showContributors, setShowContributors] = useState(false);
@@ -300,6 +352,14 @@ export default function Index({ headerImg }) {
           />
           mr cow this will show your email!
         </UnderVoteButton>
+      </UnderTitle>
+      <UnderTitle>
+        <VoteCounter>
+          Votes: <strong>{sum}</strong>
+        </VoteCounter>
+        <UnderVoteCounter>
+          Updated {formatDistanceToNow(new Date(date), { addSuffix: true })}
+        </UnderVoteCounter>
       </UnderTitle>
       <UnderTitle>
         <strong>Contributors</strong>:{" "}
