@@ -9,4 +9,4 @@ jobs:
       - name: Call our API route
         run: |
           curl --request POST \
-          --url ${{ secrets.DEPLOY_HOOK }} \
+          --url `${{ secrets.DEPLOY_HOOK }}` \
