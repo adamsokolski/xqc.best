@@ -2,12 +2,12 @@ import HomeHeader from "../../components/HomeHeader";
 import styled from "styled-components";
 import Image from "next/image";
 import { keyframes } from "styled-components";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FancyLinkStyled } from "../../components/styles/FancyLinkStyled";
 import { BiLinkExternal } from "react-icons/bi";
 import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
 import HamburgerBest from "../../components/HamburgerBest";
-import { formatDistanceToNow } from "date-fns";
+import { formatDistance } from "date-fns";
 import NumberFormat from "react-number-format";
 
 import { xqc2021 } from "../../data/xqc2021";
@@ -317,6 +317,10 @@ export async function getStaticProps() {
 export default function Index({ headerImg, votes, updateDate }) {
   const [showContributors, setShowContributors] = useState(false);
   const [showChannels, setShowChannels] = useState(false);
+  const updateDateUnix = new Date(updateDate).toUTCString();
+  const now = new Date().toUTCString();
+
+  console.log(now, updateDateUnix);
 
   return (
     <Container>
@@ -356,10 +360,7 @@ export default function Index({ headerImg, votes, updateDate }) {
             />
           </strong>
         </VoteCounter>
-        <UnderVoteCounter>
-          Updated{" "}
-          {formatDistanceToNow(new Date(updateDate), { addSuffix: true })}
-        </UnderVoteCounter>
+        <UnderVoteCounter>Updated ? ago</UnderVoteCounter>
       </UnderTitle>
       <UnderTitle>
         <strong>Contributors</strong>:{" "}
