@@ -429,6 +429,7 @@ export default function Index({ headerImg, votes, updateDate }) {
                       height="300px"
                       width="450px"
                       alt={option.name}
+                      quality={40}
                       placeholder="blur"
                       blurDataURL="/images/logo-emotes/xqcSCAREDOFGIRLS-fraserlol.webp"
                     />
