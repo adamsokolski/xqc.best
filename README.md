@@ -1,21 +1,23 @@
-﻿# xqc-masterchef-tierlist
+#xqc.best
 
 See: [xqc.best](https://www.xqc.best/)
-MasterChef tier list.
+Best of xQcOW 2021. MasterChef US tier list, seasons 1-7. 
+
+![Laptop with xqc.best opened](https://raw.githubusercontent.com/adamsokolski/xqc.best/main/public/images/mockup.png)
 
 ## Tech Stack
 
 - Next.js (react)
 - Styled-Components
-- react-beautiful-dnd
 
-## Todo/ideas
+## Acknowledgements
 
-- [x] Move state from Logo.js to \_app.js (global state to prevent reseting)
-- [x] Add season 1-4 contestants
-- [x] Implement moving contestants between columns
-- [x] Add logo emotes from BetterTTV/7tv
-- [x] Add authors of emotes to /credit page
-- [x] Add cookies to store columns state
-- [x] Add confetti when all contestants are in rating columns
-- [x] Add confetti cookie (do confetti only first time)
+- This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+- Tier list build with [react-beautiful-dnd](https://github.com/atlassian/react-beautiful-dnd) and [react-cookie](https://github.com/reactivestack/cookies)
+- Icons - [react-icons](https://react-icons.github.io/react-icons/)
+- Spoiler alert - [sweetalert2](https://sweetalert2.github.io/)
+- Vote counter - (google-spreadsheet)[https://github.com/theoephraim/node-google-spreadsheet]
+
+
+
+
