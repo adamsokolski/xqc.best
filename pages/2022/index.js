@@ -164,7 +164,7 @@ export default function Index({ headerImg }) {
         width="290px"
         alt="xqcSCAREDOFGIRLS"
         placeholder="blur"
-        blurDataURL="/images/logo-emotes/xqcSCAREDOFGIRLS-fraserlol.webp"
+        blurDataURL="/images/10px2.png"
       />
     </Container>
   );

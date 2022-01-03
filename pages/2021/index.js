@@ -431,7 +431,7 @@ export default function Index({ headerImg, votes, updateDate }) {
                       alt={option.name}
                       quality={40}
                       placeholder="blur"
-                      blurDataURL="/images/logo-emotes/xqcSCAREDOFGIRLS-fraserlol.webp"
+                      blurDataURL="/images/10px2.png"
                     />
                   ) : (
                     ""

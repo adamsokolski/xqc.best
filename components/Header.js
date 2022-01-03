@@ -34,7 +34,7 @@ export default function Header({ headerImg }) {
               height="128px"
               alt="logo with xqc"
               placeholder="blur"
-              blurDataURL="/images/logo-emotes/xqcSCAREDOFGIRLS-fraserlol.webp"
+              blurDataURL="/images/10px2.png"
             />
             <span>x</span>
             <Image
