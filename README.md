@@ -17,7 +17,7 @@ Best of xQcOW 2021. MasterChef US tier list, seasons 1-7.
 - Tier list build with [react-beautiful-dnd](https://github.com/atlassian/react-beautiful-dnd) and [react-cookie](https://github.com/reactivestack/cookies)
 - Icons - [react-icons](https://react-icons.github.io/react-icons/)
 - Spoiler alert - [sweetalert2](https://sweetalert2.github.io/)
-- Vote counter - (google-spreadsheet)[https://github.com/theoephraim/node-google-spreadsheet]
+- Vote counter - [google-spreadsheet](https://github.com/theoephraim/node-google-spreadsheet)
 
 
 
