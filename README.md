@@ -1,6 +1,7 @@
 # xqc.best
 
 See: [xqc.best](https://www.xqc.best/)
+
 Best of xQcOW 2021. MasterChef US tier list, seasons 1-7. 
 
 ![Laptop with xqc.best opened](https://raw.githubusercontent.com/adamsokolski/xqc.best/main/public/images/mockup.png)
