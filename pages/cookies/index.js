@@ -67,7 +67,7 @@ export default function Cookies({ headerImg }) {
         >
           <CreditLink>xqc.best</CreditLink>
         </FancyLinkStyled>
-        . In such a case, tier list won't save.
+        . In such a case, tier list won&apos;t save.
       </Text>
     </Container>
   )
