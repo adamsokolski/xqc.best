@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const FancyLinkStyled = styled.a`
   display: inline-block;
@@ -15,8 +15,9 @@ export const FancyLinkStyled = styled.a`
   cursor: pointer;
   text-decoration: none;
   text-align: center;
+  gap: 2px;
 
   &:hover {
     background-size: 100% 2px;
   }
-`;
+`
