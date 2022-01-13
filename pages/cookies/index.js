@@ -58,8 +58,8 @@ export default function Cookies({ headerImg }) {
         </FancyLinkStyled>{' '}
       </Text>
       <Text>
-        If you don’t wish to accept cookies, you should instruct your browser to
-        refuse cookies from{' '}
+        If you don&apos;t wish to accept cookies, you should instruct your
+        browser to refuse cookies from{' '}
         <FancyLinkStyled
           href="https://www.xqc.best/"
           target="_blank"
