@@ -18,10 +18,10 @@ const HomeLink = styled.a`
 `
 
 const NotFound = () => {
-  const router = useRouter()
   const [redirectTimer, setRedirectTimer] = useState(10)
 
   useEffect(() => {
+    const router = useRouter()
     setTimeout(() => {
       router.push('/')
     }, 10000)
