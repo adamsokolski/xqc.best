@@ -1,16 +1,16 @@
-import { ContainerStyled } from "../components/styles/ContainerStyled";
-import Link from "next/link";
-import HomeHeader from "../components/HomeHeader";
-import styled from "styled-components";
-import { FancyLinkStyled } from "../components/styles/FancyLinkStyled";
-import { keyframes } from "styled-components";
-import Image from "next/image";
+import { ContainerStyled } from '../components/styles/ContainerStyled'
+import Link from 'next/link'
+import HomeHeader from '../components/HomeHeader'
+import styled from 'styled-components'
+import { FancyLinkStyled } from '../components/styles/FancyLinkStyled'
+import { keyframes } from 'styled-components'
+import Image from 'next/image'
 
 const gradientAnimation = keyframes`
  to {
       background-position: 200%;
     }
-`;
+`
 
 const LinkTitle = styled.h3`
   position: relative;
@@ -20,7 +20,7 @@ const LinkTitle = styled.h3`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-`;
+`
 
 const ImageContainer = styled.div`
   z-index: 11;
@@ -39,14 +39,14 @@ const ImageContainer = styled.div`
     object-position: center center;
     cursor: pointer;
   }
-`;
+`
 
 export default function Home({ headerImg }) {
   return (
     <div>
       <HomeHeader headerImg={headerImg} />
       <ContainerStyled>
-        <Link href="/2021">
+        <Link href="/2021" passHref>
           <LinkTitle>
             <ImageContainer>
               <Image
@@ -60,7 +60,7 @@ export default function Home({ headerImg }) {
             <FancyLinkStyled>Best of XQC 2021</FancyLinkStyled>
           </LinkTitle>
         </Link>
-        <Link href="/masterchef">
+        <Link href="/masterchef" passHref>
           <LinkTitle>
             <ImageContainer>
               <Image
@@ -75,5 +75,5 @@ export default function Home({ headerImg }) {
         </Link>
       </ContainerStyled>
     </div>
-  );
+  )
 }

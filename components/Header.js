@@ -1,8 +1,8 @@
-import Image from "next/image";
-import Link from "next/link";
-import { HeaderStyled } from "./styles/HeaderStyled";
-import styled from "styled-components";
-import Hamburger from "./Hamburger";
+import Image from 'next/image'
+import Link from 'next/link'
+import { HeaderStyled } from './styles/HeaderStyled'
+import styled from 'styled-components'
+import Hamburger from './Hamburger'
 
 const NavContainer = styled.nav`
   right: 40px;
@@ -20,13 +20,13 @@ const NavContainer = styled.nav`
     padding: 2px;
     flex-direction: row;
   }
-`;
+`
 
 export default function Header({ headerImg }) {
   return (
     <HeaderStyled>
       <div>
-        <Link href="/">
+        <Link href="/" passHref>
           <a>
             <Image
               src={headerImg}
@@ -49,5 +49,5 @@ export default function Header({ headerImg }) {
 
       <Hamburger />
     </HeaderStyled>
-  );
+  )
 }

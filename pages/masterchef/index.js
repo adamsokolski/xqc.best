@@ -1,17 +1,17 @@
-import { ContainerStyled } from "../../components/styles/ContainerStyled";
-import Link from "next/link";
-import HomeHeader from "../../components/HomeHeader";
-import styled from "styled-components";
-import { FancyLinkStyled } from "../../components/styles/FancyLinkStyled";
-import { keyframes } from "styled-components";
-import { useRouter } from "next/router";
-import Swal from "sweetalert2";
+import { ContainerStyled } from '../../components/styles/ContainerStyled'
+import Link from 'next/link'
+import HomeHeader from '../../components/HomeHeader'
+import styled from 'styled-components'
+import { FancyLinkStyled } from '../../components/styles/FancyLinkStyled'
+import { keyframes } from 'styled-components'
+import { useRouter } from 'next/router'
+import Swal from 'sweetalert2'
 
 const gradientAnimation = keyframes`
  to {
       background-position: 200%;
     }
-`;
+`
 
 const LinkTitle = styled.h3`
   position: relative;
@@ -20,7 +20,7 @@ const LinkTitle = styled.h3`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
+`
 
 const NewTag = styled.span`
   right: -60px;
@@ -43,7 +43,7 @@ const NewTag = styled.span`
     infinite;
   border-radius: 20px;
   padding: 2px 5px 5px 5px;
-`;
+`
 
 const Container = styled.div`
   display: flex;
@@ -52,78 +52,78 @@ const Container = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   padding: 50px 0;
-`;
+`
 
 export default function Masterchef({ headerImg }) {
-  const router = useRouter();
+  const router = useRouter()
 
   const AllSeasonsClicked = () => {
     Swal.fire({
       title: `Potential spoilers`,
-      imageUrl: "/images/logo-emotes/xqcBased-AtypicalLUL.webp",
-      text: "This page will have spoilers of top 5 from 1-6 seasons. Do you want to continue?",
+      imageUrl: '/images/logo-emotes/xqcBased-AtypicalLUL.webp',
+      text: 'This page will have spoilers of top 5 from 1-6 seasons. Do you want to continue?',
       showDenyButton: true,
-      confirmButtonText: "Yes",
+      confirmButtonText: 'Yes',
       denyButtonText: `No`,
-      color: "white",
-      background: "#333",
+      color: 'white',
+      background: '#333',
     }).then((result) => {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
-        router.push("/all-seasons");
+        router.push('/all-seasons')
       }
-    });
-  };
+    })
+  }
   return (
     <div>
       <HomeHeader headerImg={headerImg} underTitle={true} />
       <Container>
-        <Link href="/challenges">
+        <Link href="/challenges" passHref>
           <LinkTitle>
             <FancyLinkStyled>Challenges</FancyLinkStyled>
           </LinkTitle>
         </Link>
         <LinkTitle>
-          <Link href="/season1">
+          <Link href="/season1" passHref>
             <FancyLinkStyled>Season 1</FancyLinkStyled>
           </Link>
         </LinkTitle>
         <LinkTitle>
-          <Link href="/season2">
+          <Link href="/season2" passHref>
             <FancyLinkStyled>Season 2</FancyLinkStyled>
           </Link>
         </LinkTitle>
         <LinkTitle>
-          <Link href="/season3">
+          <Link href="/season3" passHref>
             <FancyLinkStyled>Season 3</FancyLinkStyled>
           </Link>
         </LinkTitle>
         <LinkTitle>
-          <Link href="/season4">
+          <Link href="/season4" passHref>
             <FancyLinkStyled>Season 4</FancyLinkStyled>
           </Link>
         </LinkTitle>
         <LinkTitle>
-          <Link href="/season5">
+          <Link href="/season5" passHref>
             <FancyLinkStyled>Season 5</FancyLinkStyled>
           </Link>
         </LinkTitle>
-        <Link href="/season6">
+        <Link href="/season6" passHref>
           <LinkTitle>
             <FancyLinkStyled>Season 6 </FancyLinkStyled>
           </LinkTitle>
         </Link>
-        <Link href="/season7">
+        <Link href="/season7" passHref>
           <LinkTitle>
             <FancyLinkStyled>Season 7 </FancyLinkStyled>
             <NewTag>New</NewTag>
           </LinkTitle>
         </Link>
-        <Link href="">
+        <Link href="" passHref>
           <LinkTitle>
             <FancyLinkStyled
               onClick={() => {
-                AllSeasonsClicked();
+                AllSeasonsClicked()
               }}
             >
               Seasons 1-6 (Top 5)
@@ -132,5 +132,5 @@ export default function Masterchef({ headerImg }) {
         </Link>
       </Container>
     </div>
-  );
+  )
 }

@@ -1,7 +1,7 @@
-import Link from "next/link";
-import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import styled from "styled-components";
+import Link from 'next/link'
+import { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
+import styled from 'styled-components'
 
 const Container = styled.div`
   width: 100%;
@@ -10,40 +10,40 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-`;
+`
 
 const HomeLink = styled.a`
   border-bottom: 1px solid white;
   cursor: pointer;
-`;
+`
 
 const NotFound = () => {
-  const router = useRouter();
-  const [redirectTimer, setRedirectTimer] = useState(10);
+  const router = useRouter()
+  const [redirectTimer, setRedirectTimer] = useState(10)
 
   useEffect(() => {
     setTimeout(() => {
-      router.push("/");
-    }, 10000);
-  }, []);
+      router.push('/')
+    }, 10000)
+  }, [])
 
   useEffect(() => {
     setTimeout(() => {
-      setRedirectTimer(redirectTimer - 1);
-    }, 1000);
-  }, [redirectTimer]);
+      setRedirectTimer(redirectTimer - 1)
+    }, 1000)
+  }, [redirectTimer])
   return (
     <Container>
       <h1>Page not found... 😕</h1>
       <p>
-        You&apos;ll be redirected to the{" "}
-        <Link href="/">
+        You&apos;ll be redirected to the{' '}
+        <Link href="/" passHref>
           <HomeLink className="fancy-link">Homepage</HomeLink>
-        </Link>{" "}
+        </Link>{' '}
         in {redirectTimer} seconds.
       </p>
     </Container>
-  );
-};
+  )
+}
 
-export default NotFound;
+export default NotFound

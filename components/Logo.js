@@ -1,6 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
-import styled from "styled-components";
+import Image from 'next/image'
+import Link from 'next/link'
+import styled from 'styled-components'
 
 const LogoContainer = styled.div`
   display: flex;
@@ -15,15 +15,15 @@ const LogoContainer = styled.div`
   span {
     font-weight: 100;
     font-size: 60px;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 20px;
   }
-`;
+`
 
 export default function Logo({ headerImg }) {
   return (
     <LogoContainer>
-      <Link href="/">
+      <Link href="/" passHref>
         <a>
           <Image
             src={headerImg}
@@ -36,5 +36,5 @@ export default function Logo({ headerImg }) {
         </a>
       </Link>
     </LogoContainer>
-  );
+  )
 }

@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import Logo from "./Logo";
-import Link from "next/link";
-import HamburgerBest from "./HamburgerBest";
+import styled from 'styled-components'
+import Logo from './Logo'
+import Link from 'next/link'
+import HamburgerBest from './HamburgerBest'
 
 const Container = styled.header`
   background-color: #282828;
@@ -17,7 +17,7 @@ const Container = styled.header`
     font-weight: 200;
     margin: 10px;
   }
-`;
+`
 
 const Title = styled.h1`
   margin: 20px 0 0 0;
@@ -25,19 +25,19 @@ const Title = styled.h1`
   text-align: center;
   font-weight: 400;
   z-index: 30;
-`;
+`
 
 const UnderTitle = styled.h2`
   opacity: 0.9;
   font-weight: 500;
   text-align: center;
-`;
+`
 
 export default function HomeHeader({ headerImg, underTitle, navBar }) {
   return (
     <Container>
       <Logo headerImg={headerImg} />
-      <Link href="/">
+      <Link href="/" passHref>
         <a>
           <Title>xqc.best</Title>
         </a>
@@ -45,10 +45,10 @@ export default function HomeHeader({ headerImg, underTitle, navBar }) {
       {underTitle ? (
         <UnderTitle>MasterChef tier list for our reactor</UnderTitle>
       ) : (
-        ""
+        ''
       )}
 
-      {navBar ? <HamburgerBest /> : ""}
+      {navBar ? <HamburgerBest /> : ''}
     </Container>
-  );
+  )
 }

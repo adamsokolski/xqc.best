@@ -88,7 +88,7 @@ export default function credits({ headerImg }) {
           </ul>
           <h2>Emotes</h2>
 
-          <Link href="/credits/all-emotes">
+          <Link href="/credits/all-emotes" passHref>
             <FancyLinkStyled>
               <CreditLink>All emotes </CreditLink>
               <Image

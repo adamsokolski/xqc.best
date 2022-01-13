@@ -14,10 +14,6 @@ const ImageWrapper = styled.div`
 
 const InlineLink = styled.span`
   margin: 0 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2px;
 `
 
 export default function Footer() {
@@ -34,13 +30,13 @@ export default function Footer() {
         />{' '}
       </ImageWrapper>
       by
-      <Link href="/credits">
+      <Link href="/credits" passHref>
         <InlineLink>
           <FancyLinkStyled>NiceDevTools</FancyLinkStyled>
         </InlineLink>
       </Link>
       <BsDot />
-      <Link href="/cookies">
+      <Link href="/cookies" passHref>
         <InlineLink>
           <FancyLinkStyled>
             <BiCookie /> Cookies

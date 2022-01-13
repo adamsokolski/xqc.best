@@ -1,10 +1,10 @@
-import styled from "styled-components";
-import { useState, useEffect } from "react";
-import { useRouter } from "next/router";
-import { Turn as Ham } from "hamburger-react";
-import { keyframes } from "styled-components";
-import { xqc2021 } from "../data/xqc2021";
-import * as Scroll from "react-scroll";
+import styled from 'styled-components'
+import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
+import { Turn as Ham } from 'hamburger-react'
+import { keyframes } from 'styled-components'
+import { xqc2021 } from '../data/xqc2021'
+import * as Scroll from 'react-scroll'
 import {
   Link,
   DirectLink,
@@ -13,9 +13,9 @@ import {
   animateScroll as scroll,
   scrollSpy,
   scroller,
-} from "react-scroll";
+} from 'react-scroll'
 
-let LinkScroll = Scroll.Link;
+let LinkScroll = Scroll.Link
 
 const LinkStyled = styled(LinkScroll)`
   cursor: pointer;
@@ -27,7 +27,7 @@ const LinkStyled = styled(LinkScroll)`
   &:hover {
     background-color: ${(props) => props.theme.main3};
   }
-`;
+`
 
 const fadeIn = keyframes`
   0% {
@@ -37,7 +37,7 @@ const fadeIn = keyframes`
     opacity: 1;
   }
  
-`;
+`
 
 const fadeOut = keyframes`
   0% {
@@ -47,7 +47,7 @@ const fadeOut = keyframes`
     opacity: 0;
   }
  
-`;
+`
 
 const Container = styled.div`
   position: fixed;
@@ -65,7 +65,7 @@ const Container = styled.div`
   .hidden {
     animation: ${fadeOut} 250ms ease;
   }
-`;
+`
 const List = styled.div`
   z-index: 60;
   background-color: #282828;
@@ -87,29 +87,29 @@ const List = styled.div`
   @media (max-width: 900px) {
     padding: 1px;
   }
-`;
+`
 
 export default function HamburgerBest() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [outAnim, setOutAnim] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
+  const [outAnim, setOutAnim] = useState(false)
 
-  const router = useRouter();
+  const router = useRouter()
   useEffect(() => {
-    setIsOpen(false);
-  }, [router.pathname]);
+    setIsOpen(false)
+  }, [router.pathname])
   useEffect(() => {
     if (!isOpen) {
-      setOutAnim(isOpen);
+      setOutAnim(isOpen)
     } else {
-      setOutAnim(isOpen);
+      setOutAnim(isOpen)
     }
-  }, [isOpen]);
+  }, [isOpen])
 
   return (
     <Container>
       <Ham toggled={isOpen} toggle={setIsOpen} />
       {outAnim && (
-        <List className={!isOpen ? "hidden" : ""}>
+        <List className={!isOpen ? 'hidden' : ''}>
           {xqc2021.categories.map((category) => (
             <LinkStyled
               key={category.id}
@@ -119,6 +119,7 @@ export default function HamburgerBest() {
               offset={-50}
               duration={500}
               onClick={() => setIsOpen(false)}
+              passHref
             >
               {category.name}
             </LinkStyled>
@@ -126,5 +127,5 @@ export default function HamburgerBest() {
         </List>
       )}
     </Container>
-  );
+  )
 }
