@@ -18,8 +18,9 @@ const CreditLink = styled.span`
 `
 
 const Text = styled.p`
-  max-width: 900px;
+  max-width: 600px;
   font-size: 1.2em;
+  margin: 10px 20px;
 `
 
 const Title = styled.h2`
@@ -31,44 +32,53 @@ const Title = styled.h2`
 
 export default function Cookies({ headerImg }) {
   return (
-    <Container>
+    <>
       <HomeHeader headerImg={headerImg} />
-      <Title>
-        <BiCookie /> Cookies
-      </Title>
-      <Text>
-        <FancyLinkStyled
-          href="https://www.xqc.best/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <CreditLink>xqc.best</CreditLink>
-        </FancyLinkStyled>{' '}
-        uses its own technical cookies in order to save tier list progress.
-      </Text>
-      <Text>
-        The website uses Google Analytics cookies to count the number of site
-        visits. For information about the cookies used to visit the appropriate{' '}
-        <FancyLinkStyled
-          href="https://policies.google.com/technologies/cookies#types-of-cookies"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <CreditLink> page of Google.</CreditLink>
-        </FancyLinkStyled>{' '}
-      </Text>
-      <Text>
-        If you don&apos;t wish to accept cookies, you should instruct your
-        browser to refuse cookies from{' '}
-        <FancyLinkStyled
-          href="https://www.xqc.best/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <CreditLink>xqc.best</CreditLink>
-        </FancyLinkStyled>
-        . In such a case, tier list won&apos;t save.
-      </Text>
-    </Container>
+      <Container>
+        <Title>
+          <BiCookie /> Cookies
+        </Title>
+        <Text>
+          <FancyLinkStyled
+            href="https://www.xqc.best/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <CreditLink>xqc.best</CreditLink>
+          </FancyLinkStyled>{' '}
+          uses its own technical cookies in order to save tier list progress.
+        </Text>
+        <Text>
+          <FancyLinkStyled
+            href="https://www.xqc.best/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <CreditLink>xqc.best</CreditLink>
+          </FancyLinkStyled>{' '}
+          uses Google Analytics cookies to count the number of site visits. For
+          information about the cookies used to visit the appropriate{' '}
+          <FancyLinkStyled
+            href="https://policies.google.com/technologies/cookies#types-of-cookies"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <CreditLink> page of Google.</CreditLink>
+          </FancyLinkStyled>{' '}
+        </Text>
+        <Text>
+          If you don&apos;t wish to accept cookies, you should instruct your
+          browser to refuse cookies from{' '}
+          <FancyLinkStyled
+            href="https://www.xqc.best/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <CreditLink>xqc.best</CreditLink>
+          </FancyLinkStyled>
+          . In such a case, tier list won&apos;t save.
+        </Text>
+      </Container>
+    </>
   )
 }
