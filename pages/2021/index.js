@@ -1,20 +1,47 @@
-import HomeHeader from "../../components/HomeHeader";
-import styled from "styled-components";
-import Image from "next/image";
-import { keyframes } from "styled-components";
-import { useState, useEffect } from "react";
-import { FancyLinkStyled } from "../../components/styles/FancyLinkStyled";
-import { BiLinkExternal } from "react-icons/bi";
-import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
-import HamburgerBest from "../../components/HamburgerBest";
-import { formatDistance } from "date-fns";
-import NumberFormat from "react-number-format";
+import HomeHeader from '../../components/HomeHeader'
+import styled from 'styled-components'
+import Image from 'next/image'
+import { keyframes } from 'styled-components'
+import { useState, useEffect } from 'react'
+import { FancyLinkStyled } from '../../components/styles/FancyLinkStyled'
+import { BiLinkExternal } from 'react-icons/bi'
+import { BsEyeFill, BsEyeSlashFill } from 'react-icons/bs'
+import HamburgerBest from '../../components/HamburgerBest'
+import Link from 'next/link'
 
-import { xqc2021 } from "../../data/xqc2021";
-import { xqc2021contributors } from "../../data/xqc2021contributors";
-import { xqc2021channels } from "../../data/xqc2021channels";
+import { xqc2021 } from '../../data/xqc2021'
+import { xqc2021contributors } from '../../data/xqc2021contributors'
+import { xqc2021channels } from '../../data/xqc2021channels'
 
-const { GoogleSpreadsheet } = require("google-spreadsheet");
+const fadeInOut = keyframes`
+  0% {
+    opacity: 0;
+  }
+  10%,90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+`
+const gradientAnimation = keyframes`
+to {
+    background-position: 200%;
+  }
+
+`
+
+const shadowAnimation = keyframes`
+  0% {
+    box-shadow: 0 0px 7px 0 #42ff60;
+  }
+  25%,75% {
+    box-shadow: 0 0px 15px 0 #42ff60;
+  }
+  100% {
+    box-shadow: 0 0px 7px 0 #42ff60;
+  }
+`
 
 const Container = styled.div`
   width: 100%;
@@ -23,11 +50,11 @@ const Container = styled.div`
   justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
-`;
+`
 
 const Title = styled.h2`
   font-size: 2em;
-`;
+`
 
 const ImageContainer = styled.div`
   z-index: 11;
@@ -45,67 +72,76 @@ const ImageContainer = styled.div`
     object-position: center center;
     transition: 300ms ease-in-out;
   }
-`;
+`
 
 const Categories = styled.div`
   max-width: 1400px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: ${(props) => (props.winners ? 'flex-start' : 'center')};
   flex-direction: row;
   flex-wrap: wrap;
-`;
+`
 
 const Category = styled.div`
-  width: 100%;
+  width: ${(props) => (props.winners ? '30%' : '100%')};
   display: flex;
-  align-items: stretch;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: ${(props) => (props.winners ? 'center' : 'flex-start')};
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 50px;
-  margin-bottom: 20px;
+  margin-top: ${(props) => (props.winners ? '0' : '50px')};
+  margin-bottom: ${(props) => (props.winners ? '0' : '20px')};
+  margin: 10px;
+  padding: 5px;
   @media (max-width: 900px) {
     flex-direction: column;
+    width: 100%;
   }
-`;
+`
 
 const CategoryTitle = styled.h3`
   font-size: 1.5em;
   text-align: center;
   width: 100%;
-`;
+`
 const Option = styled.div`
-  width: 30%;
+  box-sizing: border-box;
+  width: ${(props) => (props.winners ? '100%' : '30%')};
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   background-color: ${(props) => props.theme.main4};
-  margin: 10px;
+  margin: ${(props) => (props.winners ? '0' : '10px')};
   padding: 5px;
   border-radius: 4px;
 
-  box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.37);
+  box-shadow: 0 0px 4px 0 ${(props) => props.theme.main4};
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   transition: 300ms ease-in-out;
+  animation: ${(props) => (props.winner ? shadowAnimation : '')} 3s ease
+    infinite;
+
+  border: 1px solid
+    ${(props) => (props.winner ? props.theme.winnerGreen : 'none')};
 
   &:hover {
-    box-shadow: 0 0px 15px 0 rgba(0, 0, 0, 0.37);
+    box-shadow: 0 0px 15px 0 ${(props) => props.theme.main4};
   }
 
   @media (max-width: 900px) {
     width: 95%;
   }
-`;
+`
 
 const OptionName = styled.p`
   font-size: 1.1em;
   font-weight: 600;
-`;
+`
 
-const UnderTitle = styled.p`
+const UnderTitle = styled.div`
   text-align: center;
   line-height: 35px;
   margin: 10px 20px;
@@ -149,7 +185,7 @@ const UnderTitle = styled.p`
     );
   }
   .front {
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     display: block;
     position: relative;
@@ -184,39 +220,7 @@ const UnderTitle = styled.p`
   .pushable:focus:not(:focus-visible) {
     outline: none;
   }
-`;
-
-const Important = styled.span`
-  font-size: 1.4em;
-  font-weight: 600;
-  margin: 0 10px;
-  padding: 5px 10px;
-  background-color: rgba(252, 50, 50, 0.5);
-  border-radius: 4px;
-`;
-
-const fadeInOut = keyframes`
-  0% {
-    opacity: 0;
-  }
-  10%,90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-`;
-const Copied = styled.div`
-  margin-left: 5px;
-  font-weight: 500;
-  display: inline-block;
-  position: absolute;
-  animation: ${fadeInOut} 1s linear;
-`;
-
-const Strong = styled.strong`
-  cursor: pointer;
-`;
+`
 
 const Contributor = styled.span`
   font-size: 0.8em;
@@ -229,18 +233,18 @@ const Contributor = styled.span`
   border-radius: 4px;
   padding: 0 5px;
   transition: 300ms ease-in-out;
-  cursor: ${(props) => (props.cursor == "true" ? "pointer" : "")};
+  cursor: ${(props) => (props.cursor == 'true' ? 'pointer' : '')};
   color: ${(props) => {
     switch (props.platform) {
-      case "twitch":
-        return "#b073ff";
-        break;
-      case "reddit":
-        return "#ff6e38";
-        break;
-      case "youtube":
-        return "#fc6565";
-        break;
+      case 'twitch':
+        return '#b073ff'
+        break
+      case 'reddit':
+        return '#ff6e38'
+        break
+      case 'youtube':
+        return '#fc6565'
+        break
     }
   }};
   font-weight: 600;
@@ -255,119 +259,121 @@ const Contributor = styled.span`
     transition: 300ms ease-in-out;
     box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.37);
   }
-`;
+`
 
-const VoteButton = styled.button``;
+const Tags = styled.div`
+  top: 5px;
+  left: 5px;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+`
 
-const VoteLink = styled.a``;
-
-const UnderVoteButton = styled.span`
-  display: block;
-  font-size: 1em;
-  font-weight: 600;
-  margin: 10px;
-  margin-bottom: 20px;
-  padding: 5px 10px;
-  background-color: rgba(252, 50, 50, 0.2);
+const ProcentTag = styled.div`
+  font-family: 'Montserrat', sans-serif;
+  z-index: 1;
+  background-color: #333;
   border-radius: 4px;
-`;
+  padding: 3px 10px;
+  font-weight: 600;
+  font-size: 1.2em;
+`
 
-const VoteCounter = styled.span`
+const WinnerTag = styled.div`
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 4px;
+  z-index: 1;
+  background-color: #333;
+  border-radius: 4px;
+  padding: 3px 10px;
+  font-weight: 700;
+  font-size: 1.2em;
+  color: white;
+  background-color: ${(props) => props.theme.main4};
+
+  span {
+    background: radial-gradient(circle, #00ff42 0%, #00e98a 50%, #00cfc6 100%);
+    animation: ${gradientAnimation} 6s cubic-bezier(0.68, -0.6, 0.32, 1.6)
+      infinite;
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+`
+
+const NextYearGreetings = styled.div`
+  font-family: 'Montserrat', sans-serif;
+  background-color: ${(props) => props.theme.main4};
+  margin: 50px;
+  padding: 20px;
+  font-size: 3em;
+  font-weight: 600;
+  border-radius: 4px;
+
+  a {
+    font-weight: 800;
+    background: radial-gradient(circle, #00ff42 0%, #00e98a 50%, #00cfc6 100%);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+`
+
+const ShowWinnersBox = styled.div`
   font-size: 1.2em;
   font-weight: 400;
   margin: 0 10px;
   padding: 5px 10px;
   background-color: rgba(124, 255, 54, 0.2);
   border-radius: 4px;
-
   strong {
     font-size: 1.4em;
     font-weight: 700;
   }
-`;
+`
 
-const UnderVoteCounter = styled.span`
-  opacity: 0.5;
-  font-size: 0.8em;
-  display: block;
-`;
-
-export async function getStaticProps() {
-  const doc = new GoogleSpreadsheet(process.env.SHEET_ID);
-
-  // Initialize Auth - see https://theoephraim.github.io/node-google-spreadsheet/#/getting-started/authentication
-  await doc.useServiceAccountAuth({
-    // env var values are copied from service account credentials generated by google
-    // see "Authentication" section in docs for more info
-    client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
-    private_key: process.env.GOOGLE_PRIVATE_KEY,
-  });
-
-  await doc.loadInfo(); // loads document properties and worksheets
-  const sheet = doc.sheetsByTitle["Sheet2"];
-
-  await sheet.loadCells("A1:E10");
-  const votes = sheet.getCell(1, 0).value;
-  const updateDate = new Date().toUTCString();
-  return {
-    props: { votes, updateDate }, // will be passed to the page component as props
-  };
-}
-
-export default function Index({ headerImg, votes, updateDate }) {
-  const [showContributors, setShowContributors] = useState(false);
-  const [showChannels, setShowChannels] = useState(false);
-  const now = new Date().toUTCString();
-
-  // console.log(`Updated: ${updateDateUnix.toUTCString()}, now: ${now}`);
+export default function Index({ headerImg }) {
+  const [showContributors, setShowContributors] = useState(false)
+  const [showChannels, setShowChannels] = useState(false)
+  const [showOnlyWinners, setShowOnlyWinners] = useState(false)
 
   return (
     <Container>
       <HomeHeader headerImg={headerImg} />
       <HamburgerBest />
       <Title>Best of XQC 2021</Title>
+
       <UnderTitle>
-        <VoteLink
-          href="https://docs.google.com/forms/d/e/1FAIpQLSeUFx91_m517Lz-V-yo183K80Gv3fPjh_wBKyxKCpYmFuDH1Q/viewform?usp=sf_link"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <VoteButton className="pushable">
-            <span className="shadow"></span>
-            <span className="edge"></span>
-            <span className="front">VOTE HERE</span>
-          </VoteButton>
-        </VoteLink>
-        <UnderVoteButton>
-          <Image
-            src="/images/emotes/DinkDonk.gif"
-            alt="emote of donk"
-            width="32"
-            height="32"
-          />
-          mr cow this will show your email!
-        </UnderVoteButton>
+        <ShowWinnersBox>
+          <strong>ONLY WINNERS</strong>{' '}
+          <Contributor
+            cursor="true"
+            onClick={() => setShowOnlyWinners(!showOnlyWinners)}
+          >
+            {showOnlyWinners ? (
+              <>
+                <BsEyeSlashFill /> <span>Hide</span>
+              </>
+            ) : (
+              <>
+                <BsEyeFill /> <span>Show</span>
+              </>
+            )}
+          </Contributor>
+        </ShowWinnersBox>
       </UnderTitle>
       <UnderTitle>
-        <VoteCounter>
-          Votes:{" "}
-          <strong>
-            <NumberFormat
-              displayType="text"
-              thousandSeparator=" "
-              value={votes}
-            />
-          </strong>
-        </VoteCounter>
-        <UnderVoteCounter>
-          Updated{" "}
-          {formatDistance(new Date(updateDate), new Date(now), {
-            addSuffix: true,
-          })}
-        </UnderVoteCounter>
-      </UnderTitle>
-      <UnderTitle>
-        <strong>Contributors</strong>:{" "}
+        <strong>Contributors</strong>:{' '}
         <Contributor
           cursor="true"
           onClick={() => setShowContributors(!showContributors)}
@@ -392,7 +398,7 @@ export default function Index({ headerImg, votes, updateDate }) {
       </UnderTitle>
 
       <UnderTitle>
-        <strong>Clips from</strong>:{" "}
+        <strong>Clips from</strong>:{' '}
         <Contributor
           cursor="true"
           onClick={() => setShowChannels(!showChannels)}
@@ -416,57 +422,171 @@ export default function Index({ headerImg, votes, updateDate }) {
             </Contributor>
           ))}
       </UnderTitle>
-      <Categories>
-        {xqc2021.categories.map((category) => (
-          <Category key={category.name} className={category.id}>
-            <CategoryTitle>{category.name}</CategoryTitle>
-            {category.options.map((option) => (
-              <Option key={option.id}>
-                <ImageContainer>
-                  {option.name ? (
-                    <Image
-                      src={option.thumbnail}
-                      height="300px"
-                      width="450px"
-                      alt={option.name}
-                      quality={40}
-                      placeholder="blur"
-                      blurDataURL="/images/10px2.png"
-                    />
-                  ) : (
-                    ""
-                  )}
-                </ImageContainer>
-                <OptionName>
-                  {option.nameImg ? (
-                    <Image
-                      src={option.nameImg}
-                      height="28"
-                      width="28"
-                      alt={option.name}
-                    />
-                  ) : (
-                    ""
-                  )}
-                  {option.link ? (
-                    <FancyLinkStyled
-                      href={option.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {option.name} <BiLinkExternal />
-                    </FancyLinkStyled>
-                  ) : (
-                    option.name
-                  )}
+      <Categories winners={showOnlyWinners}>
+        {!showOnlyWinners &&
+          xqc2021.categories.map((category) => (
+            <Category key={category.name} className={category.id}>
+              <CategoryTitle>{category.name}</CategoryTitle>
+              {category.options.map((option) => (
+                <Option key={option.id} winner={option.winner}>
+                  <ImageContainer>
+                    {option.name ? (
+                      <>
+                        {' '}
+                        <Tags>
+                          <ProcentTag>{option.votesProcent}%</ProcentTag>
+                          {option.winner ? (
+                            <WinnerTag>
+                              <Image
+                                src="/images/emotes/EZ.png"
+                                width="18px"
+                                height="18px"
+                                alt="EZ emote"
+                              />{' '}
+                              <span>1st</span>
+                            </WinnerTag>
+                          ) : (
+                            ''
+                          )}
+                        </Tags>
+                        <Image
+                          src={option.thumbnail}
+                          height="300px"
+                          width="450px"
+                          alt={option.name}
+                          quality={40}
+                          placeholder="blur"
+                          blurDataURL="/images/10px2.png"
+                        />
+                      </>
+                    ) : (
+                      ''
+                    )}
+                  </ImageContainer>
+                  <OptionName>
+                    {option.nameImg ? (
+                      <Image
+                        src={option.nameImg}
+                        height="28"
+                        width="28"
+                        alt={option.name}
+                      />
+                    ) : (
+                      ''
+                    )}
+                    {option.link ? (
+                      <FancyLinkStyled
+                        href={option.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {option.name} <BiLinkExternal />
+                      </FancyLinkStyled>
+                    ) : (
+                      option.name
+                    )}
 
-                  {}
-                </OptionName>
-              </Option>
-            ))}
-          </Category>
-        ))}
+                    {}
+                  </OptionName>
+                </Option>
+              ))}
+            </Category>
+          ))}
+        {showOnlyWinners &&
+          xqc2021.categories.map((category) => (
+            <Category
+              key={category.name + '-winners'}
+              className={category.id}
+              winners={true}
+            >
+              <CategoryTitle>{category.name}</CategoryTitle>
+              {category.options.map((option) => (
+                <>
+                  {option.winner ? (
+                    <Option
+                      key={option.id + '-winners'}
+                      winners={option.winner}
+                    >
+                      <ImageContainer>
+                        {option.name ? (
+                          <>
+                            {' '}
+                            <Tags>
+                              <ProcentTag>{option.votesProcent}%</ProcentTag>
+                              {option.winner ? (
+                                <WinnerTag>
+                                  <Image
+                                    src="/images/emotes/EZ.png"
+                                    width="18px"
+                                    height="18px"
+                                    alt="EZ emote"
+                                  />{' '}
+                                  <span>1st</span>
+                                </WinnerTag>
+                              ) : (
+                                ''
+                              )}
+                            </Tags>
+                            <Image
+                              src={option.thumbnail}
+                              height="300px"
+                              width="450px"
+                              alt={option.name}
+                              quality={40}
+                              placeholder="blur"
+                              blurDataURL="/images/10px2.png"
+                            />
+                          </>
+                        ) : (
+                          ''
+                        )}
+                      </ImageContainer>
+                      <OptionName>
+                        {option.nameImg ? (
+                          <Image
+                            src={option.nameImg}
+                            height="28"
+                            width="28"
+                            alt={option.name}
+                          />
+                        ) : (
+                          ''
+                        )}
+                        {option.link ? (
+                          <FancyLinkStyled
+                            href={option.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {option.name} <BiLinkExternal />
+                          </FancyLinkStyled>
+                        ) : (
+                          option.name
+                        )}
+
+                        {}
+                      </OptionName>
+                    </Option>
+                  ) : (
+                    ''
+                  )}
+                </>
+              ))}
+            </Category>
+          ))}
       </Categories>
+      <NextYearGreetings>
+        See you in{' '}
+        <Link href="/2022">
+          <a>2022</a>
+        </Link>{' '}
+        <Image
+          src="/images/emotes/xqcl.png"
+          width="64px"
+          height="64px"
+          alt="EZ emote"
+        />
+      </NextYearGreetings>
     </Container>
-  );
+  )
 }

@@ -30,6 +30,7 @@ const theme = {
   main2: '#fff',
   main3: '#333',
   main4: '#282828',
+  winnerGreen: '#42ff60',
 }
 
 export default function Layout({ children, headerImg }) {
