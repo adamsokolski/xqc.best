@@ -281,9 +281,10 @@ const ProcentTag = styled.div`
   padding: 3px 10px;
   font-weight: 600;
   font-size: 1.2em;
+  background-color: ${(props) => props.theme.main4};
 `
 
-const WinnerTag = styled.div`
+const PlaceTag = styled.div`
   font-family: 'Montserrat', sans-serif;
   display: flex;
   align-items: center;
@@ -294,7 +295,7 @@ const WinnerTag = styled.div`
   background-color: #333;
   border-radius: 4px;
   padding: 3px 10px;
-  font-weight: 700;
+  font-weight: ${(props) => (props.winner ? 700 : 600)};
   font-size: 1.2em;
   color: white;
   background-color: ${(props) => props.theme.main4};
@@ -346,6 +347,17 @@ export default function Index({ headerImg }) {
   const [showContributors, setShowContributors] = useState(false)
   const [showChannels, setShowChannels] = useState(false)
   const [showOnlyWinners, setShowOnlyWinners] = useState(false)
+
+  const placeSwitch = (place) => {
+    switch (place) {
+      case 2:
+        return '2nd'
+      case 3:
+        return '3rd'
+      default:
+        return `${place}th`
+    }
+  }
 
   return (
     <Container>
@@ -436,7 +448,7 @@ export default function Index({ headerImg }) {
                         <Tags>
                           <ProcentTag>{option.votesProcent}%</ProcentTag>
                           {option.winner ? (
-                            <WinnerTag>
+                            <PlaceTag winner={true}>
                               <Image
                                 src="/images/emotes/EZ.png"
                                 width="18px"
@@ -444,9 +456,9 @@ export default function Index({ headerImg }) {
                                 alt="EZ emote"
                               />{' '}
                               <span>1st</span>
-                            </WinnerTag>
+                            </PlaceTag>
                           ) : (
-                            ''
+                            <PlaceTag> {placeSwitch(option.place)}</PlaceTag>
                           )}
                         </Tags>
                         <Image
@@ -492,6 +504,7 @@ export default function Index({ headerImg }) {
               ))}
             </Category>
           ))}
+        {/* WINNERS */}
         {showOnlyWinners &&
           xqc2021.categories.map((category) => (
             <Category
@@ -514,7 +527,7 @@ export default function Index({ headerImg }) {
                             <Tags>
                               <ProcentTag>{option.votesProcent}%</ProcentTag>
                               {option.winner ? (
-                                <WinnerTag>
+                                <PlaceTag>
                                   <Image
                                     src="/images/emotes/EZ.png"
                                     width="18px"
@@ -522,7 +535,7 @@ export default function Index({ headerImg }) {
                                     alt="EZ emote"
                                   />{' '}
                                   <span>1st</span>
-                                </WinnerTag>
+                                </PlaceTag>
                               ) : (
                                 ''
                               )}

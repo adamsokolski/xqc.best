@@ -13,6 +13,7 @@ export const xqc2021 = {
           thumbnail: '/images/xqc2021/gtarp2.jpg',
           votesProcent: 29.3,
           winner: true,
+          place: 1,
         },
         {
           id: 2,
@@ -20,6 +21,7 @@ export const xqc2021 = {
           link: '',
           thumbnail: '/images/xqc2021/rust.jpg',
           votesProcent: 8.9,
+          place: 5,
         },
         {
           id: 3,
@@ -27,6 +29,7 @@ export const xqc2021 = {
           link: '',
           thumbnail: '/images/xqc2021/minecraft.webp',
           votesProcent: 26.5,
+          place: 2,
         },
         {
           id: 4,
@@ -34,6 +37,7 @@ export const xqc2021 = {
           link: '',
           thumbnail: '/images/xqc2021/slots2.jpg',
           votesProcent: 11.8,
+          place: 4,
         },
         {
           id: 5,
@@ -41,6 +45,7 @@ export const xqc2021 = {
           link: '',
           thumbnail: '/images/xqc2021/masterchef.jpg',
           votesProcent: 12.2,
+          place: 3,
         },
         {
           id: 6,
@@ -48,6 +53,7 @@ export const xqc2021 = {
           link: '',
           thumbnail: '/images/xqc2021/mario.jpg',
           votesProcent: 6.9,
+          place: 6,
         },
         {
           id: 7,
@@ -55,6 +61,7 @@ export const xqc2021 = {
           link: '',
           thumbnail: '/images/xqc2021/crab.jpg',
           votesProcent: 4.4,
+          place: 7,
         },
       ],
     },
@@ -70,6 +77,7 @@ export const xqc2021 = {
           thumbnail: '/images/xqc2021/setup/place1.png',
           votesProcent: 61,
           winner: true,
+          place: 1,
         },
         {
           id: 2,
@@ -77,6 +85,7 @@ export const xqc2021 = {
           link: '',
           thumbnail: '/images/xqc2021/setup/place2.png',
           votesProcent: 2.4,
+          place: 7,
         },
         {
           id: 3,
@@ -84,6 +93,7 @@ export const xqc2021 = {
           link: '',
           thumbnail: '/images/xqc2021/setup/place3.png',
           votesProcent: 3.4,
+          place: 5,
         },
         {
           id: 4,
@@ -91,13 +101,15 @@ export const xqc2021 = {
           link: '',
           thumbnail: '/images/xqc2021/setup/place4.png',
           votesProcent: 11.8,
+          place: 2,
         },
         {
           id: 5,
           name: 'Setup 5',
           link: '',
           thumbnail: '/images/xqc2021/setup/place5.png',
-          votesProcent: 0.0,
+          votesProcent: 0,
+          place: 10,
         },
         {
           id: 6,
@@ -105,14 +117,15 @@ export const xqc2021 = {
           link: '',
           thumbnail: '/images/xqc2021/setup/place6.png',
           votesProcent: 0.4,
+          place: 9,
         },
-
         {
           id: 7,
           name: 'Setup 7',
           link: '',
           thumbnail: '/images/xqc2021/setup/place7.png',
           votesProcent: 0.5,
+          place: 8,
         },
         {
           id: 8,
@@ -120,6 +133,7 @@ export const xqc2021 = {
           link: '',
           thumbnail: '/images/xqc2021/setup/place8.png',
           votesProcent: 6.7,
+          place: 4,
         },
         {
           id: 9,
@@ -127,6 +141,7 @@ export const xqc2021 = {
           link: '',
           thumbnail: '/images/xqc2021/setup/place9.png',
           votesProcent: 2.9,
+          place: 6,
         },
         {
           id: 10,
@@ -134,6 +149,7 @@ export const xqc2021 = {
           link: '',
           thumbnail: '/images/xqc2021/setup/place10.png',
           votesProcent: 10.9,
+          place: 3,
         },
       ],
     },
@@ -148,6 +164,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/zw1k0e',
           thumbnail: '/images/xqc2021/category3/1.png',
           votesProcent: 30.9,
+          place: 2,
         },
         {
           id: 2,
@@ -155,6 +172,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/yepyrv',
           thumbnail: '/images/xqc2021/category3/2.png',
           votesProcent: 15.2,
+          place: 3,
         },
         {
           id: 3,
@@ -162,6 +180,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/ssdmzm',
           thumbnail: '/images/xqc2021/category3/3.png',
           votesProcent: 2.4,
+          place: 5,
         },
         {
           id: 4,
@@ -169,6 +188,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/6qcv8s',
           thumbnail: '/images/xqc2021/category3/4.png',
           votesProcent: 7.8,
+          place: 4,
         },
         {
           id: 5,
@@ -177,6 +197,7 @@ export const xqc2021 = {
           thumbnail: '/images/xqc2021/category3/5.png',
           votesProcent: 43.8,
           winner: true,
+          place: 1,
         },
       ],
     },
@@ -191,6 +212,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/h3263g',
           thumbnail: '/images/xqc2021/category4/1.jpg',
           votesProcent: 5.1,
+          place: 6,
         },
         {
           id: 2,
@@ -198,6 +220,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/f7o4n0',
           thumbnail: '/images/xqc2021/category4/2.png',
           votesProcent: 9.9,
+          place: 4,
         },
         {
           id: 3,
@@ -205,6 +228,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/a475qs',
           thumbnail: '/images/xqc2021/category4/3.png',
           votesProcent: 19.3,
+          place: 2,
         },
         {
           id: 4,
@@ -212,6 +236,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/en6ptv',
           thumbnail: '/images/xqc2021/category4/4.png',
           votesProcent: 9.4,
+          place: 5,
         },
         {
           id: 5,
@@ -220,6 +245,7 @@ export const xqc2021 = {
           thumbnail: '/images/xqc2021/category4/5.png',
           votesProcent: 41.8,
           winner: true,
+          place: 1,
         },
         {
           id: 6,
@@ -227,6 +253,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/sac91z',
           thumbnail: '/images/xqc2021/category4/66.png',
           votesProcent: 14.5,
+          place: 3,
         },
       ],
     },
@@ -242,6 +269,7 @@ export const xqc2021 = {
           thumbnail: '/images/xqc2021/dansgame/1.png',
           votesProcent: 60.9,
           winner: true,
+          place: 1,
         },
         {
           id: 2,
@@ -249,6 +277,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/hheocy',
           thumbnail: '/images/xqc2021/dansgame/2.png',
           votesProcent: 23.8,
+          place: 2,
         },
         {
           id: 3,
@@ -256,6 +285,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/254qxd',
           thumbnail: '/images/xqc2021/dansgame/3.png',
           votesProcent: 5.3,
+          place: 3,
         },
         {
           id: 4,
@@ -263,6 +293,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/9z5x7q',
           thumbnail: '/images/xqc2021/dansgame/4.png',
           votesProcent: 3.5,
+          place: 5,
         },
         {
           id: 5,
@@ -270,6 +301,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/xd75cr',
           thumbnail: '/images/xqc2021/dansgame/5.png',
           votesProcent: 0.4,
+          place: 6,
         },
         {
           id: 6,
@@ -277,6 +309,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/cx2btb',
           thumbnail: '/images/xqc2021/dansgame/6.png',
           votesProcent: 5.3,
+          place: 4,
         },
       ],
     },
@@ -291,6 +324,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/e6duh2',
           thumbnail: '/images/xqc2021/monkaw/1.png',
           votesProcent: 1.1,
+          place: 4,
         },
         {
           id: 2,
@@ -299,6 +333,7 @@ export const xqc2021 = {
           thumbnail: '/images/xqc2021/monkaw/2.png',
           votesProcent: 74.5,
           winner: true,
+          place: 1,
         },
         {
           id: 3,
@@ -306,6 +341,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/sk3r4s',
           thumbnail: '/images/xqc2021/monkaw/3.png',
           votesProcent: 6.8,
+          place: 3,
         },
         {
           id: 4,
@@ -313,6 +349,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/oc5c0q',
           thumbnail: '/images/xqc2021/monkaw/4.png',
           votesProcent: 17.7,
+          place: 2,
         },
       ],
     },
@@ -327,6 +364,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/ztzinl',
           thumbnail: '/images/xqc2021/soy/1.png',
           votesProcent: 18.4,
+          place: 4,
         },
         {
           id: 2,
@@ -334,6 +372,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/21dbjv',
           thumbnail: '/images/xqc2021/soy/2.png',
           votesProcent: 23.4,
+          place: 2,
         },
         {
           id: 3,
@@ -342,6 +381,7 @@ export const xqc2021 = {
           thumbnail: '/images/xqc2021/soy/3.png',
           votesProcent: 24,
           winner: true,
+          place: 1,
         },
         {
           id: 4,
@@ -349,6 +389,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/cspt99',
           thumbnail: '/images/xqc2021/soy/4.png',
           votesProcent: 6.5,
+          place: 5,
         },
         {
           id: 5,
@@ -356,6 +397,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/sfcmja',
           thumbnail: '/images/xqc2021/soy/5.png',
           votesProcent: 6.3,
+          place: 6,
         },
         {
           id: 6,
@@ -363,6 +405,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/e4virq',
           thumbnail: '/images/xqc2021/soy/6.png',
           votesProcent: 21.4,
+          place: 3,
         },
       ],
     },
@@ -378,6 +421,7 @@ export const xqc2021 = {
           thumbnail: '/images/xqc2021/wholesome/1.png',
           votesProcent: 38.2,
           winner: true,
+          place: 1,
         },
         {
           id: 2,
@@ -385,6 +429,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/77we3x',
           thumbnail: '/images/xqc2021/wholesome/2.png',
           votesProcent: 27.1,
+          place: 2,
         },
         {
           id: 3,
@@ -392,6 +437,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/1qb3p7',
           thumbnail: '/images/xqc2021/wholesome/3.png',
           votesProcent: 3.5,
+          place: 6,
         },
         {
           id: 4,
@@ -399,6 +445,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/jq6ln4',
           thumbnail: '/images/xqc2021/wholesome/4.png',
           votesProcent: 11.3,
+          place: 4,
         },
         {
           id: 5,
@@ -406,6 +453,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/0eq5e0',
           thumbnail: '/images/xqc2021/wholesome/5.png',
           votesProcent: 5.8,
+          place: 5,
         },
         {
           id: 6,
@@ -413,6 +461,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/g0zff6',
           thumbnail: '/images/xqc2021/wholesome/6.png',
           votesProcent: 14.2,
+          place: 3,
         },
       ],
     },
@@ -427,6 +476,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/g6yqv9',
           thumbnail: '/images/xqc2021/pogu/1.png',
           votesProcent: 18.4,
+          place: 4,
         },
         {
           id: 2,
@@ -434,6 +484,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/j01eis',
           thumbnail: '/images/xqc2021/pogu/2.png',
           votesProcent: 23.3,
+          place: 2,
         },
         {
           id: 3,
@@ -442,6 +493,7 @@ export const xqc2021 = {
           thumbnail: '/images/xqc2021/pogu/3.png',
           votesProcent: 25.9,
           winner: true,
+          place: 1,
         },
         {
           id: 4,
@@ -449,6 +501,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/5ltf2e',
           thumbnail: '/images/xqc2021/pogu/4.png',
           votesProcent: 19.1,
+          place: 3,
         },
         {
           id: 5,
@@ -456,6 +509,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/n8k7cr',
           thumbnail: '/images/xqc2021/pogu/5.png',
           votesProcent: 13.2,
+          place: 5,
         },
       ],
     },
@@ -470,6 +524,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/rnjm63',
           thumbnail: '/images/xqc2021/rage/1.png',
           votesProcent: 22.7,
+          place: 3,
         },
         {
           id: 2,
@@ -477,6 +532,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/68awiu',
           thumbnail: '/images/xqc2021/rage/2.png',
           votesProcent: 7.6,
+          place: 4,
         },
         {
           id: 3,
@@ -484,6 +540,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/oi218d',
           thumbnail: '/images/xqc2021/rage/3.png',
           votesProcent: 4.6,
+          place: 6,
         },
         {
           id: 4,
@@ -491,6 +548,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/sbt7r4',
           thumbnail: '/images/xqc2021/rage/4.png',
           votesProcent: 23,
+          place: 2,
         },
         {
           id: 5,
@@ -499,6 +557,7 @@ export const xqc2021 = {
           thumbnail: '/images/xqc2021/rage/5.png',
           votesProcent: 37.4,
           winner: true,
+          place: 1,
         },
         {
           id: 6,
@@ -506,6 +565,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/x1r1la',
           thumbnail: '/images/xqc2021/rage/6.png',
           votesProcent: 4.8,
+          place: 5,
         },
       ],
     },
@@ -520,6 +580,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/b5ywgt',
           thumbnail: '/images/xqc2021/streamsnipe/1.png',
           votesProcent: 23.1,
+          place: 2,
         },
         {
           id: 2,
@@ -527,6 +588,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/twxf0v',
           thumbnail: '/images/xqc2021/streamsnipe/2.png',
           votesProcent: 13,
+          place: 3,
         },
         {
           id: 3,
@@ -534,6 +596,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/4bjffj',
           thumbnail: '/images/xqc2021/streamsnipe/3.png',
           votesProcent: 11.4,
+          place: 4,
         },
         {
           id: 4,
@@ -541,6 +604,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/pp93gy',
           thumbnail: '/images/xqc2021/streamsnipe/4.png',
           votesProcent: 8.2,
+          place: 5,
         },
         {
           id: 5,
@@ -549,6 +613,7 @@ export const xqc2021 = {
           thumbnail: '/images/xqc2021/streamsnipe/5.jpg',
           votesProcent: 44.3,
           winner: true,
+          place: 1,
         },
       ],
     },
@@ -564,6 +629,7 @@ export const xqc2021 = {
           thumbnail: '/images/xqc2021/tts/1.png',
           votesProcent: 29.6,
           winner: true,
+          place: 1,
         },
         {
           id: 2,
@@ -571,6 +637,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/ido8gm',
           thumbnail: '/images/xqc2021/tts/2.png',
           votesProcent: 23.1,
+          place: 2,
         },
         {
           id: 3,
@@ -578,6 +645,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/zxabcy',
           thumbnail: '/images/xqc2021/tts/3.png',
           votesProcent: 11.4,
+          place: 5,
         },
         {
           id: 4,
@@ -585,6 +653,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/4panu0',
           thumbnail: '/images/xqc2021/tts/4.png',
           votesProcent: 12.7,
+          place: 3,
         },
         {
           id: 5,
@@ -592,6 +661,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/xjkebe',
           thumbnail: '/images/xqc2021/tts/5.png',
           votesProcent: 10.8,
+          place: 6,
         },
         {
           id: 6,
@@ -599,10 +669,10 @@ export const xqc2021 = {
           link: 'https://streamable.com/dhe920',
           thumbnail: '/images/xqc2021/tts/6.png',
           votesProcent: 12.5,
+          place: 4,
         },
       ],
     },
-
     {
       id: 'category-11',
       name: 'Best fanart',
@@ -614,6 +684,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/x8s6fo',
           thumbnail: '/images/xqc2021/fanart/2.png',
           votesProcent: 16.8,
+          place: 4,
         },
         {
           id: 3,
@@ -621,6 +692,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/zb3fgx',
           thumbnail: '/images/xqc2021/fanart/3.png',
           votesProcent: 16.2,
+          place: 5,
         },
         {
           id: 4,
@@ -628,6 +700,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/pk6may',
           thumbnail: '/images/xqc2021/fanart/4.png',
           votesProcent: 17.5,
+          place: 2,
         },
         {
           id: 5,
@@ -635,6 +708,7 @@ export const xqc2021 = {
           link: 'https://i.redd.it/951skthcrmv61.jpg',
           thumbnail: '/images/xqc2021/fanart/5.png',
           votesProcent: 16.9,
+          place: 3,
         },
         {
           id: 6,
@@ -643,6 +717,7 @@ export const xqc2021 = {
           thumbnail: '/images/xqc2021/fanart/6.jpg',
           votesProcent: 17.9,
           winner: true,
+          place: 1,
         },
         {
           id: 7,
@@ -650,6 +725,7 @@ export const xqc2021 = {
           link: 'https://www.youtube.com/watch?v=A9klYhTPJvk',
           thumbnail: '/images/xqc2021/fanart/7.png',
           votesProcent: 9.5,
+          place: 6,
         },
       ],
     },
@@ -664,6 +740,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/rxnbed',
           thumbnail: '/images/xqc2021/fails/1.png',
           votesProcent: 21.3,
+          place: 2,
         },
         {
           id: 2,
@@ -671,6 +748,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/lz2ekt',
           thumbnail: '/images/xqc2021/fails/2.png',
           votesProcent: 3.5,
+          place: 5,
         },
         {
           id: 3,
@@ -679,6 +757,7 @@ export const xqc2021 = {
           thumbnail: '/images/xqc2021/fails/3.png',
           votesProcent: 51.9,
           winner: true,
+          place: 1,
         },
         {
           id: 4,
@@ -686,6 +765,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/7g2ciw',
           thumbnail: '/images/xqc2021/fails/4.png',
           votesProcent: 13.1,
+          place: 3,
         },
         {
           id: 5,
@@ -693,6 +773,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/cp0mvx',
           thumbnail: '/images/xqc2021/fails/5.png',
           votesProcent: 10.2,
+          place: 4,
         },
       ],
     },
@@ -707,6 +788,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/10i17k',
           thumbnail: '/images/xqc2021/fart/1.png',
           votesProcent: 16.7,
+          place: 3,
         },
         {
           id: 2,
@@ -714,6 +796,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/ff1t5b',
           thumbnail: '/images/xqc2021/fart/2.png',
           votesProcent: 16.5,
+          place: 4,
         },
         {
           id: 3,
@@ -721,6 +804,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/65uaxc',
           thumbnail: '/images/xqc2021/fart/3.png',
           votesProcent: 19.9,
+          place: 2,
         },
         {
           id: 4,
@@ -728,6 +812,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/gtyoux',
           thumbnail: '/images/xqc2021/fart/4.png',
           votesProcent: 10.9,
+          place: 5,
         },
         {
           id: 5,
@@ -735,6 +820,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/hqt0ql',
           thumbnail: '/images/xqc2021/fart/5.png',
           votesProcent: 3.3,
+          place: 6,
         },
         {
           id: 6,
@@ -743,10 +829,10 @@ export const xqc2021 = {
           thumbnail: '/images/xqc2021/fart/6.png',
           votesProcent: 32.8,
           winner: true,
+          place: 1,
         },
       ],
     },
-
     {
       id: 'category-12',
       name: 'Most overused meme',
@@ -758,6 +844,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/87xgov',
           thumbnail: '/images/xqc2021/category12/1.png',
           votesProcent: 23.6,
+          place: 2,
         },
         {
           id: 2,
@@ -766,6 +853,7 @@ export const xqc2021 = {
           thumbnail: '/images/xqc2021/category12/2.jpg',
           votesProcent: 39.9,
           winner: true,
+          place: 1,
         },
         {
           id: 3,
@@ -773,6 +861,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/85kij1',
           thumbnail: '/images/xqc2021/category12/3.png',
           votesProcent: 4,
+          place: 5,
         },
         {
           id: 4,
@@ -780,6 +869,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/a8o6y7',
           thumbnail: '/images/xqc2021/category12/4.jpg',
           votesProcent: 9.5,
+          place: 4,
         },
         {
           id: 5,
@@ -788,6 +878,7 @@ export const xqc2021 = {
           link: '',
           thumbnail: '/images/xqc2021/category12/5.png',
           votesProcent: 23,
+          place: 3,
         },
       ],
     },
@@ -802,6 +893,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/qbu5tb',
           thumbnail: '/images/xqc2021/cringe/1.png',
           votesProcent: 24.9,
+          place: 2,
         },
         {
           id: 2,
@@ -810,6 +902,7 @@ export const xqc2021 = {
           thumbnail: '/images/xqc2021/cringe/2.png',
           votesProcent: 75.1,
           winner: true,
+          place: 1,
         },
       ],
     },
@@ -824,6 +917,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/ez7102',
           thumbnail: '/images/xqc2021/funny/1.png',
           votesProcent: 7.6,
+          place: 5,
         },
         {
           id: 2,
@@ -831,6 +925,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/53e80q',
           thumbnail: '/images/xqc2021/funny/2.png',
           votesProcent: 13.6,
+          place: 2,
         },
         {
           id: 3,
@@ -838,6 +933,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/w80ruu',
           thumbnail: '/images/xqc2021/funny/3.png',
           votesProcent: 12.2,
+          place: 4,
         },
         {
           id: 4,
@@ -845,6 +941,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/dj5tp1',
           thumbnail: '/images/xqc2021/funny/4.png',
           votesProcent: 12.9,
+          place: 3,
         },
         {
           id: 5,
@@ -853,6 +950,7 @@ export const xqc2021 = {
           thumbnail: '/images/xqc2021/funny/5.png',
           votesProcent: 47.5,
           winner: true,
+          place: 1,
         },
         {
           id: 6,
@@ -860,6 +958,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/6h3bjz',
           thumbnail: '/images/xqc2021/funny/6.png',
           votesProcent: 5.7,
+          place: 6,
         },
       ],
     },
@@ -874,6 +973,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/asvhzm',
           thumbnail: '/images/xqc2021/harold/1.png',
           votesProcent: 13.3,
+          place: 4,
         },
         {
           id: 2,
@@ -881,6 +981,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/3s5c6l',
           thumbnail: '/images/xqc2021/harold/2.png',
           votesProcent: 9,
+          place: 6,
         },
         {
           id: 3,
@@ -888,6 +989,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/yx3d5d',
           thumbnail: '/images/xqc2021/harold/3.png',
           votesProcent: 21.3,
+          place: 2,
         },
         {
           id: 4,
@@ -896,6 +998,7 @@ export const xqc2021 = {
           thumbnail: '/images/xqc2021/harold/4.png',
           votesProcent: 27,
           winner: true,
+          place: 1,
         },
         {
           id: 5,
@@ -903,6 +1006,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/vyb2ye',
           thumbnail: '/images/xqc2021/harold/55.png',
           votesProcent: 11.8,
+          place: 5,
         },
         {
           id: 6,
@@ -910,6 +1014,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/yprtbe',
           thumbnail: '/images/xqc2021/harold/6.png',
           votesProcent: 17.5,
+          place: 3,
         },
       ],
     },
@@ -925,6 +1030,7 @@ export const xqc2021 = {
           thumbnail: '/images/xqc2021/best/1.jpg',
           votesProcent: 46.4,
           winner: true,
+          place: 1,
         },
         {
           id: 2,
@@ -932,6 +1038,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/a4s8m5',
           thumbnail: '/images/xqc2021/best/2.png',
           votesProcent: 42.3,
+          place: 2,
         },
         {
           id: 3,
@@ -939,6 +1046,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/minwju',
           thumbnail: '/images/xqc2021/best/3.png',
           votesProcent: 6,
+          place: 3,
         },
         {
           id: 4,
@@ -946,6 +1054,7 @@ export const xqc2021 = {
           link: 'https://streamable.com/rpg2yx',
           thumbnail: '/images/xqc2021/best/4.png',
           votesProcent: 5.3,
+          place: 4,
         },
       ],
     },

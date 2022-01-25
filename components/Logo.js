@@ -26,6 +26,7 @@ export default function Logo({ headerImg }) {
       <Link href="/" passHref>
         <a>
           <Image
+            key={headerImg}
             src={headerImg}
             width="128px"
             height="128px"
